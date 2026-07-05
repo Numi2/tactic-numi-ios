@@ -37,6 +37,8 @@ IOS_MODEL_ASSETS = (
     "IOSDozer",
     "IOSRanger",
     "IOSScoutVehicle",
+    "IOSBeacon",
+    "IOSRallyPointMarker",
 )
 
 DAZZLE_TEXTURES = (
@@ -338,6 +340,8 @@ IOS_CSF_LABELS = {
     "INI:IOSDozer": "Builder",
     "INI:IOSRanger": "Ranger",
     "INI:IOSScoutVehicle": "Scout Vehicle",
+    "INI:IOSBeacon": "Beacon",
+    "INI:RallyPointMarker": "Rally Point",
     "INI:Command_ConstructIOSDozer": "Build Builder",
     "INI:Command_ConstructIOSDozerDescription": "Produces a construction unit.",
     "INI:Command_ConstructIOSPowerPlant": "Build Power Plant",
@@ -403,6 +407,7 @@ PlayerTemplate FactionIOS
   StartingUnit0 = IOSRanger
   StartingUnit1 = IOSScoutVehicle
   StartingUnit2 = IOSDozer
+  BeaconName = IOSBeacon
   PurchaseScienceCommandSetRank1 = IOSScienceCommandSet
   PurchaseScienceCommandSetRank3 = IOSScienceCommandSet
   PurchaseScienceCommandSetRank8 = IOSScienceCommandSet
@@ -885,6 +890,40 @@ Object IOSScoutVehicle
   End
   ButtonImage = IOSScoutVehicleIcon
   SelectPortrait = IOSScoutVehicleIcon
+End
+
+Object IOSBeacon
+  DisplayName = INI:IOSBeacon
+  Side = IOS
+  EditorSorting = MISC_MAN_MADE
+  KindOf = IMMOBILE SELECTABLE INERT
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = IOSBeacon
+    End
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 1.0
+    InitialHealth = 1.0
+  End
+End
+
+Object RallyPointMarker
+  DisplayName = INI:RallyPointMarker
+  Side = IOS
+  EditorSorting = MISC_MAN_MADE
+  KindOf = IMMOBILE INERT
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = IOSRallyPointMarker
+    End
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 1.0
+    InitialHealth = 1.0
+  End
 End
 """
 

@@ -413,6 +413,8 @@ int main(int argc, char* argv[])
 				"IOSDozer.w3d",
 				"IOSRanger.w3d",
 				"IOSScoutVehicle.w3d",
+				"IOSBeacon.w3d",
+				"IOSRallyPointMarker.w3d",
 				"Maps/IOSPlayableSlice/IOSPlayableSlice.map",
 				"Maps/MapCache.ini",
 				"DefaultOptions.ini",

@@ -1,5 +1,5 @@
 {
-  "asset_count": 228,
+  "asset_count": 232,
   "assets": [
     {
       "bytes": 6876,
@@ -214,6 +214,34 @@
     {
       "bytes": 2444,
       "path": "ios-original-assets/generated/GameData/IOSScoutVehicle.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSBeacon.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSBeacon.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSRallyPointMarker.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSRallyPointMarker.w3d",
       "role": "ios_generated_model_root_lookup",
       "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
       "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
@@ -912,10 +940,10 @@
       "source": "generated"
     },
     {
-      "bytes": 3881,
+      "bytes": 3988,
       "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
       "role": "localization_boot_csf",
-      "sha256": "7062a0526bf6be5005116a1edc4fd181ca7192353945bc0972cd8701db13127a",
+      "sha256": "f0e80855882949b55e393357aeb5fb8b380d32f4db5edad8e11a47004e6b2fc2",
       "source": "generated"
     },
     {
@@ -1388,10 +1416,10 @@
       "source": "generated"
     },
     {
-      "bytes": 838,
+      "bytes": 863,
       "path": "ios-original-assets/generated/GameData/Data/INI/PlayerTemplate/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "616fe59771c9d0cdbdf8612d8154e061c0664a25c97a2f358eeb74a94b5ed1b0",
+      "sha256": "f42547beb5b3394b402e152ced0b73132d4d5f0b1d8c3e4a19c955fb0976ed98",
       "source": "generated"
     },
     {
@@ -1437,10 +1465,10 @@
       "source": "generated"
     },
     {
-      "bytes": 5264,
+      "bytes": 5951,
       "path": "ios-original-assets/generated/GameData/Data/INI/Object/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "b47e7ce571e8c32bf352ed6122d9ba145c0605a2768e074010876633e216d5fc",
+      "sha256": "074a0d9a554a88b3191660c59b4e90f2290a0590251d2ab644d1a056347d6c0e",
       "source": "generated"
     },
     {
