@@ -323,10 +323,26 @@ IOS_SLICE_OBJECT = """Object IOSCommandCenter
   CommandSet = IOSCommandCenterCommandSet
   VisionRange = 200.0
   ShroudClearingRange = 220.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
   ArmorSet
     Conditions = None
     Armor = IOSStructureArmor
     DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 1800.0
+    InitialHealth = 1800.0
+  End
+  Behavior = ProductionUpdate ModuleTag_Production
+    MaxQueueEntries = 4
+  End
+  Behavior = QueueProductionExitUpdate ModuleTag_ProductionExit
+    UnitCreatePoint = X:0.0 Y:0.0 Z:0.0
+    NaturalRallyPoint = X:72.0 Y:0.0 Z:0.0
   End
   ButtonImage = IOSCommandCenterIcon
   SelectPortrait = IOSCommandCenterIcon
@@ -343,10 +359,19 @@ Object IOSPowerPlant
   EnergyProduction = 5
   VisionRange = 120.0
   ShroudClearingRange = 140.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
   ArmorSet
     Conditions = None
     Armor = IOSStructureArmor
     DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 900.0
+    InitialHealth = 900.0
   End
   ButtonImage = IOSPowerPlantIcon
   SelectPortrait = IOSPowerPlantIcon
@@ -364,10 +389,26 @@ Object IOSBarracks
   CommandSet = IOSBarracksCommandSet
   VisionRange = 140.0
   ShroudClearingRange = 160.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
   ArmorSet
     Conditions = None
     Armor = IOSStructureArmor
     DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 1100.0
+    InitialHealth = 1100.0
+  End
+  Behavior = ProductionUpdate ModuleTag_Production
+    MaxQueueEntries = 4
+  End
+  Behavior = QueueProductionExitUpdate ModuleTag_ProductionExit
+    UnitCreatePoint = X:0.0 Y:0.0 Z:0.0
+    NaturalRallyPoint = X:56.0 Y:0.0 Z:0.0
   End
   ButtonImage = IOSBarracksIcon
   SelectPortrait = IOSBarracksIcon
@@ -384,6 +425,11 @@ Object IOSRanger
   CommandSet = IOSUnitCommandSet
   VisionRange = 160.0
   ShroudClearingRange = 180.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
   WeaponSet
     Conditions = None
     Weapon = PRIMARY IOSRifleWeapon
@@ -392,6 +438,17 @@ Object IOSRanger
     Conditions = None
     Armor = IOSInfantryArmor
     DamageFX = IOSDefaultDamageFX
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 120.0
+    InitialHealth = 120.0
+  End
+  Behavior = AIUpdateInterface ModuleTag_AI
+    AutoAcquireEnemiesWhenIdle = Yes
+  End
+  LocomotorSet = SET_NORMAL IOSInfantryLocomotor
+  Behavior = PhysicsBehavior ModuleTag_Physics
+    Mass = 4.0
   End
   ButtonImage = IOSRangerIcon
   SelectPortrait = IOSRangerIcon
@@ -408,6 +465,11 @@ Object IOSScoutVehicle
   CommandSet = IOSUnitCommandSet
   VisionRange = 180.0
   ShroudClearingRange = 200.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
   WeaponSet
     Conditions = None
     Weapon = PRIMARY IOSCannonWeapon
@@ -416,6 +478,17 @@ Object IOSScoutVehicle
     Conditions = None
     Armor = IOSVehicleArmor
     DamageFX = IOSDefaultDamageFX
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 360.0
+    InitialHealth = 360.0
+  End
+  Behavior = AIUpdateInterface ModuleTag_AI
+    AutoAcquireEnemiesWhenIdle = Yes
+  End
+  LocomotorSet = SET_NORMAL IOSVehicleLocomotor
+  Behavior = PhysicsBehavior ModuleTag_Physics
+    Mass = 40.0
   End
   ButtonImage = IOSScoutVehicleIcon
   SelectPortrait = IOSScoutVehicleIcon
