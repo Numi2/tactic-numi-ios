@@ -646,10 +646,10 @@
       "source": "generated"
     },
     {
-      "bytes": 962,
+      "bytes": 62562,
       "path": "ios-original-assets/generated/GameData/Data/Window/ControlBar.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "addae86e1023345f972a4b8dc001c8c7aacd0db2ea34ee8d409ad8497dd05884",
+      "sha256": "f0424c84b528765692e453f4184d06c38199a58fbdf937a80a95744864ca3521",
       "source": "generated"
     },
     {

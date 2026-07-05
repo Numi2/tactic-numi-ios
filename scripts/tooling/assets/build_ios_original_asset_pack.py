@@ -704,6 +704,193 @@ WINDOW
 END
 """
 
+def wnd_block(
+    name: str,
+    x1: int,
+    y1: int,
+    x2: int,
+    y2: int,
+    window_type: str = "USER",
+    style: str = "USER",
+    system_callback: str = "[None]",
+    input_callback: str = "[None]",
+    draw_callback: str = "[None]",
+    text: str = "",
+    font_size: int = 10,
+    color: tuple[int, int, int, int] = (40, 44, 50, 210),
+    indent: str = "  ",
+    children: str = "",
+) -> str:
+    child_block = f"{children}" if children else ""
+    return f"""{indent}WINDOW
+{indent}  WINDOWTYPE = {window_type};
+{indent}  SCREENRECT = UPPERLEFT: {x1} {y1}, BOTTOMRIGHT: {x2} {y2}, CREATIONRESOLUTION: 1024 768;
+{indent}  NAME = "{name}";
+{indent}  STATUS = ENABLED+IMAGE;
+{indent}  STYLE = {style};
+{indent}  SYSTEMCALLBACK = "{system_callback}";
+{indent}  INPUTCALLBACK = "{input_callback}";
+{indent}  TOOLTIPCALLBACK = "[None]";
+{indent}  DRAWCALLBACK = "{draw_callback}";
+{indent}  FONT = NAME: "Arial", SIZE: {font_size}, BOLD: 0;
+{indent}  HEADERTEMPLATE = "[NONE]";
+{indent}  TOOLTIPDELAY = -1;
+{indent}  TEXT = "{text}";
+{indent}  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+{indent}              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+{indent}              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+{indent}  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: {color[0]} {color[1]} {color[2]} {color[3]}, BORDERCOLOR: 180 190 205 180;
+{indent}  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 25 28 32 180, BORDERCOLOR: 80 80 80 160;
+{indent}  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 75 82 92 235, BORDERCOLOR: 255 235 170 220;{child_block}
+{indent}END
+"""
+
+
+def child_wnd_block(
+    name: str,
+    x1: int,
+    y1: int,
+    x2: int,
+    y2: int,
+    window_type: str = "USER",
+    style: str = "USER",
+    system_callback: str = "[None]",
+    input_callback: str = "[None]",
+    draw_callback: str = "[None]",
+    text: str = "",
+    font_size: int = 10,
+    color: tuple[int, int, int, int] = (40, 44, 50, 210),
+) -> str:
+    return "\n  CHILD\n" + wnd_block(
+        name,
+        x1,
+        y1,
+        x2,
+        y2,
+        window_type=window_type,
+        style=style,
+        system_callback=system_callback,
+        input_callback=input_callback,
+        draw_callback=draw_callback,
+        text=text,
+        font_size=font_size,
+        color=color,
+        indent="  ",
+    )
+
+
+def push_button(
+    name: str,
+    x1: int,
+    y1: int,
+    x2: int,
+    y2: int,
+    text: str = "",
+) -> str:
+    return child_wnd_block(
+        name,
+        x1,
+        y1,
+        x2,
+        y2,
+        window_type="PUSHBUTTON",
+        style="PUSHBUTTON+USER",
+        system_callback="PassSelectedButtonsToParentSystem",
+        text=text,
+        color=(58, 64, 72, 235),
+    )
+
+
+def control_bar_wnd() -> str:
+    command_buttons = []
+    for index in range(14):
+        col = index % 7
+        row = index // 7
+        command_buttons.append(
+            push_button(
+                f"ControlBar.wnd:ButtonCommand{index + 1:02d}",
+                372 + col * 52,
+                606 + row * 52,
+                418 + col * 52,
+                652 + row * 52,
+            )
+        )
+    queue_buttons = [
+        push_button(f"ControlBar.wnd:ButtonQueue{index + 1:02d}", 765 + index * 42, 604, 802 + index * 42, 641)
+        for index in range(9)
+    ]
+    upgrades = [
+        push_button(f"ControlBar.wnd:UnitUpgrade{index + 1}", 824 + index * 38, 672, 858 + index * 38, 706)
+        for index in range(8)
+    ]
+    children = "".join(
+        [
+            child_wnd_block("ControlBar.wnd:BackgroundMarker", 0, 582, 1024, 768, color=(16, 19, 24, 230)),
+            child_wnd_block("ControlBar.wnd:ControlBarParent", 0, 582, 1024, 768, system_callback="ControlBarSystem", input_callback="ControlBarInput", color=(18, 22, 28, 235)),
+            child_wnd_block("ControlBar.wnd:CommandWindow", 360, 596, 750, 714, color=(20, 24, 30, 190)),
+            *command_buttons,
+            child_wnd_block("ControlBar.wnd:ProductionQueueWindow", 756, 596, 1012, 646, color=(20, 24, 30, 190)),
+            *queue_buttons,
+            child_wnd_block("ControlBar.wnd:RightHUD", 780, 648, 1018, 756, color=(24, 29, 35, 210)),
+            child_wnd_block("ControlBar.wnd:WinUnitSelected", 788, 656, 1010, 750, color=(24, 29, 35, 180)),
+            child_wnd_block("ControlBar.wnd:CameoWindow", 792, 660, 858, 726, color=(48, 54, 62, 220)),
+            *upgrades,
+            child_wnd_block("ControlBar.wnd:MoneyDisplay", 18, 602, 154, 632, window_type="STATICTEXT", style="STATICTEXT+USER", text="$0", font_size=14, color=(24, 38, 30, 220)),
+            child_wnd_block("ControlBar.wnd:PowerWindow", 18, 638, 154, 668, window_type="STATICTEXT", style="STATICTEXT+USER", text="POWER", font_size=12, color=(42, 34, 20, 220)),
+            child_wnd_block("ControlBar.wnd:GeneralsExp", 18, 674, 154, 704, color=(36, 32, 48, 220)),
+            child_wnd_block("ControlBar.wnd:ExpBarForeground", 22, 680, 150, 698, color=(120, 92, 32, 220)),
+            child_wnd_block("ControlBar.wnd:WinUAttack", 166, 604, 344, 756, input_callback="LeftHUDInput", color=(28, 34, 40, 190)),
+            push_button("ControlBar.wnd:PopupCommunicator", 900, 584, 944, 624),
+            push_button("ControlBar.wnd:ButtonOptions", 952, 584, 1004, 624),
+            push_button("ControlBar.wnd:ButtonIdleWorker", 166, 710, 212, 756),
+            push_button("ControlBar.wnd:ButtonPlaceBeacon", 218, 710, 264, 756),
+            push_button("ControlBar.wnd:ButtonGeneral", 270, 710, 316, 756),
+            push_button("ControlBar.wnd:ButtonLarge", 322, 710, 352, 756),
+            child_wnd_block("ControlBar.wnd:UnderConstructionWindow", 360, 596, 750, 714, color=(40, 28, 28, 190)),
+            child_wnd_block("ControlBar.wnd:UnderConstructionDesc", 374, 610, 730, 640, window_type="STATICTEXT", style="STATICTEXT+USER", text="Constructing", color=(40, 28, 28, 190)),
+            push_button("ControlBar.wnd:ButtonCancelConstruction", 660, 660, 730, 704, "Cancel"),
+            child_wnd_block("ControlBar.wnd:OCLTimerWindow", 360, 596, 750, 714, color=(28, 32, 40, 190)),
+            child_wnd_block("ControlBar.wnd:OCLTimerStaticText", 374, 610, 730, 640, window_type="STATICTEXT", style="STATICTEXT+USER", text="Timer", color=(28, 32, 40, 190)),
+            child_wnd_block("ControlBar.wnd:OCLTimerProgressBar", 374, 652, 730, 674, color=(90, 120, 160, 220)),
+            push_button("ControlBar.wnd:OCLTimerSellButton", 660, 680, 730, 724, "Sell"),
+            child_wnd_block("ControlBar.wnd:BeaconWindow", 360, 596, 750, 714, color=(25, 35, 35, 190)),
+            child_wnd_block("ControlBar.wnd:EditBeaconText", 374, 610, 700, 642, window_type="TEXTENTRY", style="TEXTENTRY+USER", color=(20, 25, 25, 220)),
+            child_wnd_block("ControlBar.wnd:StaticTextBeaconLabel", 374, 650, 550, 678, window_type="STATICTEXT", style="STATICTEXT+USER", text="Beacon", color=(25, 35, 35, 190)),
+            push_button("ControlBar.wnd:ButtonDeleteBeacon", 560, 650, 630, 694, "Delete"),
+            push_button("ControlBar.wnd:ButtonClearBeaconText", 638, 650, 708, 694, "Clear"),
+            child_wnd_block("ControlBar.wnd:ObserverPlayerListWindow", 166, 604, 352, 756, color=(24, 29, 35, 190)),
+            child_wnd_block("ControlBar.wnd:ObserverPlayerInfoWindow", 780, 648, 1018, 756, color=(24, 29, 35, 190)),
+            push_button("ControlBar.wnd:ButtonCancel", 704, 666, 748, 710),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0, BOTTOMRIGHT: 1024 768, CREATIONRESOLUTION: 1024 768;
+  NAME = "ControlBar.wnd";
+  STATUS = ENABLED+IMAGE+NOFOCUS;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 255 255 255 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 255 255 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -1166,9 +1353,14 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
         project_root,
     )
     for layout_path, title in sorted(IOS_GAMEPLAY_WND_LAYOUTS.items()):
+        layout_name = Path(layout_path).name
+        if layout_name == "ControlBar.wnd":
+            layout_text = control_bar_wnd()
+        else:
+            layout_text = minimal_wnd(layout_name, title)
         write_text(
             out_dir / "Data" / "Window" / layout_path,
-            minimal_wnd(Path(layout_path).name, title),
+            layout_text,
             records,
             "ios_gameplay_window_layout",
             project_root,
