@@ -278,6 +278,23 @@
             "environment": {
                 "PKG_CONFIG_PATH": ""
             }
+        },
+        {
+            "name": "ios-simulator-vulkan",
+            "displayName": "iOS Simulator (MoltenVK + SDL3 + OpenAL) arm64",
+            "inherits": "ios-vulkan",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "description": "iOS Simulator port: arm64 simulator build for local iPhone/iPad Simulator validation. Requires the LunarG Vulkan SDK with the iOS simulator MoltenVK xcframework slice; export VULKAN_SDK=$HOME/VulkanSDK/<version>/macOS.",
+            "cacheVariables": {
+                "CMAKE_OSX_SYSROOT": "iphonesimulator",
+                "VCPKG_TARGET_TRIPLET": "arm64-ios-simulator",
+                "Vulkan_LIBRARY": "$env{VULKAN_SDK}/lib/MoltenVK.xcframework/ios-arm64_x86_64-simulator/libMoltenVK.a",
+                "Vulkan_MoltenVK_LIBRARY": "$env{VULKAN_SDK}/lib/MoltenVK.xcframework/ios-arm64_x86_64-simulator/libMoltenVK.a",
+                "Vulkan_MoltenVK_INCLUDE_DIR": "$env{VULKAN_SDK}/include"
+            },
+            "environment": {
+                "PKG_CONFIG_PATH": ""
+            }
         }
     ],
     "buildPresets": [
@@ -377,6 +394,12 @@
             "configurePreset": "mingw-w64-i686-profile",
             "displayName": "Build MinGW-w64 32-bit (i686) Profile",
             "description": "Build MinGW-w64 32-bit (i686) Profile"
+        },
+        {
+            "name": "ios-simulator-vulkan",
+            "configurePreset": "ios-simulator-vulkan",
+            "displayName": "Build iOS Simulator arm64",
+            "description": "Build Zero Hour for the iOS Simulator"
         },
         {
             "name": "linux64-deploy",

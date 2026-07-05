@@ -1093,7 +1093,19 @@ void ControlBar::init()
 		NameKeyType id;
 		id = TheNameKeyGenerator->nameToKey( "ControlBar.wnd:ControlBarParent" );
 		m_contextParent[ CP_MASTER ] = TheWindowManager->winGetWindowFromId( nullptr, id );
-	m_contextParent[ CP_MASTER ]->winGetPosition(&m_defaultControlBarPosition.x, &m_defaultControlBarPosition.y);
+		if( m_contextParent[ CP_MASTER ] == nullptr )
+		{
+			// GeneralsX @bugfix Codex 05/07/2026 The iOS bootstrap can enter control bar init before the WND is resident.
+			TheWindowManager->winCreateFromScript( "ControlBar.wnd" );
+			m_contextParent[ CP_MASTER ] = TheWindowManager->winGetWindowFromId( nullptr, id );
+		}
+		if( m_contextParent[ CP_MASTER ] == nullptr )
+		{
+			DEBUG_CRASH(( "ControlBar::init missing required window 'ControlBar.wnd:ControlBarParent'" ));
+			DEBUG_LOG(( "ControlBar::init missing required window 'ControlBar.wnd:ControlBarParent'" ));
+			return;
+		}
+		m_contextParent[ CP_MASTER ]->winGetPosition(&m_defaultControlBarPosition.x, &m_defaultControlBarPosition.y);
 
 		m_scienceLayout = TheWindowManager->winCreateLayout("GeneralsExpPoints.wnd");
 		m_scienceLayout->hide(TRUE);

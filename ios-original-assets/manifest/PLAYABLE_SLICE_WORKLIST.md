@@ -81,6 +81,7 @@ Source manifest: `build/asset-manifest/ios_asset_manifest.json`
 | `Data/INI/Default/Weather/ios_boot.ini` | 0 |
 | `Data/INI/DrawGroupInfo/ios_boot.ini` | 0 |
 | `Data/INI/Eva/ios_boot.ini` | 0 |
+| `Data/INI/GameData/ios_boot.ini` | 0 |
 | `Data/INI/FXList/ios_boot.ini` | 0 |
 | `Data/INI/GameLOD/ios_boot.ini` | 0 |
 | `Data/INI/GameLODPresets/ios_boot.ini` | 0 |

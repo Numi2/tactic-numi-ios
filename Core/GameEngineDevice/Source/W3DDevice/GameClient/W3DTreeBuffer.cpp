@@ -1243,11 +1243,25 @@ void W3DTreeBuffer::allocateTreeBuffers()
 	HRESULT hr;
 	hr = W3DShaderManager::LoadAndCreateD3DShader("shaders\\Trees.vso", &Declaration[0], 0, true, &m_dwTreeVertexShader);
 	if (FAILED(hr))
+	{
+		// GeneralsX @bugfix Codex 05/07/2026 Allow iOS/original-slice builds to use the fixed-function tree path.
+		DEBUG_LOG(("W3DTreeBuffer: Trees.vso not found, using fixed-function tree rendering"));
+		m_dwTreeVertexShader = 0;
+		m_dwTreePixelShader = 0;
 		return;
+	}
 
 	hr = W3DShaderManager::LoadAndCreateD3DShader("shaders\\Trees.pso", &Declaration[0], 0, false, &m_dwTreePixelShader);
 	if (FAILED(hr))
+	{
+		// GeneralsX @bugfix Codex 05/07/2026 Pixel tree shader is optional when vertex shader fallback is active.
+		DEBUG_LOG(("W3DTreeBuffer: Trees.pso not found, using fixed-function tree rendering"));
+		if (m_dwTreeVertexShader)
+			DX8Wrapper::_Get_D3D_Device8()->DeleteVertexShader(m_dwTreeVertexShader);
+		m_dwTreeVertexShader = 0;
+		m_dwTreePixelShader = 0;
 		return;
+	}
 }
 
 //=============================================================================
@@ -2033,7 +2047,6 @@ void W3DTreeBuffer::loadPostProcess()
 {
 	// empty. jba [8/11/2003]
 }
-
 
 
 

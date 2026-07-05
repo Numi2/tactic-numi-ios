@@ -4209,6 +4209,16 @@ void InGameUI::createControlBar()
 {
 
 	TheWindowManager->winCreateFromScript( "ControlBar.wnd" );
+
+	// GeneralsX @bugfix Codex 05/07/2026 Validate the exact control bar root before ControlBar::init dereferences it.
+	NameKeyType controlBarParentId = TheNameKeyGenerator->nameToKey( "ControlBar.wnd:ControlBarParent" );
+	GameWindow *controlBarParent = TheWindowManager->winGetWindowFromId( nullptr, controlBarParentId );
+	if( controlBarParent == nullptr )
+	{
+		DEBUG_CRASH(( "ControlBar.wnd did not create required window 'ControlBar.wnd:ControlBarParent'" ));
+		DEBUG_LOG(( "ControlBar.wnd did not create required window 'ControlBar.wnd:ControlBarParent'" ));
+	}
+
 	HideControlBar();
 /*
 	// hide all windows created from this layout

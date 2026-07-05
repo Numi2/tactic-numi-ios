@@ -9,34 +9,52 @@
 #      and their install names rewritten to @rpath.
 #   4. Everything is re-signed inside-out with the Apple Development identity and the
 #      provisioning profile from step 1, preserving entitlements.
-#   5. Optional: install to the first connected device via devicectl.
+#   5. Optional: install to the first connected device via devicectl, or the
+#      booted Simulator when --sim is used.
 #
-# Usage: ./scripts/build/ios/package-ios-zh.sh [--dev] [--install]
+# Usage: ./scripts/build/ios/package-ios-zh.sh [--dev] [--install] [--sim]
 #   --dev      skip bundling the 2.7 GB of game assets (code-only iteration)
 #   --install  install the packaged app to the first connected device
+#   --sim      package for the iOS Simulator instead of a physical device
 #   GX_ORIGINAL_ASSET_PACK=/path/to/generated/GameData
 #              bundle generated original assets instead of GX_GAME_DATA retail data
 set -euo pipefail
 
 DEV_MODE=0
 DO_INSTALL=0
+SIMULATOR_MODE=0
 for arg in "$@"; do
     case "$arg" in
         --dev)     DEV_MODE=1 ;;
         --install) DO_INSTALL=1 ;;
-        *) echo "ERROR: unknown argument '$arg' (usage: $0 [--dev] [--install])"; exit 1 ;;
+        --sim|--simulator) SIMULATOR_MODE=1 ;;
+        *) echo "ERROR: unknown argument '$arg' (usage: $0 [--dev] [--install] [--sim])"; exit 1 ;;
     esac
 done
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-PRESET="${GX_IOS_PRESET:-ios-vulkan}"
+if [[ "${SIMULATOR_MODE}" == "1" ]]; then
+    PRESET="${GX_IOS_PRESET:-ios-simulator-vulkan}"
+    XCODE_DESTINATION="generic/platform=iOS Simulator"
+    XCODE_PRODUCT_DIR="Release-iphonesimulator"
+    MOLTENVK_ARCH_DIR="ios-arm64_x86_64-simulator"
+    OUT_DIR="${PROJECT_ROOT}/build/ios-simulator-package"
+else
+    PRESET="${GX_IOS_PRESET:-ios-vulkan}"
+    XCODE_DESTINATION="generic/platform=iOS"
+    XCODE_PRODUCT_DIR="Release-iphoneos"
+    MOLTENVK_ARCH_DIR="ios-arm64"
+    OUT_DIR="${PROJECT_ROOT}/build/ios-package"
+fi
 BUILD_DIR="${PROJECT_ROOT}/build/${PRESET}"
 IOS_DIR="${PROJECT_ROOT}/ios"
 DERIVED="${IOS_DIR}/build"
-OUT_DIR="${PROJECT_ROOT}/build/ios-package"
 APP_NAME="GeneralsXZH"
 IDENTITY="${GX_SIGN_IDENTITY:-Apple Development}"
+if [[ "${SIMULATOR_MODE}" == "1" && -z "${GX_SIGN_IDENTITY:-}" ]]; then
+    IDENTITY="-"
+fi
 
 # Signing/bundle identity — override for your own Apple Developer account:
 #   GX_TEAM_ID=ABCDE12345 GX_BUNDLE_ID=com.you.generalszh ./package-ios-zh.sh --install
@@ -57,13 +75,13 @@ echo "==> Generating Xcode project (xcodegen)"
 echo "==> Building provisioning shell app"
 xcodebuild -project "${IOS_DIR}/${APP_NAME}.xcodeproj" \
     -scheme "${APP_NAME}" -configuration Release \
-    -destination 'generic/platform=iOS' \
+    -destination "${XCODE_DESTINATION}" \
     -derivedDataPath "${DERIVED}" \
     DEVELOPMENT_TEAM="${TEAM_ID}" \
     PRODUCT_BUNDLE_IDENTIFIER="${BUNDLE_ID}" \
     -allowProvisioningUpdates build | tail -3
 
-SHELL_APP="${DERIVED}/Build/Products/Release-iphoneos/${APP_NAME}.app"
+SHELL_APP="${DERIVED}/Build/Products/${XCODE_PRODUCT_DIR}/${APP_NAME}.app"
 if [[ ! -d "${SHELL_APP}" ]]; then
     echo "ERROR: shell app not produced at ${SHELL_APP}"
     exit 1
@@ -111,7 +129,13 @@ fi
 # An app without it launches and dies at Vulkan init, so missing framework is fatal.
 # (This used to live in /tmp, which the OS periodically cleans — hence the hard error.)
 MVK_ROOT="${GX_MOLTENVK_ROOT:-${HOME}/GeneralsX/MoltenVK}"
-MVK_FRAMEWORK="${GX_MOLTENVK:-${MVK_ROOT}/MoltenVK/MoltenVK/dynamic/MoltenVK.xcframework/ios-arm64/MoltenVK.framework}"
+MVK_FRAMEWORK="${GX_MOLTENVK:-${MVK_ROOT}/MoltenVK/MoltenVK/dynamic/MoltenVK.xcframework/${MOLTENVK_ARCH_DIR}/MoltenVK.framework}"
+if [[ ! -d "${MVK_FRAMEWORK}" && -n "${VULKAN_SDK:-}" ]]; then
+    MVK_FRAMEWORK="${VULKAN_SDK}/lib/MoltenVK.xcframework/${MOLTENVK_ARCH_DIR}/MoltenVK.framework"
+fi
+if [[ ! -d "${MVK_FRAMEWORK}" && -n "${VULKAN_SDK:-}" ]]; then
+    MVK_FRAMEWORK="${VULKAN_SDK}/../iOS/lib/MoltenVK.xcframework/${MOLTENVK_ARCH_DIR}/MoltenVK.framework"
+fi
 if [[ -d "${MVK_FRAMEWORK}" ]]; then
     cp -R "${MVK_FRAMEWORK}" "${APP}/Frameworks/"
     echo "    embedded MoltenVK.framework"
@@ -172,6 +196,9 @@ if [[ "${DEV_MODE}" != "1" ]]; then
             --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \
             --exclude="MoltenVK_icd.json" --exclude="dxvk.conf" --exclude="fontconfig" \
             "${ASSET_SRC}/" "${APP}/GameData/"
+        if [[ -f "${CONFIG_SRC}/dxvk.conf" ]]; then
+            cp "${CONFIG_SRC}/dxvk.conf" "${APP}/GameData/dxvk.conf"
+        fi
         if [[ -n "${ORIGINAL_SLICE_WORKLIST}" ]]; then
             echo "==> Validating bundled original slice worklist"
             "${PROJECT_ROOT}/scripts/tooling/assets/validate_ios_playable_slice.py" \
@@ -247,14 +274,29 @@ done
 if [[ -d "${APP}/Frameworks/MoltenVK.framework" ]]; then
     codesign --force --sign "${IDENTITY}" --timestamp=none "${APP}/Frameworks/MoltenVK.framework"
 fi
-codesign --force --sign "${IDENTITY}" --timestamp=none \
-    --entitlements "${ENTITLEMENTS}" "${APP}"
+if [[ -s "${ENTITLEMENTS}" ]]; then
+    codesign --force --sign "${IDENTITY}" --timestamp=none \
+        --entitlements "${ENTITLEMENTS}" "${APP}"
+else
+    codesign --force --sign "${IDENTITY}" --timestamp=none "${APP}"
+fi
 
 codesign --verify --deep "${APP}" && echo "    signature OK"
 
 echo "==> App ready: ${APP}"
 
 if [[ "${DO_INSTALL}" == "1" ]]; then
+    if [[ "${SIMULATOR_MODE}" == "1" ]]; then
+        echo "==> Installing to booted iOS Simulator"
+        if ! xcrun simctl list devices booted | grep -q 'Booted'; then
+            echo "ERROR: no booted iOS Simulator found."
+            exit 1
+        fi
+        xcrun simctl install booted "${APP}"
+        xcrun simctl launch booted "${BUNDLE_ID}" || true
+        echo "==> Installed with bundled GameData: ${APP}/GameData"
+        exit 0
+    fi
     echo "==> Installing to connected device"
     DEVICE_ID=$(xcrun devicectl list devices 2>/dev/null | awk '/connected/{print $(NF-2); exit}')
     if [[ -z "${DEVICE_ID}" ]]; then

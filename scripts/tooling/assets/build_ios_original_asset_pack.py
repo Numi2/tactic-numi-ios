@@ -215,6 +215,7 @@ MANDATORY_BOOT_INI_DIRS = (
     "Credits",
     "DrawGroupInfo",
     "Eva",
+    "GameData",
     "GameLOD",
     "GameLODPresets",
     "InGameUI",
@@ -462,22 +463,25 @@ IOS_BOOT_NOOP_INI = """; Generated iOS boot no-op.
 """
 
 
-def boot_ini_for(dirname: str) -> str:
+def boot_ini_for(dirname: str, *, default_folder: bool = False) -> str:
     if dirname == "AIData":
         return IOS_AI_DATA
     if dirname == "AudioSettings":
         return IOS_AUDIO_SETTINGS
-    if dirname == "SoundEffects":
+    if dirname == "SoundEffects" and default_folder:
         return IOS_SILENT_SOUND_EFFECTS
     if dirname == "Music":
-        return IOS_SILENT_MUSIC
+        return IOS_BOOT_NOOP_INI
     if dirname == "MiscAudio":
         return IOS_MISC_AUDIO
-    if dirname in ("Speech", "Voice"):
+    if dirname in ("Speech", "Voice") and default_folder:
         return "DialogEvent DefaultDialog\n  Volume = 0%\nEnd\n"
     return IOS_BOOT_NOOP_INI
 
-IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
+IOS_BOOT_LANGUAGE = """Language
+  UnicodeFontName = Arial
+End
+"""
 CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
 CSF_LABEL = (ord("L") << 24) | (ord("B") << 16) | (ord("L") << 8) | ord(" ")
 CSF_STRING = (ord("S") << 24) | (ord("T") << 16) | (ord("R") << 8) | ord(" ")
@@ -517,6 +521,8 @@ IOS_GAMEPLAY_WND_LAYOUTS = {
     "Menus/Victorious.wnd": "Victory",
 }
 IOS_CSF_LABELS = {
+    "ERROR:D3DFailurePrompt": "Renderer initialization failed",
+    "ERROR:D3DFailureMessage": "The iOS renderer could not finish Direct3D initialization.",
     "GUI:Observer": "Observer",
     "INI:FactionCivilian": "Civilian",
     "INI:FactionIOS": "iOS Task Force",
@@ -2629,7 +2635,7 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     for dirname in DEFAULT_BOOT_INI_DIRS:
         write_text(
             out_dir / "Data" / "INI" / "Default" / dirname / "ios_boot.ini",
-            boot_ini_for(dirname),
+            boot_ini_for(dirname, default_folder=True),
             records,
             "ios_boot_default_ini",
             project_root,

@@ -1,5 +1,5 @@
 {
-  "asset_count": 313,
+  "asset_count": 314,
   "assets": [
     {
       "bytes": 6876,
@@ -1332,10 +1332,10 @@
       "source": "ios/config/dxvk.conf"
     },
     {
-      "bytes": 43,
+      "bytes": 39,
       "path": "ios-original-assets/generated/GameData/Data/English/Language.ini",
       "role": "localization_boot_config",
-      "sha256": "677227ed9d8a7e07b1e7b7d0d499c68053441dc4bf8b6679e973949aad2cfc7c",
+      "sha256": "44f35f1b0529723b3a51aed0d4563af93ab400c3dee547223f491b1ec6377433",
       "source": "generated"
     },
     {
@@ -1346,10 +1346,10 @@
       "source": "generated"
     },
     {
-      "bytes": 6694,
+      "bytes": 6955,
       "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
       "role": "localization_boot_csf",
-      "sha256": "af455bb2930b921907e6b2c14f67d879bdbe8581e96e5f695aa9c2f49e9514b0",
+      "sha256": "f0f0830a1c4edebacc326af373f5eb7eca2121b62fb70689900e6f72a341e9b4",
       "source": "generated"
     },
     {
@@ -1402,10 +1402,10 @@
       "source": "generated"
     },
     {
-      "bytes": 63,
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Music/ios_boot.ini",
       "role": "ios_boot_default_ini",
-      "sha256": "6860be744016b8eda46e0bdca9f3891734a73ded839b8b1d255c8f4e169325d4",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
       "source": "generated"
     },
     {
@@ -1599,6 +1599,13 @@
     },
     {
       "bytes": 324,
+      "path": "ios-original-assets/generated/GameData/Data/INI/GameData/ios_boot.ini",
+      "role": "ios_boot_ini",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
+      "source": "generated"
+    },
+    {
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/GameLOD/ios_boot.ini",
       "role": "ios_boot_ini",
       "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
@@ -1633,10 +1640,10 @@
       "source": "generated"
     },
     {
-      "bytes": 63,
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/Music/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "6860be744016b8eda46e0bdca9f3891734a73ded839b8b1d255c8f4e169325d4",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
       "source": "generated"
     },
     {
@@ -1794,24 +1801,24 @@
       "source": "generated"
     },
     {
-      "bytes": 613,
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/SoundEffects/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "97a4a26bcdb8581ed0a25df8efbec42869d73673c12c1cda816a52aaa26d0175",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
       "source": "generated"
     },
     {
-      "bytes": 44,
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/Speech/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
       "source": "generated"
     },
     {
-      "bytes": 44,
+      "bytes": 324,
       "path": "ios-original-assets/generated/GameData/Data/INI/Voice/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
+      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
       "source": "generated"
     },
     {

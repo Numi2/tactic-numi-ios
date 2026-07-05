@@ -304,6 +304,12 @@
     {
       "bytes": 324,
       "category": "ini",
+      "path": "Data/INI/GameData/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
       "path": "Data/INI/FXList/ios_boot.ini",
       "source_references": []
     },
