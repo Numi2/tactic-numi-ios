@@ -149,8 +149,11 @@ IOS_CSF_LABELS = {
     "INI:IOSCommandCenter": "Command Center",
     "INI:IOSPowerPlant": "Power Plant",
     "INI:IOSBarracks": "Barracks",
+    "INI:IOSDozer": "Builder",
     "INI:IOSRanger": "Ranger",
     "INI:IOSScoutVehicle": "Scout Vehicle",
+    "INI:Command_ConstructIOSDozer": "Build Builder",
+    "INI:Command_ConstructIOSDozerDescription": "Produces a construction unit.",
     "INI:Command_ConstructIOSPowerPlant": "Build Power Plant",
     "INI:Command_ConstructIOSPowerPlantDescription": "Builds a compact generator for the iOS force.",
     "INI:Command_ConstructIOSBarracks": "Build Barracks",
@@ -191,6 +194,7 @@ PlayerTemplate FactionIOS
   StartingBuilding = IOSCommandCenter
   StartingUnit0 = IOSRanger
   StartingUnit1 = IOSScoutVehicle
+  StartingUnit2 = IOSDozer
   PurchaseScienceCommandSetRank1 = IOSScienceCommandSet
   PurchaseScienceCommandSetRank3 = IOSScienceCommandSet
   PurchaseScienceCommandSetRank8 = IOSScienceCommandSet
@@ -212,6 +216,14 @@ CommandButton Command_ConstructIOSBarracks
   TextLabel = INI:Command_ConstructIOSBarracks
   DescriptLabel = INI:Command_ConstructIOSBarracksDescription
   ButtonImage = IOSBarracksIcon
+End
+
+CommandButton Command_ConstructIOSDozer
+  Command = UNIT_BUILD
+  Object = IOSDozer
+  TextLabel = INI:Command_ConstructIOSDozer
+  DescriptLabel = INI:Command_ConstructIOSDozerDescription
+  ButtonImage = IOSDozerIcon
 End
 
 CommandButton Command_ConstructIOSScoutVehicle
@@ -246,6 +258,12 @@ End
 """
 
 IOS_SLICE_COMMAND_SET = """CommandSet IOSCommandCenterCommandSet
+  1 = Command_ConstructIOSDozer
+  13 = Command_IOSSelectAllOfType
+  14 = Command_IOSStop
+End
+
+CommandSet IOSDozerCommandSet
   1 = Command_ConstructIOSPowerPlant
   2 = Command_ConstructIOSBarracks
   13 = Command_IOSSelectAllOfType
@@ -453,6 +471,44 @@ Object IOSBarracks
   End
   ButtonImage = IOSBarracksIcon
   SelectPortrait = IOSBarracksIcon
+End
+
+Object IOSDozer
+  DisplayName = INI:IOSDozer
+  Side = IOS
+  EditorSorting = VEHICLE
+  KindOf = PRELOAD SELECTABLE VEHICLE DOZER SCORE
+  Buildable = Yes
+  BuildCost = 1000
+  BuildTime = 5.0
+  CommandSet = IOSDozerCommandSet
+  VisionRange = 150.0
+  ShroudClearingRange = 180.0
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = ShatterPlanes0
+    End
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSVehicleArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 300.0
+    InitialHealth = 300.0
+  End
+  Behavior = DozerAIUpdate ModuleTag_AI
+    RepairHealthPercentPerSecond = 2%
+    BoredTime = 5000
+    BoredRange = 150
+  End
+  LocomotorSet = SET_NORMAL IOSVehicleLocomotor
+  Behavior = PhysicsBehavior ModuleTag_Physics
+    Mass = 40.0
+  End
+  ButtonImage = IOSDozerIcon
+  SelectPortrait = IOSDozerIcon
 End
 
 Object IOSRanger
@@ -898,6 +954,7 @@ def write_playable_slice_assets(
         ("IOSCommandCenterIcon.tga", (44, 120, 220, 255)),
         ("IOSPowerPlantIcon.tga", (236, 190, 52, 255)),
         ("IOSBarracksIcon.tga", (80, 180, 120, 255)),
+        ("IOSDozerIcon.tga", (190, 170, 90, 255)),
         ("IOSRangerIcon.tga", (210, 230, 245, 255)),
         ("IOSScoutVehicleIcon.tga", (120, 150, 165, 255)),
         ("IOSStopIcon.tga", (220, 62, 54, 255)),
