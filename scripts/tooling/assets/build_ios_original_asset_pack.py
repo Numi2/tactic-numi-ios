@@ -2065,6 +2065,13 @@ def write_playable_slice_assets(
         ("IOSBeaconIcon.tga", (236, 84, 76, 255)),
         ("IOSGeneralPowersIcon.tga", (110, 104, 224, 255)),
         ("IOSToggleControlBarIcon.tga", (82, 210, 164, 255)),
+        ("IOSVeterancy1Icon.tga", (104, 208, 132, 255)),
+        ("IOSVeterancy2Icon.tga", (84, 178, 232, 255)),
+        ("IOSVeterancy3Icon.tga", (236, 202, 78, 255)),
+        ("IOSAmmoFullIcon.tga", (232, 118, 68, 255)),
+        ("IOSAmmoEmptyIcon.tga", (92, 102, 112, 255)),
+        ("IOSContainerFullIcon.tga", (126, 216, 184, 255)),
+        ("IOSContainerEmptyIcon.tga", (76, 88, 96, 255)),
     )
     for filename, color in icon_colors:
         write_radial_tga(
@@ -2087,6 +2094,13 @@ def write_playable_slice_assets(
             ("SSChevron1L", "IOSRangerIcon.tga", 64, 64),
             ("SSChevron2L", "IOSScoutVehicleIcon.tga", 64, 64),
             ("SSChevron3L", "IOSCommandCenterIcon.tga", 64, 64),
+            ("SCVeter1", "IOSVeterancy1Icon.tga", 64, 64),
+            ("SCVeter2", "IOSVeterancy2Icon.tga", 64, 64),
+            ("SCVeter3", "IOSVeterancy3Icon.tga", 64, 64),
+            ("SCPAmmoFull", "IOSAmmoFullIcon.tga", 64, 64),
+            ("SCPAmmoEmpty", "IOSAmmoEmptyIcon.tga", 64, 64),
+            ("SCPPipFull", "IOSContainerFullIcon.tga", 64, 64),
+            ("SCPPipEmpty", "IOSContainerEmptyIcon.tga", 64, 64),
         )
     )
     mapped_image_text = "".join(

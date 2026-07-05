@@ -1,5 +1,5 @@
 {
-  "asset_count": 234,
+  "asset_count": 241,
   "assets": [
     {
       "bytes": 6876,
@@ -1598,10 +1598,59 @@
       "source": "generated"
     },
     {
-      "bytes": 3829,
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSVeterancy1Icon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "010c35564afa93966a20e087f4f8abfc43cc122f44245914db3c4d6a2c3d96d8",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSVeterancy2Icon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "757d9ef0f3b09fbc383f337ee70d9d39de421a3aa4ea826f819972ebf1dde137",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSVeterancy3Icon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "0d1a1616d497f47aa5d309a8d8100ecd91d7a88abcb4c2c67b05c8917620cde0",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSAmmoFullIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "ac8c7cc2deb62642746ad1e25a097cb13efdc8330df4edd3c6fab45c353654ac",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSAmmoEmptyIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "81d5c4224b6ec98bbe0c9175d2c5313b244667ddb1b3128723a2e861670827d7",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSContainerFullIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "63e50b2f2cd4019469c4da788409e9710450738dd0b3a75dfa73cc4986055457",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSContainerEmptyIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "80b967bd39bfce86d78c54566ac21cbfbb3daf923108d3469b06fd7d2c95c613",
+      "source": "generated"
+    },
+    {
+      "bytes": 6156,
       "path": "ios-original-assets/generated/GameData/Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini",
       "role": "ios_playable_slice_mapped_images",
-      "sha256": "611032d8c8cfefb900438db2ecfcb0eba1b8850d38be1819cfbc0789829edb2a",
+      "sha256": "928efdd8526e632b87a3a1d41d224913f124bcc29908cc9203426a5c8f4f1b16",
       "source": "generated"
     },
     {
