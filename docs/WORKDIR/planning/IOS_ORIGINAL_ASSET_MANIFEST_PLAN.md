@@ -44,8 +44,11 @@ For deterministic source validation, add `--hash` to include SHA-256 hashes for
 every loose file.
 
 The current scanner inventories loose files, indexes `.big` directory entries,
-and can parse small text entries inside archives for dependency references. It
-does not yet decode binary formats such as W3D, DDS, map binaries, or CSF.
+parses small text entries inside archives, extracts typed INI dependencies for
+common model/UI/audio/texture fields, scans W3D chunk strings for texture/model
+references, scans binary map/UI payloads for embedded asset tokens, and indexes
+CSF labels. It does not yet fully decode every W3D struct, DDS metadata, or
+every map/CSF binary field.
 
 ## Required Asset Buckets
 
@@ -134,11 +137,11 @@ The first generated batch should be a complete vertical slice:
 
 ## Next Engineering Tasks
 
-1. Parse common INI fields into typed dependencies instead of regex-only text
-   references.
-2. Decode W3D dependencies for textures, animations, skeletons, and hierarchy
-   links.
-3. Decode map and UI binary formats where references are not visible as text.
+1. Expand typed INI coverage for less common object, weapon, FX, science, and
+   command-button fields.
+2. Deepen W3D dependency decoding for animation hierarchy links, skeletons, LOD
+   collections, and texture replacer structs beyond first-pass string scanning.
+3. Decode map and UI binary formats where references are not visible as strings.
 4. Generate per-map and per-faction preload groups.
 5. Add budget checks for texture dimensions, model LOD presence, and oversized
    audio/video files.

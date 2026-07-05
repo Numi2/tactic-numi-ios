@@ -31,9 +31,34 @@ ASSET_CATEGORIES = {
 }
 
 TEXT_EXTENSIONS = {".ini", ".wnd", ".str", ".txt", ".const", ".dat", ".map"}
+BINARY_DEP_EXTENSIONS = {".w3d", ".csf", ".map", ".scb", ".wnd"}
 REFERENCE_RE = re.compile(
     r"(?i)([A-Za-z0-9_./\\ -]+\.(?:w3d|dds|tga|png|bmp|wav|mp3|bik|vp6|ini|wnd|csf|str|map|scb|ttf|otf))"
 )
+TOKEN_RE = re.compile(rb"[A-Za-z0-9_./\\:-]{3,260}")
+TEXTURE_EXTENSIONS = {".dds", ".tga", ".png", ".bmp", ".jpg", ".jpeg"}
+MODEL_EXTENSIONS = {".w3d"}
+AUDIO_EXTENSIONS = {".wav", ".mp3", ".mpa", ".aud"}
+VIDEO_EXTENSIONS = {".bik", ".vp6", ".avi", ".mp4", ".mov"}
+UI_EXTENSIONS = {".wnd", ".apt", ".const"}
+MAP_EXTENSIONS = {".map", ".scb"}
+LOCALIZATION_EXTENSIONS = {".csf", ".str"}
+FONT_EXTENSIONS = {".ttf", ".otf", ".fnt"}
+KNOWN_EXTENSIONS = (
+    TEXTURE_EXTENSIONS | MODEL_EXTENSIONS | AUDIO_EXTENSIONS | VIDEO_EXTENSIONS |
+    UI_EXTENSIONS | MAP_EXTENSIONS | LOCALIZATION_EXTENSIONS | FONT_EXTENSIONS |
+    {".ini"}
+)
+TEXTURE_NAME_CHUNK = 0x00000032
+TEXTURE_REPLACER_CHUNK = 0x00000062
+HLOD_SUB_OBJECT_CHUNK = 0x00000706
+LOD_MODEL_COLLECTION_CHUNK = 0x00000741
+W3D_CONTAINER_CHUNKS = {
+    0x00000000, 0x00000030, 0x00000031, 0x00000038, 0x00000040,
+    0x00000048, 0x00000200, 0x00000240, 0x00000300, 0x00000400,
+    0x00000700, 0x00000702, 0x00000704, 0x00000705, 0x00000740,
+    0x00000800, 0x00000900, 0x00000A00,
+}
 IMPLICIT_REFERENCE_KEYS = {
     "model",
     "animation",
@@ -53,7 +78,30 @@ IMPLICIT_REFERENCE_KEYS = {
     "window",
     "layout",
 }
+INI_KEY_CATEGORY_HINTS = {
+    "model": "models",
+    "modelname": "models",
+    "animation": "models",
+    "idleanimation": "models",
+    "animationname": "models",
+    "draw": "models",
+    "texture": "textures",
+    "image": "textures",
+    "mappedimage": "textures",
+    "buttonimage": "textures",
+    "unitportrait": "textures",
+    "portrait": "textures",
+    "loadscreen": "textures",
+    "sound": "audio",
+    "soundname": "audio",
+    "voice": "audio",
+    "filename": "other",
+    "file": "other",
+    "window": "ui",
+    "layout": "ui",
+}
 MAX_ARCHIVED_TEXT_BYTES = 8 * 1024 * 1024
+MAX_ARCHIVED_BINARY_PARSE_BYTES = 64 * 1024 * 1024
 
 
 def normalize_rel(path):
@@ -116,6 +164,12 @@ def decode_text_bytes(data):
         except UnicodeDecodeError:
             continue
     return data.decode("utf-8", errors="replace")
+
+
+def read_archive_bytes(archive_path, offset, size):
+    with archive_path.open("rb") as handle:
+        handle.seek(offset)
+        return handle.read(size)
 
 
 def parse_big_archive(path, extract_text=False):
@@ -183,6 +237,40 @@ def extract_references_from_text(content):
     return sorted(set(refs), key=str.lower)
 
 
+def infer_reference_category(ref, hint=None):
+    ext = Path(ref.replace("\\", "/")).suffix.lower()
+    if ext in MODEL_EXTENSIONS:
+        return "models"
+    if ext in TEXTURE_EXTENSIONS:
+        return "textures"
+    if ext in AUDIO_EXTENSIONS:
+        return "audio"
+    if ext in VIDEO_EXTENSIONS:
+        return "video"
+    if ext in UI_EXTENSIONS:
+        return "ui"
+    if ext in MAP_EXTENSIONS:
+        return "maps"
+    if ext in LOCALIZATION_EXTENSIONS:
+        return "localization"
+    if ext in FONT_EXTENSIONS:
+        return "fonts"
+    if ext == ".ini":
+        return "ini"
+    return hint or "other"
+
+
+def make_dependency(source, ref, kind, hint=None, origin=None):
+    ref = ref.strip().strip('"').strip("'").replace("\\", "/")
+    return {
+        "source": source,
+        "reference": ref,
+        "kind": kind,
+        "category_hint": infer_reference_category(ref, hint),
+        "origin": origin or kind,
+    }
+
+
 def extract_implicit_references(content):
     refs = []
     assignment_re = re.compile(r"(?i)^\s*([A-Za-z0-9_]+)\s*=\s*([A-Za-z0-9_./\\:-]+)", re.MULTILINE)
@@ -195,11 +283,137 @@ def extract_implicit_references(content):
     return refs
 
 
+def extract_typed_text_dependencies(source, content):
+    deps = []
+    seen = set()
+    for match in REFERENCE_RE.finditer(content):
+        ref = match.group(1).strip().strip('"').strip("'").replace("\\", "/")
+        dep = make_dependency(source, ref, "text_explicit", origin="regex")
+        key = (dep["source"], dep["reference"], dep["kind"], dep["origin"])
+        if key not in seen:
+            deps.append(dep)
+            seen.add(key)
+
+    assignment_re = re.compile(r"(?i)^\s*([A-Za-z0-9_]+)\s*=\s*([A-Za-z0-9_./\\:-]+)", re.MULTILINE)
+    for key_name, value in assignment_re.findall(content):
+        key_lower = key_name.lower()
+        if key_lower not in IMPLICIT_REFERENCE_KEYS:
+            continue
+        hint = INI_KEY_CATEGORY_HINTS.get(key_lower)
+        if "." not in Path(value).name:
+            if hint == "models":
+                value = f"{value}.w3d"
+            elif hint == "ui":
+                value = f"{value}.wnd"
+            else:
+                continue
+        dep = make_dependency(source, value, "ini_field", hint=hint, origin=key_name)
+        key = (dep["source"], dep["reference"], dep["kind"], dep["origin"])
+        if key not in seen:
+            deps.append(dep)
+            seen.add(key)
+    return deps
+
+
+def printable_token_references(data):
+    refs = []
+    for match in TOKEN_RE.finditer(data):
+        token = match.group(0).decode("ascii", errors="ignore").strip("\x00")
+        token = token.replace("\\", "/")
+        ext = Path(token).suffix.lower()
+        if ext in KNOWN_EXTENSIONS:
+            refs.append(token)
+    return refs
+
+
+def parse_w3d_dependencies(source, data):
+    deps = []
+    diagnostics = []
+    seen = set()
+
+    def add(ref, kind, origin):
+        dep = make_dependency(source, ref, kind, origin=origin)
+        key = (dep["source"], dep["reference"], dep["kind"], dep["origin"])
+        if key not in seen:
+            deps.append(dep)
+            seen.add(key)
+
+    def walk(start, end, depth=0):
+        pos = start
+        while pos + 8 <= end:
+            chunk_id, raw_size = struct.unpack_from("<II", data, pos)
+            size = raw_size & 0x7FFFFFFF
+            has_children = bool(raw_size & 0x80000000) or chunk_id in W3D_CONTAINER_CHUNKS
+            payload_start = pos + 8
+            payload_end = payload_start + size
+            if size < 0 or payload_end > end or payload_end < payload_start:
+                break
+            payload = data[payload_start:payload_end]
+            if chunk_id == TEXTURE_NAME_CHUNK:
+                name = payload.split(b"\0", 1)[0].decode("ascii", errors="ignore")
+                if name:
+                    add(name, "w3d_texture", "W3D_CHUNK_TEXTURE_NAME")
+            elif chunk_id in {TEXTURE_REPLACER_CHUNK, HLOD_SUB_OBJECT_CHUNK, LOD_MODEL_COLLECTION_CHUNK}:
+                for ref in printable_token_references(payload):
+                    add(ref, "w3d_struct_string", f"chunk_0x{chunk_id:08x}")
+            if has_children and depth < 64:
+                walk(payload_start, payload_end, depth + 1)
+            else:
+                for ref in printable_token_references(payload):
+                    add(ref, "w3d_binary_string", f"chunk_0x{chunk_id:08x}")
+            pos = payload_end
+        if pos != end and depth == 0:
+            diagnostics.append({"source": source, "warning": f"stopped W3D parse at byte {pos} of {end}"})
+
+    walk(0, len(data))
+    return deps, diagnostics
+
+
+def parse_csf_dependencies(source, data):
+    labels = []
+    diagnostics = []
+    try:
+        if len(data) < 24 or data[:4] != b" FSC":
+            return [], [{"source": source, "warning": "not a recognized CSF file"}]
+        label_count = struct.unpack_from("<I", data, 8)[0]
+        pos = 24
+        for _ in range(label_count):
+            if pos + 12 > len(data):
+                break
+            marker = data[pos:pos + 4]
+            pos += 4
+            if marker not in {b" LBL", b"LBL "}:
+                break
+            string_count = struct.unpack_from("<I", data, pos)[0]
+            pos += 4
+            name_len = struct.unpack_from("<I", data, pos)[0]
+            pos += 4
+            name = data[pos:pos + name_len].decode("ascii", errors="replace")
+            pos += name_len
+            labels.append({"source": source, "label": name, "string_count": string_count})
+            for _ in range(string_count):
+                if pos + 8 > len(data):
+                    break
+                string_marker = data[pos:pos + 4]
+                pos += 4
+                length = struct.unpack_from("<I", data, pos)[0]
+                pos += 4
+                pos += length * 2
+                if string_marker == b"WRTS" and pos + 4 <= len(data):
+                    extra_len = struct.unpack_from("<I", data, pos)[0]
+                    pos += 4 + extra_len
+    except (struct.error, UnicodeDecodeError) as exc:
+        diagnostics.append({"source": source, "warning": f"CSF parse failed: {exc}"})
+    return [], diagnostics + labels
+
+
 def collect(root, include_hashes=False, index_archives=True, parse_archived_text=True):
     files = []
     archive_entries = []
     archive_errors = []
     references = defaultdict(list)
+    typed_dependencies = []
+    parser_diagnostics = []
     categories = Counter()
     extensions = Counter()
     total_bytes = 0
@@ -228,6 +442,27 @@ def collect(root, include_hashes=False, index_archives=True, parse_archived_text
         refs = extract_references(path)
         if refs:
             references[rel] = refs
+        if ext in TEXT_EXTENSIONS:
+            try:
+                typed_dependencies.extend(extract_typed_text_dependencies(rel, read_text_lossy(path)))
+            except OSError as exc:
+                parser_diagnostics.append({"source": rel, "warning": str(exc)})
+        if ext in BINARY_DEP_EXTENSIONS and ext not in TEXT_EXTENSIONS:
+            try:
+                data = path.read_bytes()
+                if ext == ".w3d":
+                    deps, diagnostics = parse_w3d_dependencies(rel, data)
+                    typed_dependencies.extend(deps)
+                    parser_diagnostics.extend(diagnostics)
+                elif ext == ".csf":
+                    deps, diagnostics = parse_csf_dependencies(rel, data)
+                    typed_dependencies.extend(deps)
+                    parser_diagnostics.extend(diagnostics)
+                else:
+                    for ref in printable_token_references(data):
+                        typed_dependencies.append(make_dependency(rel, ref, "binary_string", origin=ext))
+            except OSError as exc:
+                parser_diagnostics.append({"source": rel, "warning": str(exc)})
         if index_archives and ext == ".big":
             entries, archived_text, errors = parse_big_archive(
                 path, extract_text=parse_archived_text
@@ -243,9 +478,38 @@ def collect(root, include_hashes=False, index_archives=True, parse_archived_text
         refs = extract_references_from_text(content)
         if refs:
             references[source] = refs
+        typed_dependencies.extend(extract_typed_text_dependencies(source, content))
         for item in archive_entries:
             if source.endswith(":" + item["archive_entry"]):
                 break
+
+    if index_archives:
+        for item in archive_entries:
+            ext = item["extension"]
+            if ext not in BINARY_DEP_EXTENSIONS or ext in TEXT_EXTENSIONS:
+                continue
+            if item["bytes"] > MAX_ARCHIVED_BINARY_PARSE_BYTES:
+                parser_diagnostics.append({
+                    "source": f"{item['path']}:{item['archive_entry']}",
+                    "warning": f"skipped binary parse above {MAX_ARCHIVED_BINARY_PARSE_BYTES} bytes",
+                })
+                continue
+            source = f"{item['path']}:{item['archive_entry']}"
+            try:
+                data = read_archive_bytes(root / item["path"], item["offset"], item["bytes"])
+                if ext == ".w3d":
+                    deps, diagnostics = parse_w3d_dependencies(source, data)
+                    typed_dependencies.extend(deps)
+                    parser_diagnostics.extend(diagnostics)
+                elif ext == ".csf":
+                    deps, diagnostics = parse_csf_dependencies(source, data)
+                    typed_dependencies.extend(deps)
+                    parser_diagnostics.extend(diagnostics)
+                else:
+                    for ref in printable_token_references(data):
+                        typed_dependencies.append(make_dependency(source, ref, "binary_string", origin=ext))
+            except OSError as exc:
+                parser_diagnostics.append({"source": source, "warning": str(exc)})
 
     virtual_files = []
     virtual_files.extend(files)
@@ -263,19 +527,37 @@ def collect(root, include_hashes=False, index_archives=True, parse_archived_text
     indexed_paths = {normalize_asset_key(item["path"]): item for item in virtual_files}
     missing_refs = []
     resolved_refs = []
+    all_reference_records = []
     for source, refs in references.items():
         for ref in refs:
-            ref_key = normalize_asset_key(ref)
-            name_key = basename_key(ref)
-            target = indexed_paths.get(ref_key) or indexed_names.get(name_key)
-            record = {"source": source, "reference": ref}
-            if target:
-                record["target"] = target["path"]
-                if "archive_ref" in target:
-                    record["archive_ref"] = target["archive_ref"]
-                resolved_refs.append(record)
-            else:
-                missing_refs.append(record)
+            all_reference_records.append({"source": source, "reference": ref})
+    all_reference_records.extend(typed_dependencies)
+
+    deduped_reference_records = []
+    seen_reference_records = set()
+    for record in all_reference_records:
+        key = (
+            record.get("source"),
+            normalize_asset_key(record.get("reference", "")),
+        )
+        if key in seen_reference_records:
+            continue
+        seen_reference_records.add(key)
+        deduped_reference_records.append(record)
+
+    for record in deduped_reference_records:
+        ref = record["reference"]
+        ref_key = normalize_asset_key(ref)
+        name_key = basename_key(ref)
+        target = indexed_paths.get(ref_key) or indexed_names.get(name_key)
+        resolved_record = dict(record)
+        if target:
+            resolved_record["target"] = target["path"]
+            if "archive_ref" in target:
+                resolved_record["archive_ref"] = target["archive_ref"]
+            resolved_refs.append(resolved_record)
+        else:
+            missing_refs.append(dict(record))
 
     archives = [item for item in files if item["category"] == "archives"]
     required_by_category = Counter()
@@ -295,6 +577,8 @@ def collect(root, include_hashes=False, index_archives=True, parse_archived_text
             "archive_count": len(archives),
             "archive_error_count": len(archive_errors),
             "reference_sources": len(references),
+            "typed_dependency_count": len(typed_dependencies),
+            "parser_diagnostic_count": len(parser_diagnostics),
             "resolved_reference_count": len(resolved_refs),
             "missing_reference_count": len(missing_refs),
             "required_by_category": dict(sorted(required_by_category.items())),
@@ -303,6 +587,8 @@ def collect(root, include_hashes=False, index_archives=True, parse_archived_text
         "archive_entries": archive_entries,
         "archive_errors": archive_errors,
         "references": dict(sorted(references.items())),
+        "typed_dependencies": typed_dependencies,
+        "parser_diagnostics": parser_diagnostics,
         "resolved_references": resolved_refs,
         "missing_references": missing_refs,
         "archives": archives,
@@ -340,6 +626,8 @@ def write_markdown(manifest, path):
         f"- BIG archives requiring extraction: {summary['archive_count']}",
         f"- BIG archive parse errors: {summary.get('archive_error_count', 0)}",
         f"- Text files with references: {summary['reference_sources']}",
+        f"- Typed dependencies: {summary.get('typed_dependency_count', 0)}",
+        f"- Parser diagnostics: {summary.get('parser_diagnostic_count', 0)}",
         f"- Resolved references: {summary['resolved_reference_count']}",
         f"- Hard missing references: {summary['missing_reference_count']}",
         "",
@@ -433,6 +721,18 @@ def write_markdown(manifest, path):
         ])
         for item in manifest["archive_errors"][:100]:
             lines.append(f"| `{item['archive']}` | `{item['error']}` |")
+    if manifest.get("parser_diagnostics"):
+        lines.extend([
+            "",
+            "## Parser Diagnostics",
+            "",
+            "| Source | Detail |",
+            "|---|---|",
+        ])
+        for item in manifest["parser_diagnostics"][:100]:
+            source = item.get("source", "")
+            detail = item.get("warning") or item.get("label") or str(item)
+            lines.append(f"| `{source}` | `{detail}` |")
 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
