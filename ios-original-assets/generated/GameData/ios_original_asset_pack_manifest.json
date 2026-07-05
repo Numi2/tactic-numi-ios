@@ -1,5 +1,5 @@
 {
-  "asset_count": 116,
+  "asset_count": 128,
   "assets": [
     {
       "bytes": 1068,
@@ -167,6 +167,90 @@
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/LegalPage.wnd",
       "role": "ios_boot_window_layout",
       "sha256": "12b654b3b67cedca36efe43250d24785629aaac74104d3dee49fc03580da6c55",
+      "source": "generated"
+    },
+    {
+      "bytes": 978,
+      "path": "ios-original-assets/generated/GameData/Data/Window/ControlBarPopupDescription.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "35b1cc2bf8c82a3173a0c4beebfdffab1fef20e1e0995a0952f2cfb1937f4dc6",
+      "source": "generated"
+    },
+    {
+      "bytes": 969,
+      "path": "ios-original-assets/generated/GameData/Data/Window/GeneralsExpPoints.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "7464f21db4d3050f91e3710fb72df308dc5f16595cd59a68955c3323121b334f",
+      "source": "generated"
+    },
+    {
+      "bytes": 962,
+      "path": "ios-original-assets/generated/GameData/Data/Window/InGameChat.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "d9bbe632309dfd75eb06d3c45df5650aa6718a770de4774ed6316eabb7b71202",
+      "source": "generated"
+    },
+    {
+      "bytes": 956,
+      "path": "ios-original-assets/generated/GameData/Data/Window/MOTD.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "65aecb87436e045802db27f952f19e809e97ceb8e81411522edbca4acd99893e",
+      "source": "generated"
+    },
+    {
+      "bytes": 2009,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/CRCMismatch.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "3373222fb39686e8329e54968ad94743f37b547c3ff1b82ce4e4caa91352fe3f",
+      "source": "generated"
+    },
+    {
+      "bytes": 1986,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/Defeat.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "4d0edd1782458608915e484a7c331657f4d30557c7f0332349899177281242e7",
+      "source": "generated"
+    },
+    {
+      "bytes": 1996,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/LocalDefeat.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "9d0a29eefc5789c8390827bf82b3e0978c4dba623bb5dff3bf5d26944b543bc4",
+      "source": "generated"
+    },
+    {
+      "bytes": 2005,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ObserverQuit.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "d09d7626c86f351d167d7ce4285ec017c13c6aa15698dacab141cc297d946db1",
+      "source": "generated"
+    },
+    {
+      "bytes": 969,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/PopupCommunicator.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "fd96c7492999fc6d847cb0e0b1d3d1815695c1a118951e1c59702c18ef3711ef",
+      "source": "generated"
+    },
+    {
+      "bytes": 1995,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ScoreScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "bae661b24a0cd61fec5bb176856c70dfbd84eaef90087587bdbe3bcb01a68e5a",
+      "source": "generated"
+    },
+    {
+      "bytes": 1995,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/Victorious.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "aaf4598438d8f6457b8ec23361a08c970f72fe9022e78d7447523e05e6919c34",
+      "source": "generated"
+    },
+    {
+      "bytes": 968,
+      "path": "ios-original-assets/generated/GameData/Data/Window/controlBarHidden.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "2f3dbffafa8bf2ce27413b005dbd36fe57f39b929b16caab0b96da48c889d26d",
       "source": "generated"
     },
     {

@@ -128,6 +128,20 @@ CSF_VERSION = 3
 LANGUAGE_ID_US = 0
 IOS_SLICE_MAP_NAME = "IOSPlayableSlice"
 IOS_SLICE_MAP_PATH = f"Maps/{IOS_SLICE_MAP_NAME}/{IOS_SLICE_MAP_NAME}.map"
+IOS_GAMEPLAY_WND_LAYOUTS = {
+    "ControlBarPopupDescription.wnd": None,
+    "GeneralsExpPoints.wnd": None,
+    "InGameChat.wnd": None,
+    "MOTD.wnd": None,
+    "controlBarHidden.wnd": None,
+    "Menus/CRCMismatch.wnd": "Connection Mismatch",
+    "Menus/Defeat.wnd": "Defeat",
+    "Menus/LocalDefeat.wnd": "Defeat",
+    "Menus/ObserverQuit.wnd": "Observer Quit",
+    "Menus/PopupCommunicator.wnd": None,
+    "Menus/ScoreScreen.wnd": "Score",
+    "Menus/Victorious.wnd": "Victory",
+}
 IOS_CSF_LABELS = {
     "GUI:Observer": "Observer",
     "INI:FactionCivilian": "Civilian",
@@ -1001,6 +1015,14 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
         "ios_boot_window_layout",
         project_root,
     )
+    for layout_path, title in sorted(IOS_GAMEPLAY_WND_LAYOUTS.items()):
+        write_text(
+            out_dir / "Data" / "Window" / layout_path,
+            minimal_wnd(Path(layout_path).name, title),
+            records,
+            "ios_gameplay_window_layout",
+            project_root,
+        )
 
     copy_file(
         project_root / IOS_CONFIG_DIR / "Options.ini",
