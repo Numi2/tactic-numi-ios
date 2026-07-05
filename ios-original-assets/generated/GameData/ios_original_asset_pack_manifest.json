@@ -632,10 +632,10 @@
       "source": "generated"
     },
     {
-      "bytes": 1994,
+      "bytes": 56583,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MainMenu.wnd",
       "role": "ios_boot_window_layout",
-      "sha256": "d8f6b787e8d36b71a955761b754b930d6c13609280d8424beb29afb2f3647438",
+      "sha256": "8e31f1bc889eeb756939ac3d23ff4a5f62e2b92a855f0613f702dd6c2459ec85",
       "source": "generated"
     },
     {

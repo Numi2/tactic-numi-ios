@@ -1287,6 +1287,70 @@ END
 """
 
 
+def main_menu_wnd() -> str:
+    buttons = [
+        "ButtonSinglePlayer", "ButtonMultiplayer", "ButtonSkirmish", "ButtonOnline",
+        "ButtonNetwork", "ButtonOptions", "ButtonExit", "ButtonMOTD",
+        "ButtonWorldBuilder", "ButtonGetUpdate", "ButtonChallenge", "ButtonUSA",
+        "ButtonGLA", "ButtonChina", "ButtonUSARecentSave", "ButtonUSALoadGame",
+        "ButtonGLARecentSave", "ButtonGLALoadGame", "ButtonChinaRecentSave",
+        "ButtonChinaLoadGame", "ButtonMultiBack", "ButtonSingleBack",
+        "ButtonLoadReplayBack", "ButtonReplay", "ButtonLoadReplay", "ButtonLoadGame",
+        "ButtonCredits", "ButtonEasy", "ButtonMedium", "ButtonHard", "ButtonDiffBack",
+        "ButtonTRAINING",
+    ]
+    children: list[str] = [
+        child_wnd_block("MainMenu.wnd:MainMenuParent", 0, 0, 1024, 768, system_callback="MainMenuSystem", input_callback="MainMenuInput", color=(8, 10, 14, 232)),
+        child_wnd_block("MainMenu.wnd:MainMenuRuler", 0, 0, 1024, 768, color=(8, 10, 14, 0)),
+        child_wnd_block("MainMenu.wnd:LabelVersion", 16, 724, 620, 752, window_type="STATICTEXT", style="STATICTEXT+USER", text="GeneralsX iOS", font_size=12, color=(8, 10, 14, 0)),
+        child_wnd_block("MainMenu.wnd:StaticTextRandom1", 620, 96, 960, 122, window_type="STATICTEXT", style="STATICTEXT+USER", text="", color=(8, 10, 14, 0)),
+        child_wnd_block("MainMenu.wnd:StaticTextRandom2", 620, 126, 960, 152, window_type="STATICTEXT", style="STATICTEXT+USER", text="", color=(8, 10, 14, 0)),
+    ]
+    for index in range(5):
+        suffix = "" if index == 0 else str(index)
+        children.append(child_wnd_block(f"MainMenu.wnd:MapBorder{suffix}", 604, 176 + index * 82, 964, 238 + index * 82, color=(22, 26, 32, 210)))
+    faction_names = [
+        "WinFactionGLA", "WinFactionChina", "WinFactionUS", "WinGrowMarker",
+        "WinFactionTraining", "WinFactionTrainingSmall", "WinFactionTrainingMedium",
+        "WinFactionSkirmish", "WinFactionSkirmishSmall", "WinFactionSkirmishMedium",
+        "WinFactionUSSmall", "WinFactionUSMedium", "WinFactionGLASmall",
+        "WinFactionGLAMedium", "WinFactionChinaSmall", "WinFactionChinaMedium",
+    ]
+    for index, name in enumerate(faction_names):
+        children.append(child_wnd_block(f"MainMenu.wnd:{name}", 608 + (index % 4) * 86, 184 + (index // 4) * 42, 684 + (index % 4) * 86, 216 + (index // 4) * 42, color=(36, 42, 50, 160)))
+    for index, name in enumerate(buttons):
+        x1 = 72 + (index % 2) * 214
+        y1 = 126 + (index // 2) * 34
+        children.append(push_button(f"MainMenu.wnd:{name}", x1, y1, x1 + 190, y1 + 28, name.replace("Button", "")))
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = MainMenuInit;
+  LAYOUTUPDATE = MainMenuUpdate;
+  LAYOUTSHUTDOWN = MainMenuShutdown;
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0, BOTTOMRIGHT: 1024 768, CREATIONRESOLUTION: 1024 768;
+  NAME = "MainMenu.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;{''.join(children)}
+END
+"""
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -1735,7 +1799,7 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     )
     write_text(
         out_dir / "Data" / "Window" / "Menus" / "MainMenu.wnd",
-        minimal_wnd("MainMenu.wnd", "GENERALS X"),
+        main_menu_wnd(),
         records,
         "ios_boot_window_layout",
         project_root,

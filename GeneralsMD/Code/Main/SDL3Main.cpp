@@ -372,6 +372,29 @@ int main(int argc, char* argv[])
 				fprintf(stderr, "INFO: iOS working directory (Documents): %s\n", docs);
 			}
 		}
+		if (usingBundleData) {
+			const char *requiredAssets[] = {
+				"Data/English/generals.csf",
+				"Data/Window/Menus/MainMenu.wnd",
+				"Data/Window/Menus/SinglePlayerLoadScreen.wnd",
+				"Data/Window/ControlBar.wnd",
+				"Maps/IOSPlayableSlice/IOSPlayableSlice.map",
+				"DefaultOptions.ini",
+				"dxvk.conf",
+			};
+			bool missingRequiredAsset = false;
+			for (const char *asset : requiredAssets) {
+				if (access(asset, R_OK) != 0) {
+					fprintf(stderr, "ERROR: iOS bundled GameData missing required asset: %s (%s)\n",
+					        asset, strerror(errno));
+					missingRequiredAsset = true;
+				}
+			}
+			if (!missingRequiredAsset) {
+				fprintf(stderr, "INFO: iOS bundled GameData probe passed (%zu required files)\n",
+				        sizeof(requiredAssets) / sizeof(requiredAssets[0]));
+			}
+		}
 
 		if (home != nullptr) {
 			// Keep DXVK's shader cache in Library/Caches: purgeable under
