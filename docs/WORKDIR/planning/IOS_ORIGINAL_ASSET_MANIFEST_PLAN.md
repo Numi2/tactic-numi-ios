@@ -155,12 +155,27 @@ This creates the source/generated workspace and writes:
 When the generated pack is ready, package it with:
 
 ```bash
+scripts/tooling/assets/build_ios_original_asset_pack.py --clean
+
 GX_ORIGINAL_ASSET_PACK="$PWD/ios-original-assets/generated/GameData" \
+GX_ORIGINAL_SLICE_WORKLIST="$PWD/ios-original-assets/manifest/playable_slice_worklist.json" \
   scripts/build/ios/package-ios-zh.sh
 ```
 
 The package script copies that generated tree into the app bundle and validates
-the bundled `GameData` manifest before signing.
+the slice worklist and bundled `GameData` manifest before signing.
+
+If `GX_GAME_DATA` is absent and
+`ios-original-assets/generated/GameData` already exists, the package script now
+selects that repo-owned generated pack automatically. This keeps iPhone
+packaging runnable without relying on a local retail asset tree.
+
+The current generated pack contains the renderer-required WW3D boot assets,
+the existing iOS WND boot menu, iOS runtime config, and a minimal English
+`Language.ini` font binding. It is not the final playable content set; it is
+the checked-in boot/runtime asset surface that lets the iOS app package with
+original non-retail resources while the full maps, units, UI, audio, and VFX
+replacement set is produced.
 
 ## Next Engineering Tasks
 

@@ -125,12 +125,18 @@ fi
 # for fast code-only iterations (the engine falls back to Documents assets).
 GAME_DATA_SRC="${GX_GAME_DATA:-${HOME}/GeneralsX/GeneralsZH}"
 ORIGINAL_ASSET_PACK="${GX_ORIGINAL_ASSET_PACK:-}"
+DEFAULT_ORIGINAL_ASSET_PACK="${PROJECT_ROOT}/ios-original-assets/generated/GameData"
+ORIGINAL_SLICE_WORKLIST="${GX_ORIGINAL_SLICE_WORKLIST:-}"
 FONTS_SRC="${GX_FONTS:-${HOME}/GeneralsX/ios-staging/fonts}"
 CONFIG_SRC="${GX_CONFIG:-${IOS_DIR}/config}"
 MANIFEST_DIR="${OUT_DIR}/asset-manifest"
 MANIFEST_JSON="${GX_ASSET_MANIFEST_JSON:-${MANIFEST_DIR}/ios_asset_manifest.json}"
 MANIFEST_MD="${GX_ASSET_MANIFEST_MD:-${MANIFEST_DIR}/ios_asset_inventory.md}"
 if [[ "${DEV_MODE}" != "1" ]]; then
+    # GeneralsX @build Codex 05/07/2026 Prefer the repo-owned iOS original asset pack when retail data is absent.
+    if [[ -z "${ORIGINAL_ASSET_PACK}" && ! -d "${GAME_DATA_SRC}" && -d "${DEFAULT_ORIGINAL_ASSET_PACK}" ]]; then
+        ORIGINAL_ASSET_PACK="${DEFAULT_ORIGINAL_ASSET_PACK}"
+    fi
     ASSET_SRC="${GAME_DATA_SRC}"
     ASSET_MODE="retail"
     if [[ -n "${ORIGINAL_ASSET_PACK}" ]]; then
@@ -146,6 +152,13 @@ if [[ "${DEV_MODE}" != "1" ]]; then
     echo "==> Bundling ${ASSET_MODE} game assets into the app"
     mkdir -p "${APP}/GameData"
     if [[ "${ASSET_MODE}" == "original" ]]; then
+        if [[ -n "${ORIGINAL_SLICE_WORKLIST}" ]]; then
+            echo "==> Validating generated original slice worklist"
+            "${PROJECT_ROOT}/scripts/tooling/assets/validate_ios_playable_slice.py" \
+                --worklist "${ORIGINAL_SLICE_WORKLIST}" \
+                --game-data "${ASSET_SRC}" \
+                --report "${MANIFEST_DIR}/original_slice_validation.json"
+        fi
         rsync -a --exclude=".*" \
             --exclude="*.dylib" --exclude="run.sh" --exclude="GeneralsXZH" \
             --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \

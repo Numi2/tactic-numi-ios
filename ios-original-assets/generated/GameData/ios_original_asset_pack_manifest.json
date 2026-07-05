@@ -1,0 +1,175 @@
+{
+  "asset_count": 24,
+  "assets": [
+    {
+      "bytes": 1068,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/AddProjectorGradient.tga",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "3e17cfcdb67632ea15dfa1995b33ef0abd70b4106fa6452889b9c6d589c530c2",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/AddProjectorGradient.tga"
+    },
+    {
+      "bytes": 1068,
+      "path": "ios-original-assets/generated/GameData/AddProjectorGradient.tga",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "3e17cfcdb67632ea15dfa1995b33ef0abd70b4106fa6452889b9c6d589c530c2",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/AddProjectorGradient.tga"
+    },
+    {
+      "bytes": 6245,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Dazzle.INI",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "43b07a7bb34ffd56250b01ac64a611a3fa38876cde0d0d358d97c5fce632d7f8",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/Dazzle.INI"
+    },
+    {
+      "bytes": 6245,
+      "path": "ios-original-assets/generated/GameData/Dazzle.INI",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "43b07a7bb34ffd56250b01ac64a611a3fa38876cde0d0d358d97c5fce632d7f8",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/Dazzle.INI"
+    },
+    {
+      "bytes": 1068,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/MultProjectorGradient.tga",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "0848287a61ef54ec538c4464862eb8f30d7cb0b8359fd11ac25779270e93632d",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/MultProjectorGradient.tga"
+    },
+    {
+      "bytes": 1068,
+      "path": "ios-original-assets/generated/GameData/MultProjectorGradient.tga",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "0848287a61ef54ec538c4464862eb8f30d7cb0b8359fd11ac25779270e93632d",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/MultProjectorGradient.tga"
+    },
+    {
+      "bytes": 209,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/ShatterAVel.tbl",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "9d74c4b3f5a402e226c70b9aa453182afe2aba3b183ca9bbfcfd80dfff0dab4a",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterAVel.tbl"
+    },
+    {
+      "bytes": 209,
+      "path": "ios-original-assets/generated/GameData/ShatterAVel.tbl",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "9d74c4b3f5a402e226c70b9aa453182afe2aba3b183ca9bbfcfd80dfff0dab4a",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterAVel.tbl"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/ShatterPlanes0.w3d",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/ShatterPlanes0.w3d",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 209,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/ShatterVel.tbl",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "fb5e2dce9275e461ee29dd57b893c9cfe5b64f869c942657335914e4841f4e88",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterVel.tbl"
+    },
+    {
+      "bytes": 209,
+      "path": "ios-original-assets/generated/GameData/ShatterVel.tbl",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "fb5e2dce9275e461ee29dd57b893c9cfe5b64f869c942657335914e4841f4e88",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterVel.tbl"
+    },
+    {
+      "bytes": 49196,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/w3d_missing_texture.tga",
+      "role": "ww3d_runtime_required_asset",
+      "sha256": "6fee3221cd3764fbfe806898947251228ebd354c41f48c9df1ab36843fdd7c4e",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/w3d_missing_texture.tga"
+    },
+    {
+      "bytes": 49196,
+      "path": "ios-original-assets/generated/GameData/w3d_missing_texture.tga",
+      "role": "ww3d_root_lookup_asset",
+      "sha256": "6fee3221cd3764fbfe806898947251228ebd354c41f48c9df1ab36843fdd7c4e",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/w3d_missing_texture.tga"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/SunDazzle.tga",
+      "role": "dazzle radial sprite",
+      "sha256": "9081b7636435aef98f4948c6d89e01d1e671b088bc0ae5cb54d66d0d1e4cda2a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/SunDazzle.tga",
+      "role": "dazzle radial sprite",
+      "sha256": "9081b7636435aef98f4948c6d89e01d1e671b088bc0ae5cb54d66d0d1e4cda2a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/SunHalo.tga",
+      "role": "halo radial sprite",
+      "sha256": "8542375479fc7d343dd8c2e5b62980d587105306bf35a77acabeff81fe7201e7",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/SunHalo.tga",
+      "role": "halo radial sprite",
+      "sha256": "8542375479fc7d343dd8c2e5b62980d587105306bf35a77acabeff81fe7201e7",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/SunLensFlare.tga",
+      "role": "lens flare atlas",
+      "sha256": "6fc52aed833f452e2c37b16dc3a7a335300bb4142a81e4e93ba12520561a1319",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/SunLensFlare.tga",
+      "role": "lens flare atlas",
+      "sha256": "6fc52aed833f452e2c37b16dc3a7a335300bb4142a81e4e93ba12520561a1319",
+      "source": "generated"
+    },
+    {
+      "bytes": 62415,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ExtrasMenu.wnd",
+      "role": "ios_boot_menu",
+      "sha256": "7e20b188f268c2dfc4a2985d974c2ccd8ee9865e2c95431008d0af37b49a38df",
+      "source": "GeneralsZH/Data/Window/Menus/ExtrasMenu.wnd"
+    },
+    {
+      "bytes": 102,
+      "path": "ios-original-assets/generated/GameData/DefaultOptions.ini",
+      "role": "ios_runtime_config",
+      "sha256": "cee90c333dd5fa834b7669527c21c5b4dff88ca49eacc11271bcd451e5644da2",
+      "source": "ios/config/Options.ini"
+    },
+    {
+      "bytes": 577,
+      "path": "ios-original-assets/generated/GameData/dxvk.conf",
+      "role": "ios_runtime_config",
+      "sha256": "603f0668a392b9d010180981e40130ced8094e8d587a4b1f4e631e2211407a28",
+      "source": "ios/config/dxvk.conf"
+    },
+    {
+      "bytes": 43,
+      "path": "ios-original-assets/generated/GameData/Data/English/Language.ini",
+      "role": "localization_boot_config",
+      "sha256": "677227ed9d8a7e07b1e7b7d0d499c68053441dc4bf8b6679e973949aad2cfc7c",
+      "source": "generated"
+    }
+  ],
+  "game_data": "ios-original-assets/generated/GameData",
+  "schema": "generalsx-ios-original-asset-pack-v1"
+}

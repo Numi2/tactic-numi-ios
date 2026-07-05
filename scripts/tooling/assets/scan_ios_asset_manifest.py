@@ -228,6 +228,7 @@ def parse_big_archive(path, extract_text=False):
 
 
 def extract_references_from_text(content):
+    content = strip_text_comments(content)
     refs = []
     for match in REFERENCE_RE.finditer(content):
         ref = match.group(1).strip().strip('"').strip("'")
@@ -260,6 +261,16 @@ def infer_reference_category(ref, hint=None):
     return hint or "other"
 
 
+def strip_text_comments(content):
+    kept = []
+    for line in content.splitlines():
+        stripped = line.lstrip()
+        if stripped.startswith(";") or stripped.startswith("#") or stripped.startswith("//"):
+            continue
+        kept.append(line)
+    return "\n".join(kept)
+
+
 def make_dependency(source, ref, kind, hint=None, origin=None):
     ref = ref.strip().strip('"').strip("'").replace("\\", "/")
     return {
@@ -284,6 +295,7 @@ def extract_implicit_references(content):
 
 
 def extract_typed_text_dependencies(source, content):
+    content = strip_text_comments(content)
     deps = []
     seen = set()
     for match in REFERENCE_RE.finditer(content):
