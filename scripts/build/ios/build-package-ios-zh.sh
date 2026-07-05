@@ -28,6 +28,7 @@ PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 PRESET="${GX_IOS_PRESET:-ios-vulkan}"
 TARGET="${GX_IOS_TARGET:-z_generals}"
 ORIGINAL_ASSET_PACK="${GX_ORIGINAL_ASSET_PACK:-${PROJECT_ROOT}/ios-original-assets/generated/GameData}"
+ORIGINAL_SLICE_WORKLIST="${GX_ORIGINAL_SLICE_WORKLIST:-${PROJECT_ROOT}/ios-original-assets/manifest/playable_slice_worklist.json}"
 
 if ! command -v cmake >/dev/null 2>&1; then
     echo "ERROR: cmake is required for the iOS build."
@@ -77,5 +78,11 @@ if [[ "${DO_INSTALL}" == "1" ]]; then
     PACKAGE_ARGS+=(--install)
 fi
 
-GX_ORIGINAL_ASSET_PACK="${ORIGINAL_ASSET_PACK}" \
-    "${PROJECT_ROOT}/scripts/build/ios/package-ios-zh.sh" "${PACKAGE_ARGS[@]}"
+if [[ -f "${ORIGINAL_SLICE_WORKLIST}" ]]; then
+    GX_ORIGINAL_ASSET_PACK="${ORIGINAL_ASSET_PACK}" \
+    GX_ORIGINAL_SLICE_WORKLIST="${ORIGINAL_SLICE_WORKLIST}" \
+        "${PROJECT_ROOT}/scripts/build/ios/package-ios-zh.sh" "${PACKAGE_ARGS[@]}"
+else
+    GX_ORIGINAL_ASSET_PACK="${ORIGINAL_ASSET_PACK}" \
+        "${PROJECT_ROOT}/scripts/build/ios/package-ios-zh.sh" "${PACKAGE_ARGS[@]}"
+fi

@@ -1,0 +1,1466 @@
+{
+  "missing_reference_count": 0,
+  "selected_assets": [
+    {
+      "bytes": 62562,
+      "category": "ui",
+      "path": "Data/Window/ControlBar.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ControlBar.wnd",
+          "source": "Data/Window/ControlBar.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 968,
+      "category": "ui",
+      "path": "Data/Window/controlBarHidden.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "controlBarHidden.wnd",
+          "source": "Data/Window/controlBarHidden.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3889,
+      "category": "ui",
+      "path": "Data/Window/ControlBarPopupDescription.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ControlBarPopupDescription.wnd",
+          "source": "Data/Window/ControlBarPopupDescription.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 29364,
+      "category": "ui",
+      "path": "Data/Window/GeneralsExpPoints.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "GeneralsExpPoints.wnd",
+          "source": "Data/Window/GeneralsExpPoints.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3885,
+      "category": "ui",
+      "path": "Data/Window/InGameChat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "InGameChat.wnd",
+          "source": "Data/Window/InGameChat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3877,
+      "category": "ui",
+      "path": "Data/Window/InGamePopupMessage.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "InGamePopupMessage.wnd",
+          "source": "Data/Window/InGamePopupMessage.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 963,
+      "category": "ui",
+      "path": "Data/Window/Menus/BlankWindow.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "BlankWindow.wnd",
+          "source": "Data/Window/Menus/BlankWindow.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2013,
+      "category": "ui",
+      "path": "Data/Window/Menus/ChallengeLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ChallengeLoadScreen.wnd",
+          "source": "Data/Window/Menus/ChallengeLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/CRCMismatch.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "CRCMismatch.wnd",
+          "source": "Data/Window/Menus/CRCMismatch.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1986,
+      "category": "ui",
+      "path": "Data/Window/Menus/Defeat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "Defeat.wnd",
+          "source": "Data/Window/Menus/Defeat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2012,
+      "category": "ui",
+      "path": "Data/Window/Menus/DisconnectScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "DisconnectScreen.wnd",
+          "source": "Data/Window/Menus/DisconnectScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 62415,
+      "category": "ui",
+      "path": "Data/Window/Menus/ExtrasMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ExtrasMenu.wnd",
+          "source": "Data/Window/Menus/ExtrasMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/GameSpyLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "GameSpyLoadScreen.wnd",
+          "source": "Data/Window/Menus/GameSpyLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/LegalPage.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "LegalPage.wnd",
+          "source": "Data/Window/Menus/LegalPage.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/LocalDefeat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "LocalDefeat.wnd",
+          "source": "Data/Window/Menus/LocalDefeat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 56583,
+      "category": "ui",
+      "path": "Data/Window/Menus/MainMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MainMenu.wnd",
+          "source": "Data/Window/Menus/MainMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/MapTransferScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MapTransferScreen.wnd",
+          "source": "Data/Window/Menus/MapTransferScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 962,
+      "category": "ui",
+      "path": "Data/Window/Menus/MessageBox.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MessageBox.wnd",
+          "source": "Data/Window/Menus/MessageBox.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2017,
+      "category": "ui",
+      "path": "Data/Window/Menus/MultiplayerLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MultiplayerLoadScreen.wnd",
+          "source": "Data/Window/Menus/MultiplayerLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2005,
+      "category": "ui",
+      "path": "Data/Window/Menus/ObserverQuit.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ObserverQuit.wnd",
+          "source": "Data/Window/Menus/ObserverQuit.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1997,
+      "category": "ui",
+      "path": "Data/Window/Menus/OptionsMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "OptionsMenu.wnd",
+          "source": "Data/Window/Menus/OptionsMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 969,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupCommunicator.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupCommunicator.wnd",
+          "source": "Data/Window/Menus/PopupCommunicator.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupReplay.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupReplay.wnd",
+          "source": "Data/Window/Menus/PopupReplay.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1998,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupSaveLoad.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupSaveLoad.wnd",
+          "source": "Data/Window/Menus/PopupSaveLoad.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1988,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitMenu.wnd",
+          "source": "Data/Window/Menus/QuitMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2000,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitMessageBox.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitMessageBox.wnd",
+          "source": "Data/Window/Menus/QuitMessageBox.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1992,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitNoSave.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitNoSave.wnd",
+          "source": "Data/Window/Menus/QuitNoSave.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1995,
+      "category": "ui",
+      "path": "Data/Window/Menus/ScoreScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ScoreScreen.wnd",
+          "source": "Data/Window/Menus/ScoreScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2890,
+      "category": "ui",
+      "path": "Data/Window/Menus/ShellGameLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ShellGameLoadScreen.wnd",
+          "source": "Data/Window/Menus/ShellGameLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 19076,
+      "category": "ui",
+      "path": "Data/Window/Menus/SinglePlayerLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SinglePlayerLoadScreen.wnd",
+          "source": "Data/Window/Menus/SinglePlayerLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1995,
+      "category": "ui",
+      "path": "Data/Window/Menus/Victorious.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "Victorious.wnd",
+          "source": "Data/Window/Menus/Victorious.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1848,
+      "category": "ui",
+      "path": "Data/Window/MOTD.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MOTD.wnd",
+          "source": "Data/Window/MOTD.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2863,
+      "category": "ui",
+      "path": "Data/Window/ReplayControl.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ReplayControl.wnd",
+          "source": "Data/Window/ReplayControl.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 4870,
+      "category": "maps",
+      "path": "Maps/IOSPlayableSlice/IOSPlayableSlice.map",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MapCache Maps/IOSPlayableSlice/IOSPlayableSlice.map",
+          "source": "Maps/MapCache.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "AirF_AmericaParticleCannonUplink.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "AirF_AmericaParticleCannonUplink.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "AmericaParticleCannonUplink.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "AmericaParticleCannonUplink.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Boss_GLAScudStorm.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Boss_GLAScudStorm.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Boss_NuclearMissileLauncher.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Boss_NuclearMissileLauncher.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Boss_ParticleCannonUplink.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Boss_ParticleCannonUplink.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Chem_GLAScudStorm.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Chem_GLAScudStorm.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "ChinaNuclearMissileLauncher.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "ChinaNuclearMissileLauncher.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Demo_GLAScudStorm.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Demo_GLAScudStorm.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "GarrisonGun.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "GarrisonGun.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "GLAScudStorm.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "GLAScudStorm.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Infa_ChinaNuclearMissileLauncher.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Infa_ChinaNuclearMissileLauncher.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSBarracks.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSBarracks.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSBeacon.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSBeacon.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSCommandCenter.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSCommandCenter.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSDozer.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSDozer.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSGenericBridge.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSGenericBridge.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSGenericDebris.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSGenericDebris.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSPowerPlant.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSPowerPlant.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSRallyPointMarker.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSRallyPointMarker.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSRanger.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSRanger.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSScoutVehicle.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSScoutVehicle.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "IOSWaterWaveBridge.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "IOSWaterWaveBridge.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Lazr_AmericaParticleCannonUplink.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Lazr_AmericaParticleCannonUplink.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Nuke_ChinaNuclearMissileLauncher.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Nuke_ChinaNuclearMissileLauncher.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Slth_GLAScudStorm.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Slth_GLAScudStorm.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "SupW_AmericaParticleCannonUplink.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "SupW_AmericaParticleCannonUplink.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Tank_ChinaNuclearMissileLauncher.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "Tank_ChinaNuclearMissileLauncher.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveHit01.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveHit01.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSplash01.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSplash01.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSplashLeft01.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSplashLeft01.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSplashRight01.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSplashRight01.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSpray01.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSpray01.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSpray02.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSpray02.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaveSpray03.w3d",
+      "source_references": [
+        {
+          "kind": "ini_field",
+          "origin": "Model",
+          "reference": "WaveSpray03.w3d",
+          "source": "Data/INI/Object/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "SunDazzle.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunDazzle.tga",
+          "source": "Data/Runtime/RequiredAssets/Dazzle.INI"
+        },
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunDazzle.tga",
+          "source": "Dazzle.INI"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "SunHalo.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunHalo.tga",
+          "source": "Data/Runtime/RequiredAssets/Dazzle.INI"
+        },
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunHalo.tga",
+          "source": "Dazzle.INI"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "SunLensFlare.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunLensFlare.tga",
+          "source": "Data/Runtime/RequiredAssets/Dazzle.INI"
+        },
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SunLensFlare.tga",
+          "source": "Dazzle.INI"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSAmmoEmptyIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSAmmoEmptyIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSAmmoFullIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSAmmoFullIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSBarracksIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSBarracksIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSBeaconIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSBeaconIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSCancelIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSCancelIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSCivilianSideIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSCivilianSideIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSCommandCenterIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSCommandCenterIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSCommunicatorIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSCommunicatorIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSContainerEmptyIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSContainerEmptyIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSContainerFullIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSContainerFullIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSDozerIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSDozerIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSExitIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSExitIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSFactionEnabled.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSFactionEnabled.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSFactionGeneral.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSFactionGeneral.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSFactionSideIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSFactionSideIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSFlagWaterMark.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSFlagWaterMark.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSGeneralPowersIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSGeneralPowersIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSHeadWaterMark.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSHeadWaterMark.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSIdleWorkerIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSIdleWorkerIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSLoadScreen.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSLoadScreen.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSMapPreview.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSMapPreview.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSObserverSideIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSObserverSideIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSOptionsIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSOptionsIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSPowerPlantIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSPowerPlantIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSRallyPointIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSRallyPointIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSRangerIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSRangerIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSScoreScreen.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSScoreScreen.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSScoutVehicleIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSScoutVehicleIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSSelectAllIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSSelectAllIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSSellIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSSellIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSStarBronze.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSStarBronze.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSStarGold.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSStarGold.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSStarRedYellow.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSStarRedYellow.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSStarSilver.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSStarSilver.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSStopIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSStopIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSToggleControlBarIcon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSToggleControlBarIcon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSVeterancy1Icon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSVeterancy1Icon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSVeterancy2Icon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSVeterancy2Icon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/IOSVeterancy3Icon.tga",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "IOSVeterancy3Icon.tga",
+          "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    }
+  ],
+  "source_manifest": "build/asset-manifest/ios_asset_manifest.json",
+  "source_subdirs": [
+    "source/blender",
+    "source/imagen-prompts",
+    "source/textures",
+    "source/audio",
+    "source/ui",
+    "source/maps",
+    "source/localization",
+    "generated/GameData",
+    "manifest",
+    "validation"
+  ]
+}
