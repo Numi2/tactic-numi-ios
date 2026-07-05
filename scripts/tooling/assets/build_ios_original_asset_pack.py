@@ -122,8 +122,32 @@ End
 
 IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
 CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
+CSF_LABEL = (ord("L") << 24) | (ord("B") << 16) | (ord("L") << 8) | ord(" ")
+CSF_STRING = (ord("S") << 24) | (ord("T") << 16) | (ord("R") << 8) | ord(" ")
 CSF_VERSION = 3
 LANGUAGE_ID_US = 0
+IOS_CSF_LABELS = {
+    "GUI:Observer": "Observer",
+    "INI:FactionCivilian": "Civilian",
+    "INI:FactionIOS": "iOS Task Force",
+    "INI:IOSCommandCenter": "Command Center",
+    "INI:IOSPowerPlant": "Power Plant",
+    "INI:IOSBarracks": "Barracks",
+    "INI:IOSRanger": "Ranger",
+    "INI:IOSScoutVehicle": "Scout Vehicle",
+    "INI:Command_ConstructIOSPowerPlant": "Build Power Plant",
+    "INI:Command_ConstructIOSPowerPlantDescription": "Builds a compact generator for the iOS force.",
+    "INI:Command_ConstructIOSBarracks": "Build Barracks",
+    "INI:Command_ConstructIOSBarracksDescription": "Builds an infantry production structure.",
+    "INI:Command_ConstructIOSScoutVehicle": "Build Scout Vehicle",
+    "INI:Command_ConstructIOSScoutVehicleDescription": "Produces a fast armed scout vehicle.",
+    "INI:Command_ConstructIOSRanger": "Train Ranger",
+    "INI:Command_ConstructIOSRangerDescription": "Trains a basic infantry squad member.",
+    "INI:Command_Stop": "Stop",
+    "INI:Command_StopDescription": "Cancels the current order.",
+    "INI:Command_SelectAllOfType": "Select Type",
+    "INI:Command_SelectAllOfTypeDescription": "Selects matching units on screen.",
+}
 IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
   Side = Observer
   BaseSide = Observer
@@ -628,6 +652,25 @@ def write_binary(
     )
 
 
+def build_csf(labels: dict[str, str]) -> bytes:
+    payload = bytearray()
+    sorted_items = sorted(labels.items())
+    payload.extend(struct.pack("<iiiiii", CSF_ID, CSF_VERSION, len(sorted_items), len(sorted_items), 0, LANGUAGE_ID_US))
+    for label, text in sorted_items:
+        label_bytes = label.encode("ascii")
+        text_units = text.encode("utf-16le")
+        obfuscated = bytearray()
+        for index in range(0, len(text_units), 2):
+            unit = text_units[index] | (text_units[index + 1] << 8)
+            unit = (~unit) & 0xFFFF
+            obfuscated.extend(struct.pack("<H", unit))
+        payload.extend(struct.pack("<iii", CSF_LABEL, 1, len(label_bytes)))
+        payload.extend(label_bytes)
+        payload.extend(struct.pack("<ii", CSF_STRING, len(obfuscated) // 2))
+        payload.extend(obfuscated)
+    return bytes(payload)
+
+
 def write_radial_tga(
     dest: Path,
     color: tuple[int, int, int, int],
@@ -814,7 +857,7 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     )
     write_binary(
         out_dir / "Data" / "English" / "generals.csf",
-        struct.pack("<iiiiii", CSF_ID, CSF_VERSION, 0, 0, 0, LANGUAGE_ID_US),
+        build_csf(IOS_CSF_LABELS),
         records,
         "localization_boot_csf",
         project_root,
