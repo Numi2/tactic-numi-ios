@@ -366,6 +366,19 @@ void updateTouchLongPress(SDL3Mouse *mouse, SDL_Window *window)
 	}
 }
 
+// GeneralsX @bugfix Codex 05/07/2026 Release synthetic iOS touch buttons before lifecycle resets.
+void cancelTouchGesture(SDL3Mouse *mouse, SDL_Window *window)
+{
+	if (s_touch.phase == TouchState::DRAGGING) {
+		sendSyntheticMouse(mouse, window, SDL_EVENT_MOUSE_BUTTON_UP,
+		                   s_touch.lastX, s_touch.lastY, SDL_BUTTON_LEFT);
+	} else if (s_touch.phase == TouchState::PAN) {
+		sendSyntheticMouse(mouse, window, SDL_EVENT_MOUSE_BUTTON_UP,
+		                   s_touch.panX, s_touch.panY, SDL_BUTTON_RIGHT);
+	}
+	s_touch = TouchState();
+}
+
 } // anonymous namespace
 #endif // TARGET_OS_IPHONE
 
@@ -615,6 +628,14 @@ void SDL3GameEngine::pollSDL3Events(void)
 				if (TheMouse) {
 					TheMouse->loseFocus();
 				}
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+				if (TheMouse && m_SDLWindow) {
+					SDL3Mouse* mouse = dynamic_cast<SDL3Mouse*>(TheMouse);
+					if (mouse) {
+						cancelTouchGesture(mouse, m_SDLWindow);
+					}
+				}
+#endif
 				break;
 
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
@@ -623,6 +644,10 @@ void SDL3GameEngine::pollSDL3Events(void)
 			case SDL_EVENT_DID_ENTER_BACKGROUND:
 				m_IsActive = false;
 				if (TheMouse) {
+					SDL3Mouse* mouse = dynamic_cast<SDL3Mouse*>(TheMouse);
+					if (mouse && m_SDLWindow) {
+						cancelTouchGesture(mouse, m_SDLWindow);
+					}
 					TheMouse->loseFocus();
 				}
 				break;
@@ -961,4 +986,3 @@ AudioManager *SDL3GameEngine::createAudioManager(Bool dummy)
 }
 
 #endif // !_WIN32
-
