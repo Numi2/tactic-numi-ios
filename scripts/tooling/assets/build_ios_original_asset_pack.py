@@ -138,10 +138,13 @@ LANGUAGE_ID_US = 0
 IOS_SLICE_MAP_NAME = "IOSPlayableSlice"
 IOS_SLICE_MAP_PATH = f"Maps/{IOS_SLICE_MAP_NAME}/{IOS_SLICE_MAP_NAME}.map"
 IOS_GAMEPLAY_WND_LAYOUTS = {
+    "ControlBar.wnd": None,
     "ControlBarPopupDescription.wnd": None,
     "GeneralsExpPoints.wnd": None,
+    "InGamePopupMessage.wnd": None,
     "InGameChat.wnd": None,
     "MOTD.wnd": None,
+    "ReplayControl.wnd": None,
     "controlBarHidden.wnd": None,
     "Menus/CRCMismatch.wnd": "Connection Mismatch",
     "Menus/Defeat.wnd": "Defeat",

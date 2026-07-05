@@ -1,5 +1,5 @@
 {
-  "asset_count": 141,
+  "asset_count": 144,
   "assets": [
     {
       "bytes": 1068,
@@ -254,6 +254,13 @@
       "source": "generated"
     },
     {
+      "bytes": 962,
+      "path": "ios-original-assets/generated/GameData/Data/Window/ControlBar.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "addae86e1023345f972a4b8dc001c8c7aacd0db2ea34ee8d409ad8497dd05884",
+      "source": "generated"
+    },
+    {
       "bytes": 978,
       "path": "ios-original-assets/generated/GameData/Data/Window/ControlBarPopupDescription.wnd",
       "role": "ios_gameplay_window_layout",
@@ -272,6 +279,13 @@
       "path": "ios-original-assets/generated/GameData/Data/Window/InGameChat.wnd",
       "role": "ios_gameplay_window_layout",
       "sha256": "d9bbe632309dfd75eb06d3c45df5650aa6718a770de4774ed6316eabb7b71202",
+      "source": "generated"
+    },
+    {
+      "bytes": 970,
+      "path": "ios-original-assets/generated/GameData/Data/Window/InGamePopupMessage.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "642ece7c6ba50d62a017cfa7d3aab2d0f1cc46d21dd674928a0ef2fe6193ec43",
       "source": "generated"
     },
     {
@@ -328,6 +342,13 @@
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/Victorious.wnd",
       "role": "ios_gameplay_window_layout",
       "sha256": "aaf4598438d8f6457b8ec23361a08c970f72fe9022e78d7447523e05e6919c34",
+      "source": "generated"
+    },
+    {
+      "bytes": 965,
+      "path": "ios-original-assets/generated/GameData/Data/Window/ReplayControl.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "e25b9b5519f5d7afc31baa95fa650a7d4df8618ec3f53422405b08b1a1d76959",
       "source": "generated"
     },
     {
