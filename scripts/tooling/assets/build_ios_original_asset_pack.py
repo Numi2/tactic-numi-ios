@@ -461,6 +461,8 @@ IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
   BaseSide = Observer
   PlayableSide = No
   DisplayName = GUI:Observer
+  SideIconImage = IOSObserverSideIcon
+  GeneralImage = IOSObserverSideIcon
   IsObserver = Yes
 End
 
@@ -470,6 +472,8 @@ PlayerTemplate FactionCivilian
   PlayableSide = No
   DisplayName = INI:FactionCivilian
   PreferredColor = R:255 G:255 B:255
+  SideIconImage = IOSCivilianSideIcon
+  GeneralImage = IOSCivilianSideIcon
 End
 
 PlayerTemplate FactionIOS
@@ -477,6 +481,13 @@ PlayerTemplate FactionIOS
   BaseSide = USA
   PlayableSide = Yes
   DisplayName = INI:FactionIOS
+  LoadScreenImage = IOSLoadScreen
+  ScoreScreenImage = IOSScoreScreen
+  HeadWaterMark = IOSHeadWaterMark
+  FlagWaterMark = IOSFlagWaterMark
+  EnabledImage = IOSFactionEnabled
+  SideIconImage = IOSFactionSideIcon
+  GeneralImage = IOSFactionGeneral
   StartMoney = 10000
   PreferredColor = R:32 G:168 B:255
   StartingBuilding = IOSCommandCenter
@@ -2072,6 +2083,20 @@ def write_playable_slice_assets(
         ("IOSAmmoEmptyIcon.tga", (92, 102, 112, 255)),
         ("IOSContainerFullIcon.tga", (126, 216, 184, 255)),
         ("IOSContainerEmptyIcon.tga", (76, 88, 96, 255)),
+        ("IOSObserverSideIcon.tga", (126, 138, 150, 255)),
+        ("IOSCivilianSideIcon.tga", (184, 184, 168, 255)),
+        ("IOSFactionSideIcon.tga", (38, 156, 238, 255)),
+        ("IOSFactionGeneral.tga", (62, 132, 216, 255)),
+        ("IOSFactionEnabled.tga", (48, 170, 238, 255)),
+        ("IOSHeadWaterMark.tga", (38, 104, 176, 180)),
+        ("IOSFlagWaterMark.tga", (42, 190, 224, 210)),
+        ("IOSLoadScreen.tga", (34, 98, 154, 255)),
+        ("IOSScoreScreen.tga", (40, 126, 98, 255)),
+        ("IOSMapPreview.tga", (58, 150, 118, 255)),
+        ("IOSStarBronze.tga", (188, 116, 58, 255)),
+        ("IOSStarSilver.tga", (178, 190, 198, 255)),
+        ("IOSStarGold.tga", (238, 202, 78, 255)),
+        ("IOSStarRedYellow.tga", (238, 72, 62, 255)),
     )
     for filename, color in icon_colors:
         write_radial_tga(
@@ -2101,6 +2126,19 @@ def write_playable_slice_assets(
             ("SCPAmmoEmpty", "IOSAmmoEmptyIcon.tga", 64, 64),
             ("SCPPipFull", "IOSContainerFullIcon.tga", 64, 64),
             ("SCPPipEmpty", "IOSContainerEmptyIcon.tga", 64, 64),
+            ("Star-Bronze", "IOSStarBronze.tga", 64, 64),
+            ("Star-Silver", "IOSStarSilver.tga", 64, 64),
+            ("Star-Gold", "IOSStarGold.tga", 64, 64),
+            ("RedYell_Star", "IOSStarRedYellow.tga", 64, 64),
+            ("MapPreview", "IOSMapPreview.tga", 64, 64),
+            ("Maps_IOSPlayableSlice_IOSPlayableSlice", "IOSMapPreview.tga", 64, 64),
+            ("maps_iosplayableslice_iosplayableslice", "IOSMapPreview.tga", 64, 64),
+            ("MissionLoad_USA", "IOSLoadScreen.tga", 64, 64),
+            ("MissionLoad_GLA", "IOSLoadScreen.tga", 64, 64),
+            ("MissionLoad_China", "IOSLoadScreen.tga", 64, 64),
+            ("LoadingBar_ProgressCenter1", "IOSFactionEnabled.tga", 64, 64),
+            ("LoadingBar_ProgressCenter2", "IOSFactionEnabled.tga", 64, 64),
+            ("LoadingBar_ProgressCenter3", "IOSFactionEnabled.tga", 64, 64),
         )
     )
     mapped_image_text = "".join(
