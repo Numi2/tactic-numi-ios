@@ -124,7 +124,15 @@ fi
 GAME_DATA_SRC="${GX_GAME_DATA:-${HOME}/GeneralsX/GeneralsZH}"
 FONTS_SRC="${GX_FONTS:-${HOME}/GeneralsX/ios-staging/fonts}"
 CONFIG_SRC="${GX_CONFIG:-${IOS_DIR}/config}"
+MANIFEST_DIR="${OUT_DIR}/asset-manifest"
+MANIFEST_JSON="${GX_ASSET_MANIFEST_JSON:-${MANIFEST_DIR}/ios_asset_manifest.json}"
+MANIFEST_MD="${GX_ASSET_MANIFEST_MD:-${MANIFEST_DIR}/ios_asset_inventory.md}"
 if [[ "${DEV_MODE}" != "1" ]]; then
+    if [[ ! -d "${GAME_DATA_SRC}" ]]; then
+        echo "ERROR: game data source not found at ${GAME_DATA_SRC}"
+        echo "  Set GX_GAME_DATA to a staged GeneralsZH tree containing the .big archives."
+        exit 1
+    fi
     echo "==> Bundling game assets into the app"
     mkdir -p "${APP}/GameData"
     rsync -a --exclude=".*" \
@@ -155,6 +163,16 @@ if [[ "${DEV_MODE}" != "1" ]]; then
     cp "${CONFIG_SRC}/dxvk.conf" "${APP}/GameData/dxvk.conf"
     cp "${CONFIG_SRC}/Options.ini" "${APP}/GameData/DefaultOptions.ini"
     echo "    bundled $(du -sh "${APP}/GameData" | cut -f1) of game data"
+
+    echo "==> Validating bundled asset manifest"
+    mkdir -p "${MANIFEST_DIR}"
+    "${PROJECT_ROOT}/scripts/tooling/assets/scan_ios_asset_manifest.py" \
+        "${APP}/GameData" \
+        --json-out "${MANIFEST_JSON}" \
+        --md-out "${MANIFEST_MD}" \
+        --fail-on-missing
+    cp "${MANIFEST_JSON}" "${APP}/GameData/ios_asset_manifest.json"
+    cp "${MANIFEST_MD}" "${APP}/GameData/ios_asset_inventory.md"
 fi
 
 # Loose icon PNGs alongside the compiled asset catalog: SpringBoard on some

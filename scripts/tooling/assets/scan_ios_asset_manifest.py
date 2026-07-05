@@ -751,6 +751,8 @@ def main():
                         help="Do not index BIG archive directory entries")
     parser.add_argument("--no-archived-text", action="store_true",
                         help="Do not parse text entries inside BIG archives")
+    parser.add_argument("--fail-on-missing", action="store_true",
+                        help="Exit non-zero when hard missing references are found")
     args = parser.parse_args()
 
     root = Path(args.root).expanduser().resolve()
@@ -780,6 +782,8 @@ def main():
         print(f"Indexed {summary.get('archive_entry_count', 0)} entries from {summary['archive_count']} BIG archives.")
     if summary["missing_reference_count"]:
         print(f"WARNING: {summary['missing_reference_count']} hard missing references remain.")
+        if args.fail_on_missing:
+            return 2
     return 0
 
 
