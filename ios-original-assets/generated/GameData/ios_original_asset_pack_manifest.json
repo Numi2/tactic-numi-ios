@@ -667,24 +667,24 @@
       "source": "generated"
     },
     {
-      "bytes": 962,
+      "bytes": 3885,
       "path": "ios-original-assets/generated/GameData/Data/Window/InGameChat.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "d9bbe632309dfd75eb06d3c45df5650aa6718a770de4774ed6316eabb7b71202",
+      "sha256": "3e27c12f8b3ed271d55ba0619f34b62d180e52a6270320b6f605a4111d84e7fc",
       "source": "generated"
     },
     {
-      "bytes": 970,
+      "bytes": 3877,
       "path": "ios-original-assets/generated/GameData/Data/Window/InGamePopupMessage.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "642ece7c6ba50d62a017cfa7d3aab2d0f1cc46d21dd674928a0ef2fe6193ec43",
+      "sha256": "54b3fdf1d104bb369ef0de9058738677c7cf926ddc998670815c1b30b8ac1427",
       "source": "generated"
     },
     {
-      "bytes": 956,
+      "bytes": 1848,
       "path": "ios-original-assets/generated/GameData/Data/Window/MOTD.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "65aecb87436e045802db27f952f19e809e97ceb8e81411522edbca4acd99893e",
+      "sha256": "2be950ecc38e565b1487aa181ffbfcae9983bfce2243ee2ef7793b9a1f5f6859",
       "source": "generated"
     },
     {
@@ -835,10 +835,10 @@
       "source": "generated"
     },
     {
-      "bytes": 965,
+      "bytes": 2863,
       "path": "ios-original-assets/generated/GameData/Data/Window/ReplayControl.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "e25b9b5519f5d7afc31baa95fa650a7d4df8618ec3f53422405b08b1a1d76959",
+      "sha256": "6a9623f1bc9b90d8a73ba653b86f1d961071f4d8787959e46bb3c3597dcf40df",
       "source": "generated"
     },
     {

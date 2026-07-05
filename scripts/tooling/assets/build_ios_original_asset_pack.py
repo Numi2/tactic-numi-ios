@@ -1023,6 +1023,147 @@ END
 """
 
 
+def ingame_chat_wnd() -> str:
+    children = "".join(
+        [
+            child_wnd_block("InGameChat.wnd:StaticTextChatType", 12, 10, 214, 34, window_type="STATICTEXT", style="STATICTEXT+USER", text="Everyone", font_size=12, color=(18, 22, 28, 220)),
+            child_wnd_block("InGameChat.wnd:TextEntryChat", 12, 38, 438, 72, window_type="TEXTENTRY", style="TEXTENTRY+USER", system_callback="InGameChatSystem", input_callback="InGameChatInput", color=(20, 25, 30, 235)),
+            push_button("InGameChat.wnd:ButtonClear", 448, 38, 520, 72, "Clear"),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 240 650, BOTTOMRIGHT: 780 738, CREATIONRESOLUTION: 1024 768;
+  NAME = "InGameChat.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "InGameChatSystem";
+  INPUTCALLBACK = "InGameChatInput";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 238, BORDERCOLOR: 180 190 205 180;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 160, BORDERCOLOR: 80 80 80 160;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 238, BORDERCOLOR: 255 235 170 220;{children}
+END
+"""
+
+
+def ingame_popup_message_wnd() -> str:
+    children = "".join(
+        [
+            child_wnd_block("InGamePopupMessage.wnd:InGamePopupMessageParent", 0, 0, 420, 168, system_callback="InGamePopupMessageSystem", input_callback="InGamePopupMessageInput", color=(16, 20, 26, 242)),
+            child_wnd_block("InGamePopupMessage.wnd:StaticTextMessage", 12, 12, 408, 112, window_type="STATICTEXT", style="STATICTEXT+USER", text="", font_size=12, color=(16, 20, 26, 210)),
+            push_button("InGamePopupMessage.wnd:ButtonOk", 320, 124, 408, 156, "OK"),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = InGamePopupMessageInit;
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 302 260, BOTTOMRIGHT: 722 428, CREATIONRESOLUTION: 1024 768;
+  NAME = "InGamePopupMessage.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
+def replay_control_wnd() -> str:
+    children = "".join(
+        [
+            child_wnd_block("ReplayControl.wnd:ParentReplayControl", 0, 0, 320, 64, system_callback="ReplayControlSystem", input_callback="ReplayControlInput", color=(16, 20, 26, 220)),
+            child_wnd_block("ReplayControl.wnd:StaticTextReplay", 12, 12, 308, 38, window_type="STATICTEXT", style="STATICTEXT+USER", text="Replay Controls", font_size=12, color=(16, 20, 26, 180)),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 352 12, BOTTOMRIGHT: 672 76, CREATIONRESOLUTION: 1024 768;
+  NAME = "ReplayControl.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
+def motd_wnd() -> str:
+    children = child_wnd_block("MOTD.wnd:MOTD", 0, 0, 420, 220, system_callback="MOTDSystem", color=(16, 20, 26, 230))
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 302 160, BOTTOMRIGHT: 722 380, CREATIONRESOLUTION: 1024 768;
+  NAME = "MOTD.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -1491,6 +1632,14 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
             layout_text = control_bar_popup_description_wnd()
         elif layout_name == "GeneralsExpPoints.wnd":
             layout_text = generals_exp_points_wnd()
+        elif layout_name == "InGameChat.wnd":
+            layout_text = ingame_chat_wnd()
+        elif layout_name == "InGamePopupMessage.wnd":
+            layout_text = ingame_popup_message_wnd()
+        elif layout_name == "MOTD.wnd":
+            layout_text = motd_wnd()
+        elif layout_name == "ReplayControl.wnd":
+            layout_text = replay_control_wnd()
         else:
             layout_text = minimal_wnd(layout_name, title)
         write_text(
