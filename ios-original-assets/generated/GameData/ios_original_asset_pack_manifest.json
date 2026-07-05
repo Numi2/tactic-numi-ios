@@ -1,5 +1,5 @@
 {
-  "asset_count": 225,
+  "asset_count": 228,
   "assets": [
     {
       "bytes": 6876,
@@ -912,10 +912,10 @@
       "source": "generated"
     },
     {
-      "bytes": 2968,
+      "bytes": 3881,
       "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
       "role": "localization_boot_csf",
-      "sha256": "b2a73fd54d97de6875d2ecc1c7e2d4cff08f004670e06770ef229c6cf2bc731f",
+      "sha256": "7062a0526bf6be5005116a1edc4fd181ca7192353945bc0972cd8701db13127a",
       "source": "generated"
     },
     {
@@ -1395,10 +1395,10 @@
       "source": "generated"
     },
     {
-      "bytes": 2752,
+      "bytes": 3876,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandButton/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "d3f566bbbb33ac1018f7a83c7e7d5ffba77ef80d4e1ef136fde49268360e89bb",
+      "sha256": "c9144c002cc6f334cf7838a42fd029530731213a547afd01e26be393e13f5ea4",
       "source": "generated"
     },
     {
@@ -1497,6 +1497,27 @@
       "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSSelectAllIcon.tga",
       "role": "ios_playable_slice_icon",
       "sha256": "dea6563152cfc1211e8cc2e22e59c0abf04bedb0e992595fcb63483bce3f5ca7",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSCancelIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "65442307434d188dc18e6d33114fdbb189829b1f967ba3a411ef0ace2014556f",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSSellIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "241b52c7989830dc545e28f4907cadaf52c6147b444084552e55f948b96a18b3",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSRallyPointIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "c53bef694b70a9f18a7fbb57fb7a1cc77d0ea5bd019b1f8a9fc75e3aeb4e6306",
       "source": "generated"
     },
     {

@@ -352,6 +352,16 @@ IOS_CSF_LABELS = {
     "INI:Command_StopDescription": "Cancels the current order.",
     "INI:Command_SelectAllOfType": "Select Type",
     "INI:Command_SelectAllOfTypeDescription": "Selects matching units on screen.",
+    "INI:Command_CancelUnitCreate": "Cancel Unit",
+    "INI:Command_CancelUnitCreateDescription": "Cancels the selected production item.",
+    "INI:Command_CancelUpgradeCreate": "Cancel Upgrade",
+    "INI:Command_CancelUpgradeCreateDescription": "Cancels the selected upgrade item.",
+    "INI:Command_CancelConstruction": "Cancel",
+    "INI:Command_CancelConstructionDescription": "Cancels construction.",
+    "INI:Command_Sell": "Sell",
+    "INI:Command_SellDescription": "Sells the selected structure.",
+    "INI:Command_SetRallyPoint": "Rally Point",
+    "INI:Command_SetRallyPointDescription": "Sets the production rally point.",
     "GUI:Communicator": "Messages",
     "GUI:CommunicatorDescription": "Opens the communicator.",
     "GUI:Options": "Options",
@@ -452,6 +462,46 @@ CommandButton Command_IOSSelectAllOfType
   TextLabel = INI:Command_SelectAllOfType
   DescriptLabel = INI:Command_SelectAllOfTypeDescription
   ButtonImage = IOSSelectAllIcon
+End
+
+CommandButton Command_CancelUnitCreate
+  Command = CANCEL_UNIT_BUILD
+  TextLabel = INI:Command_CancelUnitCreate
+  DescriptLabel = INI:Command_CancelUnitCreateDescription
+  ButtonImage = IOSCancelIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton Command_CancelUpgradeCreate
+  Command = CANCEL_UPGRADE
+  TextLabel = INI:Command_CancelUpgradeCreate
+  DescriptLabel = INI:Command_CancelUpgradeCreateDescription
+  ButtonImage = IOSCancelIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton Command_CancelConstruction
+  Command = DOZER_CONSTRUCT_CANCEL
+  TextLabel = INI:Command_CancelConstruction
+  DescriptLabel = INI:Command_CancelConstructionDescription
+  ButtonImage = IOSCancelIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton Command_Sell
+  Command = SELL
+  TextLabel = INI:Command_Sell
+  DescriptLabel = INI:Command_SellDescription
+  ButtonImage = IOSSellIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton Command_SetRallyPoint
+  Command = SET_RALLY_POINT
+  TextLabel = INI:Command_SetRallyPoint
+  DescriptLabel = INI:Command_SetRallyPointDescription
+  ButtonImage = IOSRallyPointIcon
+  ButtonBorderType = ACTION
 End
 
 CommandButton NonCommand_Communicator
@@ -1851,6 +1901,9 @@ def write_playable_slice_assets(
         ("IOSScoutVehicleIcon.tga", (120, 150, 165, 255)),
         ("IOSStopIcon.tga", (220, 62, 54, 255)),
         ("IOSSelectAllIcon.tga", (150, 96, 210, 255)),
+        ("IOSCancelIcon.tga", (220, 54, 48, 255)),
+        ("IOSSellIcon.tga", (220, 164, 42, 255)),
+        ("IOSRallyPointIcon.tga", (76, 198, 126, 255)),
         ("IOSCommunicatorIcon.tga", (64, 180, 220, 255)),
         ("IOSOptionsIcon.tga", (178, 188, 198, 255)),
         ("IOSIdleWorkerIcon.tga", (214, 174, 82, 255)),
