@@ -34,14 +34,18 @@ The manifest pass must produce:
 Run:
 
 ```bash
-scripts/tooling/assets/scan_ios_asset_manifest.py \
-  "$HOME/GeneralsX/GeneralsZH" \
-  --json-out build/asset-manifest/ios_asset_manifest.json \
-  --md-out build/asset-manifest/ios_asset_inventory.md
+scripts/tooling/assets/build_ios_required_asset_manifest.sh \
+  "$HOME/GeneralsX/GeneralsZH"
 ```
 
 For deterministic source validation, add `--hash` to include SHA-256 hashes for
-every loose file.
+every loose file when invoking `scan_ios_asset_manifest.py` directly.
+
+The wrapper rejects the tiny repo fixture and requires a staged tree with
+root-level `.big` archives, then writes:
+
+- `build/asset-manifest/ios_required_asset_manifest.json`
+- `build/asset-manifest/ios_required_asset_inventory.md`
 
 The current scanner inventories loose files, indexes `.big` directory entries,
 parses small text entries inside archives, extracts typed INI dependencies for
