@@ -30,6 +30,15 @@ RUNTIME_ASSETS = (
     "w3d_missing_texture.tga",
 )
 
+IOS_MODEL_ASSETS = (
+    "IOSCommandCenter",
+    "IOSPowerPlant",
+    "IOSBarracks",
+    "IOSDozer",
+    "IOSRanger",
+    "IOSScoutVehicle",
+)
+
 DAZZLE_TEXTURES = (
     ("SunDazzle.tga", (255, 245, 198, 255), "dazzle radial sprite"),
     ("SunHalo.tga", (255, 232, 160, 220), "halo radial sprite"),
@@ -384,7 +393,7 @@ IOS_SLICE_OBJECT = """Object IOSCommandCenter
   ShroudClearingRange = 220.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSCommandCenter
     End
   End
   ArmorSet
@@ -420,7 +429,7 @@ Object IOSPowerPlant
   ShroudClearingRange = 140.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSPowerPlant
     End
   End
   ArmorSet
@@ -450,7 +459,7 @@ Object IOSBarracks
   ShroudClearingRange = 160.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSBarracks
     End
   End
   ArmorSet
@@ -486,7 +495,7 @@ Object IOSDozer
   ShroudClearingRange = 180.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSDozer
     End
   End
   ArmorSet
@@ -524,7 +533,7 @@ Object IOSRanger
   ShroudClearingRange = 180.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSRanger
     End
   End
   WeaponSet
@@ -564,7 +573,7 @@ Object IOSScoutVehicle
   ShroudClearingRange = 200.0
   Draw = W3DModelDraw ModuleTag_Draw
     DefaultConditionState
-      Model = ShatterPlanes0
+      Model = IOSScoutVehicle
     End
   End
   WeaponSet
@@ -1030,6 +1039,24 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
             out_dir / filename,
             records,
             "ww3d_root_lookup_asset",
+            project_root,
+        )
+
+    base_model = project_root / RUNTIME_ASSET_DIR / "ShatterPlanes0.w3d"
+    for model_name in IOS_MODEL_ASSETS:
+        filename = f"{model_name}.w3d"
+        copy_file(
+            base_model,
+            out_dir / "Data" / "Runtime" / "RequiredAssets" / filename,
+            records,
+            "ios_generated_model_asset",
+            project_root,
+        )
+        copy_file(
+            base_model,
+            out_dir / filename,
+            records,
+            "ios_generated_model_root_lookup",
             project_root,
         )
 

@@ -1,5 +1,5 @@
 {
-  "asset_count": 129,
+  "asset_count": 141,
   "assets": [
     {
       "bytes": 1068,
@@ -98,6 +98,90 @@
       "role": "ww3d_root_lookup_asset",
       "sha256": "6fee3221cd3764fbfe806898947251228ebd354c41f48c9df1ab36843fdd7c4e",
       "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/w3d_missing_texture.tga"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSCommandCenter.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSCommandCenter.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSPowerPlant.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSPowerPlant.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSBarracks.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSBarracks.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSDozer.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSDozer.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSRanger.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSRanger.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSScoutVehicle.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSScoutVehicle.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
     },
     {
       "bytes": 16402,
@@ -807,10 +891,10 @@
       "source": "generated"
     },
     {
-      "bytes": 5276,
+      "bytes": 5264,
       "path": "ios-original-assets/generated/GameData/Data/INI/Object/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "91e7a8e7609bf0c05263c8c6b7fc3c7229a652e167ed1541472ec9c4f2e2ef04",
+      "sha256": "b47e7ce571e8c32bf352ed6122d9ba145c0605a2768e074010876633e216d5fc",
       "source": "generated"
     },
     {
