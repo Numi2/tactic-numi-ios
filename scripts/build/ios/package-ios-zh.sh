@@ -14,6 +14,8 @@
 # Usage: ./scripts/build/ios/package-ios-zh.sh [--dev] [--install]
 #   --dev      skip bundling the 2.7 GB of game assets (code-only iteration)
 #   --install  install the packaged app to the first connected device
+#   GX_ORIGINAL_ASSET_PACK=/path/to/generated/GameData
+#              bundle generated original assets instead of GX_GAME_DATA retail data
 set -euo pipefail
 
 DEV_MODE=0
@@ -122,29 +124,45 @@ fi
 # the app is fully self-contained, nothing lives in Documents. Skip with --dev
 # for fast code-only iterations (the engine falls back to Documents assets).
 GAME_DATA_SRC="${GX_GAME_DATA:-${HOME}/GeneralsX/GeneralsZH}"
+ORIGINAL_ASSET_PACK="${GX_ORIGINAL_ASSET_PACK:-}"
 FONTS_SRC="${GX_FONTS:-${HOME}/GeneralsX/ios-staging/fonts}"
 CONFIG_SRC="${GX_CONFIG:-${IOS_DIR}/config}"
 MANIFEST_DIR="${OUT_DIR}/asset-manifest"
 MANIFEST_JSON="${GX_ASSET_MANIFEST_JSON:-${MANIFEST_DIR}/ios_asset_manifest.json}"
 MANIFEST_MD="${GX_ASSET_MANIFEST_MD:-${MANIFEST_DIR}/ios_asset_inventory.md}"
 if [[ "${DEV_MODE}" != "1" ]]; then
-    if [[ ! -d "${GAME_DATA_SRC}" ]]; then
-        echo "ERROR: game data source not found at ${GAME_DATA_SRC}"
-        echo "  Set GX_GAME_DATA to a staged GeneralsZH tree containing the .big archives."
+    ASSET_SRC="${GAME_DATA_SRC}"
+    ASSET_MODE="retail"
+    if [[ -n "${ORIGINAL_ASSET_PACK}" ]]; then
+        ASSET_SRC="${ORIGINAL_ASSET_PACK}"
+        ASSET_MODE="original"
+    fi
+    if [[ ! -d "${ASSET_SRC}" ]]; then
+        echo "ERROR: asset source not found at ${ASSET_SRC}"
+        echo "  Set GX_GAME_DATA to a staged GeneralsZH tree, or set"
+        echo "  GX_ORIGINAL_ASSET_PACK to a generated original GameData tree."
         exit 1
     fi
-    echo "==> Bundling game assets into the app"
+    echo "==> Bundling ${ASSET_MODE} game assets into the app"
     mkdir -p "${APP}/GameData"
-    rsync -a --exclude=".*" \
-        --exclude="*.dylib" --exclude="run.sh" --exclude="GeneralsXZH" \
-        --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \
-        --exclude="MoltenVK_icd.json" --exclude="dxvk.conf" --exclude="fontconfig" \
-        --exclude="*.DLL" --exclude="*.dll" --exclude="*.dat" --exclude="*.ico" \
-        --exclude="*.bmp" --exclude="*.doc" --exclude="*.lcf" --exclude="Launcher.txt" \
-        --exclude="MSS" --exclude="Manuals" --exclude="steamapps" \
-        --exclude="steam_appid.txt" --exclude="00000000.*" \
-        --exclude="RedistInstallers" --exclude="_CommonRedist" --exclude="*.txt" \
-        "${GAME_DATA_SRC}/" "${APP}/GameData/"
+    if [[ "${ASSET_MODE}" == "original" ]]; then
+        rsync -a --exclude=".*" \
+            --exclude="*.dylib" --exclude="run.sh" --exclude="GeneralsXZH" \
+            --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \
+            --exclude="MoltenVK_icd.json" --exclude="dxvk.conf" --exclude="fontconfig" \
+            "${ASSET_SRC}/" "${APP}/GameData/"
+    else
+        rsync -a --exclude=".*" \
+            --exclude="*.dylib" --exclude="run.sh" --exclude="GeneralsXZH" \
+            --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \
+            --exclude="MoltenVK_icd.json" --exclude="dxvk.conf" --exclude="fontconfig" \
+            --exclude="*.DLL" --exclude="*.dll" --exclude="*.dat" --exclude="*.ico" \
+            --exclude="*.bmp" --exclude="*.doc" --exclude="*.lcf" --exclude="Launcher.txt" \
+            --exclude="MSS" --exclude="Manuals" --exclude="steamapps" \
+            --exclude="steam_appid.txt" --exclude="00000000.*" \
+            --exclude="RedistInstallers" --exclude="_CommonRedist" --exclude="*.txt" \
+            "${ASSET_SRC}/" "${APP}/GameData/"
+    fi
     if [[ -d "${FONTS_SRC}" ]]; then
         mkdir -p "${APP}/GameData/fonts"
         cp "${FONTS_SRC}"/*.ttf "${APP}/GameData/fonts/"

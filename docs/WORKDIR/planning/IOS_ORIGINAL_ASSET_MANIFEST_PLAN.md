@@ -28,6 +28,7 @@ The manifest pass must produce:
 - Reference graph from text assets where references are visible.
 - Missing-reference report for assets that are archived, extensionless, or not
   yet replaced.
+- Package validation gate for generated original asset packs before signing.
 
 ## Current Scanner
 
@@ -130,7 +131,6 @@ every map/CSF binary field.
 The first generated batch should be a complete vertical slice:
 
 - App shell/UI frame and button atlas.
-- Fallback model, fallback texture, fallback icon, fallback audio.
 - One terrain tile set.
 - One skirmish validation map.
 - One command center, one power building, one production building.
@@ -152,6 +152,16 @@ This creates the source/generated workspace and writes:
 - `ios-original-assets/manifest/playable_slice_worklist.json`
 - `ios-original-assets/manifest/PLAYABLE_SLICE_WORKLIST.md`
 
+When the generated pack is ready, package it with:
+
+```bash
+GX_ORIGINAL_ASSET_PACK="$PWD/ios-original-assets/generated/GameData" \
+  scripts/build/ios/package-ios-zh.sh
+```
+
+The package script copies that generated tree into the app bundle and validates
+the bundled `GameData` manifest before signing.
+
 ## Next Engineering Tasks
 
 1. Expand typed INI coverage for less common object, weapon, FX, science, and
@@ -162,5 +172,5 @@ This creates the source/generated workspace and writes:
 4. Generate per-map and per-faction preload groups.
 5. Add budget checks for texture dimensions, model LOD presence, and oversized
    audio/video files.
-6. Add iOS package validation before signing so missing assets fail packaging,
-   not runtime.
+6. Replace selected worklist entries with generated original source and shipping
+   files under `ios-original-assets/`.
