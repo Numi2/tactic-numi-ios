@@ -30,7 +30,8 @@ done
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
-BUILD_DIR="${PROJECT_ROOT}/build/ios-vulkan"
+PRESET="${GX_IOS_PRESET:-ios-vulkan}"
+BUILD_DIR="${PROJECT_ROOT}/build/${PRESET}"
 IOS_DIR="${PROJECT_ROOT}/ios"
 DERIVED="${IOS_DIR}/build"
 OUT_DIR="${PROJECT_ROOT}/build/ios-package"
@@ -46,7 +47,7 @@ GAME_BIN="${BUILD_DIR}/GeneralsMD/GeneralsXZH.app/GeneralsXZH"
 DXVK_BUILD="${BUILD_DIR}/_deps/dxvk-build-macos"
 
 if [[ ! -f "${GAME_BIN}" ]]; then
-    echo "ERROR: engine binary not found at ${GAME_BIN} — build the ios-vulkan preset first."
+    echo "ERROR: engine binary not found at ${GAME_BIN} — build the ${PRESET} preset first."
     exit 1
 fi
 
@@ -95,7 +96,7 @@ for lib in \
                 echo "    (skip, optional: $(basename "${lib}"))" ;;
             *)
                 echo "ERROR: required dylib not built: ${lib}"
-                echo "  Build first: cmake --preset ios-vulkan && cmake --build build/ios-vulkan --target z_generals"
+                echo "  Build first: cmake --preset ${PRESET} && cmake --build build/${PRESET} --target z_generals"
                 exit 1 ;;
         esac
     fi
@@ -109,7 +110,8 @@ fi
 # MoltenVK: DXVK dlopens @executable_path/Frameworks/MoltenVK.framework/MoltenVK.
 # An app without it launches and dies at Vulkan init, so missing framework is fatal.
 # (This used to live in /tmp, which the OS periodically cleans — hence the hard error.)
-MVK_FRAMEWORK="${GX_MOLTENVK:-${HOME}/GeneralsX/MoltenVK/MoltenVK/MoltenVK/dynamic/MoltenVK.xcframework/ios-arm64/MoltenVK.framework}"
+MVK_ROOT="${GX_MOLTENVK_ROOT:-${HOME}/GeneralsX/MoltenVK}"
+MVK_FRAMEWORK="${GX_MOLTENVK:-${MVK_ROOT}/MoltenVK/MoltenVK/dynamic/MoltenVK.xcframework/ios-arm64/MoltenVK.framework}"
 if [[ -d "${MVK_FRAMEWORK}" ]]; then
     cp -R "${MVK_FRAMEWORK}" "${APP}/Frameworks/"
     echo "    embedded MoltenVK.framework"
@@ -159,6 +161,7 @@ if [[ "${DEV_MODE}" != "1" ]]; then
     if [[ "${ASSET_MODE}" == "original" ]]; then
         if [[ -n "${ORIGINAL_SLICE_WORKLIST}" ]]; then
             echo "==> Validating generated original slice worklist"
+            mkdir -p "${MANIFEST_DIR}"
             "${PROJECT_ROOT}/scripts/tooling/assets/validate_ios_playable_slice.py" \
                 --worklist "${ORIGINAL_SLICE_WORKLIST}" \
                 --game-data "${ASSET_SRC}" \
