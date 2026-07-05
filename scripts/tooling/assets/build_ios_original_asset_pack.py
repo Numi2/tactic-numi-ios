@@ -160,6 +160,109 @@ IOS_BOOT_GAMEDATA = """GameData
 End
 """
 
+IOS_AUDIO_SETTINGS = """AudioSettings
+  AudioRoot = Data/Audio
+  SoundsFolder = Sounds
+  MusicFolder = Music
+  StreamingFolder = Speech
+  SoundsExtension = wav
+  UseDigital = Yes
+  UseMidi = No
+  OutputRate = 44100
+  OutputBits = 16
+  OutputChannels = 2
+  SampleCount2D = 8
+  SampleCount3D = 8
+  StreamCount = 1
+  AudioFootprintInBytes = 2097152
+  DefaultSoundVolume = 0%
+  Default3DSoundVolume = 0%
+  DefaultSpeechVolume = 0%
+  DefaultMusicVolume = 0%
+  Relative2DVolume = 100%
+  MinSampleVolume = 0%
+  Use3DSoundRangeVolumeFade = Yes
+  GlobalMinRange = 0
+  GlobalMaxRange = 600
+  TimeBetweenDrawableSounds = 3000
+  TimeToFadeAudio = 100
+  ZoomSoundVolumePercentageAmount = 0%
+End
+"""
+
+IOS_SILENT_SOUND_EFFECTS = """AudioEvent DefaultSoundEffect
+  Volume = 0%
+  MinVolume = 0%
+  Limit = 1
+  Priority = LOWEST
+  Type = UI EVERYONE
+End
+
+AudioEvent PlaceBuilding
+  Volume = 0%
+End
+
+AudioEvent RallyPointSet
+  Volume = 0%
+End
+
+AudioEvent UnableToSetRallyPoint
+  Volume = 0%
+End
+
+AudioEvent BeaconPlaced
+  Volume = 0%
+End
+
+AudioEvent BeaconPlacementFailed
+  Volume = 0%
+End
+
+AudioEvent LoadScreenAmbient
+  Volume = 0%
+End
+"""
+
+IOS_SILENT_MUSIC = """MusicTrack DefaultMusicTrack
+  Volume = 0%
+  Ambient = Yes
+End
+"""
+
+IOS_MISC_AUDIO = """MiscAudio
+  GUIClickSound = NoSound
+  NoCanDoSound = NoSound
+  AllCheerSound = NoSound
+  BattleCrySound = NoSound
+  MoneyDepositSound = NoSound
+  MoneyWithdrawSound = NoSound
+  RadarNotifyUnitUnderAttackSound = NoSound
+  RadarNotifyHarvesterUnderAttackSound = NoSound
+  RadarNotifyStructureUnderAttackSound = NoSound
+  RadarNotifyUnderAttackSound = NoSound
+  RadarNotifyOnlineSound = NoSound
+  RadarNotifyOfflineSound = NoSound
+  UnitPromoted = NoSound
+  RepairSparks = NoSound
+  CrateHeal = NoSound
+  CrateMoney = NoSound
+End
+"""
+
+
+def boot_ini_for(dirname: str) -> str:
+    if dirname == "AudioSettings":
+        return IOS_AUDIO_SETTINGS
+    if dirname == "SoundEffects":
+        return IOS_SILENT_SOUND_EFFECTS
+    if dirname == "Music":
+        return IOS_SILENT_MUSIC
+    if dirname == "MiscAudio":
+        return IOS_MISC_AUDIO
+    if dirname in ("Speech", "Voice"):
+        return "DialogEvent DefaultDialog\n  Volume = 0%\nEnd\n"
+    return "; Generated iOS boot placeholder.\n"
+
 IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
 CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
 CSF_LABEL = (ord("L") << 24) | (ord("B") << 16) | (ord("L") << 8) | ord(" ")
@@ -1888,17 +1991,17 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     for dirname in DEFAULT_BOOT_INI_DIRS:
         write_text(
             out_dir / "Data" / "INI" / "Default" / dirname / "ios_boot.ini",
-            "; Generated iOS boot placeholder.\n",
+            boot_ini_for(dirname),
             records,
-            "ios_boot_default_ini_placeholder",
+            "ios_boot_default_ini",
             project_root,
         )
     for dirname in MANDATORY_BOOT_INI_DIRS:
         write_text(
             out_dir / "Data" / "INI" / dirname / "ios_boot.ini",
-            "; Generated iOS boot placeholder.\n",
+            boot_ini_for(dirname),
             records,
-            "ios_boot_ini_placeholder",
+            "ios_boot_ini",
             project_root,
         )
     write_playable_slice_assets(out_dir, records, project_root)

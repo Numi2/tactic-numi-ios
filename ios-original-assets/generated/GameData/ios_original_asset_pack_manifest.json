@@ -893,462 +893,462 @@
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/CommandButton/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/ControlBarScheme/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Science/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Multiplayer/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Terrain/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Roads/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 63,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Music/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_default_ini",
+      "sha256": "6860be744016b8eda46e0bdca9f3891734a73ded839b8b1d255c8f4e169325d4",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 401,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/SoundEffects/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_default_ini",
+      "sha256": "e19424a3eee4797a5ccd210b331db09584449e361bd5547d689c0074b2a599aa",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 44,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Speech/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_default_ini",
+      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Video/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 44,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Voice/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_default_ini",
+      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Water/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Weather/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/PlayerTemplate/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/FXList/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/ObjectCreationList/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/SpecialPower/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Object/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Upgrade/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/AIData/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Crate/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/ShellMenuScheme/ios_boot.ini",
-      "role": "ios_boot_default_ini_placeholder",
+      "role": "ios_boot_default_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Animation2D/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 658,
       "path": "ios-original-assets/generated/GameData/Data/INI/AudioSettings/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "695e5a47919a277e52bfb58996c2723547d39a80623f2021dfeb707b5b04b1b3",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Campaign/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ChallengeMode/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandButton/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandMap/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandSet/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ControlBarResizer/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ControlBarScheme/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Credits/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/DrawGroupInfo/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Eva/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/GameLOD/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/GameLODPresets/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/InGameUI/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 527,
       "path": "ios-original-assets/generated/GameData/Data/INI/MiscAudio/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "4776d057485e7aecfe5d625fedb33d9844e184527c7398ccfaf33c7dbb3f7866",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Mouse/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 63,
       "path": "ios-original-assets/generated/GameData/Data/INI/Music/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "6860be744016b8eda46e0bdca9f3891734a73ded839b8b1d255c8f4e169325d4",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ParticleSystem/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Science/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Multiplayer/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Terrain/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Roads/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Video/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Water/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Weather/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Rank/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/PlayerTemplate/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/FXList/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Weapon/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ObjectCreationList/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Locomotor/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/SpecialPower/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/DamageFX/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Armor/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Object/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Upgrade/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/AIData/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Crate/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/ShellMenuScheme/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 401,
       "path": "ios-original-assets/generated/GameData/Data/INI/SoundEffects/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "e19424a3eee4797a5ccd210b331db09584449e361bd5547d689c0074b2a599aa",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 44,
       "path": "ios-original-assets/generated/GameData/Data/INI/Speech/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
       "source": "generated"
     },
     {
-      "bytes": 34,
+      "bytes": 44,
       "path": "ios-original-assets/generated/GameData/Data/INI/Voice/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
-      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "role": "ios_boot_ini",
+      "sha256": "a0f36042f3718a72f95d1ca8284c46a89123a50366cdf26388d7d72817570891",
       "source": "generated"
     },
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/WindowTransitions/ios_boot.ini",
-      "role": "ios_boot_ini_placeholder",
+      "role": "ios_boot_ini",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
     },
