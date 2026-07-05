@@ -48,21 +48,21 @@ cd ~/GeneralsX/GeneralsZH && ./run.sh -win
 ## Quick start — iPhone / iPad
 
 On top of the macOS prerequisites: full Xcode (signed into your Apple ID),
-`brew install xcodegen`, and a (free or paid) Apple Developer team.
+`brew install xcodegen`, `VULKAN_SDK` pointed at a Vulkan SDK macOS root with
+iOS MoltenVK, and a (free or paid) Apple Developer team.
 
 ```sh
 cd GeneralsX
-git submodule update --init references/fbraz3-dxvk   # iOS DXVK is built from this + Patches/dxvk-ios.patch
-./scripts/build/ios/fetch-moltenvk.sh                # pinned MoltenVK.framework (checksummed)
-cmake --preset ios-vulkan
-cmake --build build/ios-vulkan --target z_generals
+export VULKAN_SDK=$HOME/VulkanSDK/<version>/macOS
 GX_TEAM_ID=<your-team-id> GX_BUNDLE_ID=com.you.generalszh \
-    ./scripts/build/ios/package-ios-zh.sh --install  # assembles, signs, installs
+    ./scripts/build/ios/build-package-ios-zh.sh --install
 ```
 
-Find your team id in Xcode → Settings → Accounts. The package step stages
-fonts when needed and bundles `GameData` inside the app for a self-contained
-install; `--dev` skips asset bundling for fast code iteration.
+Find your team id in Xcode -> Settings -> Accounts. The build/package script
+initializes the iOS DXVK submodule, fetches pinned MoltenVK, builds the
+`ios-vulkan` engine target, generates the repo-owned original `GameData` pack,
+signs the app, and installs it when `--install` is passed. Use `--dev` for
+code-only packaging without asset bundling.
 
 ## Where things are
 
