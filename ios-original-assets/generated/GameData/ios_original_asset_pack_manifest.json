@@ -1,5 +1,5 @@
 {
-  "asset_count": 59,
+  "asset_count": 64,
   "assets": [
     {
       "bytes": 1068,
@@ -149,6 +149,27 @@
       "source": "GeneralsZH/Data/Window/Menus/ExtrasMenu.wnd"
     },
     {
+      "bytes": 963,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/BlankWindow.wnd",
+      "role": "ios_boot_window_layout",
+      "sha256": "96e253c829ed82cd9d86c53ea47af2a6511cdd44812f003406a4cd3b28d6256e",
+      "source": "generated"
+    },
+    {
+      "bytes": 1994,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MainMenu.wnd",
+      "role": "ios_boot_window_layout",
+      "sha256": "d8f6b787e8d36b71a955761b754b930d6c13609280d8424beb29afb2f3647438",
+      "source": "generated"
+    },
+    {
+      "bytes": 1996,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/LegalPage.wnd",
+      "role": "ios_boot_window_layout",
+      "sha256": "12b654b3b67cedca36efe43250d24785629aaac74104d3dee49fc03580da6c55",
+      "source": "generated"
+    },
+    {
       "bytes": 102,
       "path": "ios-original-assets/generated/GameData/DefaultOptions.ini",
       "role": "ios_runtime_config",
@@ -270,6 +291,13 @@
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/Crate/ios_boot.ini",
+      "role": "ios_boot_default_ini_placeholder",
+      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "source": "generated"
+    },
+    {
+      "bytes": 34,
+      "path": "ios-original-assets/generated/GameData/Data/INI/Default/ShellMenuScheme/ios_boot.ini",
       "role": "ios_boot_default_ini_placeholder",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"
@@ -410,6 +438,13 @@
     {
       "bytes": 34,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandMap/ios_boot.ini",
+      "role": "ios_boot_ini_placeholder",
+      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "source": "generated"
+    },
+    {
+      "bytes": 34,
+      "path": "ios-original-assets/generated/GameData/Data/INI/ShellMenuScheme/ios_boot.ini",
       "role": "ios_boot_ini_placeholder",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
       "source": "generated"

@@ -56,6 +56,7 @@ MANDATORY_BOOT_INI_DIRS = (
     "AIData",
     "Crate",
     "CommandMap",
+    "ShellMenuScheme",
 )
 
 DEFAULT_BOOT_INI_DIRS = (
@@ -73,6 +74,7 @@ DEFAULT_BOOT_INI_DIRS = (
     "Upgrade",
     "AIData",
     "Crate",
+    "ShellMenuScheme",
 )
 
 IOS_BOOT_GAMEDATA = """GameData
@@ -85,6 +87,61 @@ IOS_BOOT_GAMEDATA = """GameData
   ShellMapOn = No
   PlayIntro = No
 End
+"""
+
+def minimal_wnd(layout_name: str, title: str | None = None) -> str:
+    text_block = ""
+    if title:
+        text_block = f"""
+  CHILD
+  WINDOW
+    WINDOWTYPE = STATICTEXT;
+    SCREENRECT = UPPERLEFT: 0 260, BOTTOMRIGHT: 1024 320, CREATIONRESOLUTION: 1024 768;
+    NAME = "{layout_name}:Title";
+    STATUS = ENABLED+NOFOCUS;
+    STYLE = STATICTEXT+CENTER+VCENTER+USER;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+    FONT = NAME: "Arial", SIZE: 22, BOLD: 1;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "{title}";
+    TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+                DISABLED: 255 255 255 255, DISABLEDBORDER: 0 0 0 255,
+                HILITE: 255 255 255 255, HILITEBORDER: 0 0 0 255;
+    STATICTEXTDATA = TEXTCOLOR: 255 255 255 255, BORDERCOLOR: 0 0 0 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END"""
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0, BOTTOMRIGHT: 1024 768, CREATIONRESOLUTION: 1024 768;
+  NAME = "{layout_name}:Root";
+  STATUS = ENABLED+IMAGE+NOFOCUS;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 255 255 255 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 255 255 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 255, BORDERCOLOR: 0 0 0 255;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 255, BORDERCOLOR: 0 0 0 255;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 255, BORDERCOLOR: 0 0 0 255;{text_block}
+END
 """
 
 
@@ -231,6 +288,28 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
         out_dir / "Data" / "Window" / "Menus" / "ExtrasMenu.wnd",
         records,
         "ios_boot_menu",
+        project_root,
+    )
+
+    write_text(
+        out_dir / "Data" / "Window" / "Menus" / "BlankWindow.wnd",
+        minimal_wnd("BlankWindow.wnd"),
+        records,
+        "ios_boot_window_layout",
+        project_root,
+    )
+    write_text(
+        out_dir / "Data" / "Window" / "Menus" / "MainMenu.wnd",
+        minimal_wnd("MainMenu.wnd", "GENERALS X"),
+        records,
+        "ios_boot_window_layout",
+        project_root,
+    )
+    write_text(
+        out_dir / "Data" / "Window" / "Menus" / "LegalPage.wnd",
+        minimal_wnd("LegalPage.wnd", "GENERALS X"),
+        records,
+        "ios_boot_window_layout",
         project_root,
     )
 
