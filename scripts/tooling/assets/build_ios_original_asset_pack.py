@@ -352,6 +352,18 @@ IOS_CSF_LABELS = {
     "INI:Command_StopDescription": "Cancels the current order.",
     "INI:Command_SelectAllOfType": "Select Type",
     "INI:Command_SelectAllOfTypeDescription": "Selects matching units on screen.",
+    "GUI:Communicator": "Messages",
+    "GUI:CommunicatorDescription": "Opens the communicator.",
+    "GUI:Options": "Options",
+    "GUI:OptionsDescription": "Opens the options menu.",
+    "GUI:IdleWorker": "Idle Builder",
+    "GUI:IdleWorkerDescription": "Selects the next idle builder.",
+    "GUI:Beacon": "Beacon",
+    "GUI:BeaconDescription": "Places a map beacon.",
+    "GUI:GeneralPowerShortcut": "General Powers",
+    "GUI:GeneralPowerShortcutDescription": "Opens available general powers.",
+    "GUI:ToggleControlBar": "Control Bar",
+    "GUI:ToggleControlBarDescription": "Toggles the expanded control bar.",
     "MAP:IOSPlayableSlice": "iOS Playable Slice",
 }
 IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
@@ -440,6 +452,54 @@ CommandButton Command_IOSSelectAllOfType
   TextLabel = INI:Command_SelectAllOfType
   DescriptLabel = INI:Command_SelectAllOfTypeDescription
   ButtonImage = IOSSelectAllIcon
+End
+
+CommandButton NonCommand_Communicator
+  Command = NONE
+  TextLabel = GUI:Communicator
+  DescriptLabel = GUI:CommunicatorDescription
+  ButtonImage = IOSCommunicatorIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_Options
+  Command = NONE
+  TextLabel = GUI:Options
+  DescriptLabel = GUI:OptionsDescription
+  ButtonImage = IOSOptionsIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_IdleWorker
+  Command = NONE
+  TextLabel = GUI:IdleWorker
+  DescriptLabel = GUI:IdleWorkerDescription
+  ButtonImage = IOSIdleWorkerIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_Beacon
+  Command = PLACE_BEACON
+  TextLabel = GUI:Beacon
+  DescriptLabel = GUI:BeaconDescription
+  ButtonImage = IOSBeaconIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_GeneralsExperience
+  Command = NONE
+  TextLabel = GUI:GeneralPowerShortcut
+  DescriptLabel = GUI:GeneralPowerShortcutDescription
+  ButtonImage = IOSGeneralPowersIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_UpDown
+  Command = NONE
+  TextLabel = GUI:ToggleControlBar
+  DescriptLabel = GUI:ToggleControlBarDescription
+  ButtonImage = IOSToggleControlBarIcon
+  ButtonBorderType = SYSTEM
 End
 """
 
@@ -1791,6 +1851,12 @@ def write_playable_slice_assets(
         ("IOSScoutVehicleIcon.tga", (120, 150, 165, 255)),
         ("IOSStopIcon.tga", (220, 62, 54, 255)),
         ("IOSSelectAllIcon.tga", (150, 96, 210, 255)),
+        ("IOSCommunicatorIcon.tga", (64, 180, 220, 255)),
+        ("IOSOptionsIcon.tga", (178, 188, 198, 255)),
+        ("IOSIdleWorkerIcon.tga", (214, 174, 82, 255)),
+        ("IOSBeaconIcon.tga", (236, 84, 76, 255)),
+        ("IOSGeneralPowersIcon.tga", (110, 104, 224, 255)),
+        ("IOSToggleControlBarIcon.tga", (82, 210, 164, 255)),
     )
     for filename, color in icon_colors:
         write_radial_tga(
