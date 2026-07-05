@@ -653,17 +653,17 @@
       "source": "generated"
     },
     {
-      "bytes": 978,
+      "bytes": 3889,
       "path": "ios-original-assets/generated/GameData/Data/Window/ControlBarPopupDescription.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "35b1cc2bf8c82a3173a0c4beebfdffab1fef20e1e0995a0952f2cfb1937f4dc6",
+      "sha256": "91d4098d79efcf506b5cfa1ed8bf70cd42b409ef34c97efe6e4473b4f654c57d",
       "source": "generated"
     },
     {
-      "bytes": 969,
+      "bytes": 29364,
       "path": "ios-original-assets/generated/GameData/Data/Window/GeneralsExpPoints.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "7464f21db4d3050f91e3710fb72df308dc5f16595cd59a68955c3323121b334f",
+      "sha256": "51244ef87851105ff0bc6baadace62199fb74e1aa6eb1d352f033484a07f0fdf",
       "source": "generated"
     },
     {

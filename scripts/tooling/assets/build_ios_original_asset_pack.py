@@ -892,6 +892,137 @@ END
 """
 
 
+def control_bar_popup_description_wnd() -> str:
+    children = "".join(
+        [
+            child_wnd_block(
+                "ControlBarPopupDescription.wnd:StaticTextName",
+                12,
+                10,
+                388,
+                36,
+                window_type="STATICTEXT",
+                style="STATICTEXT+USER",
+                text="Command",
+                font_size=13,
+                color=(22, 26, 30, 230),
+            ),
+            child_wnd_block(
+                "ControlBarPopupDescription.wnd:StaticTextCost",
+                12,
+                38,
+                388,
+                62,
+                window_type="STATICTEXT",
+                style="STATICTEXT+USER",
+                text="$0",
+                font_size=12,
+                color=(22, 34, 24, 220),
+            ),
+            child_wnd_block(
+                "ControlBarPopupDescription.wnd:StaticTextDescription",
+                12,
+                66,
+                388,
+                154,
+                window_type="STATICTEXT",
+                style="STATICTEXT+USER",
+                text="",
+                font_size=11,
+                color=(22, 26, 30, 230),
+            ),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 420 438, BOTTOMRIGHT: 820 602, CREATIONRESOLUTION: 1024 768;
+  NAME = "ControlBarPopupDescription.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 238, BORDERCOLOR: 180 190 205 180;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 160, BORDERCOLOR: 80 80 80 160;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 10 13 17 238, BORDERCOLOR: 255 235 170 220;{children}
+END
+"""
+
+
+def generals_exp_points_wnd() -> str:
+    rank1 = [
+        push_button(f"GeneralsExpPoints.wnd:ButtonRank1Number{index}", 38 + index * 72, 112, 94 + index * 72, 168)
+        for index in range(4)
+    ]
+    rank3 = [
+        push_button(
+            f"GeneralsExpPoints.wnd:ButtonRank3Number{index}",
+            38 + (index % 5) * 72,
+            204 + (index // 5) * 72,
+            94 + (index % 5) * 72,
+            260 + (index // 5) * 72,
+        )
+        for index in range(15)
+    ]
+    rank8 = [
+        push_button(f"GeneralsExpPoints.wnd:ButtonRank8Number{index}", 38 + index * 72, 460, 94 + index * 72, 516)
+        for index in range(4)
+    ]
+    children = "".join(
+        [
+            child_wnd_block("GeneralsExpPoints.wnd:GenExpParent", 0, 0, 430, 560, color=(18, 22, 28, 238)),
+            child_wnd_block("GeneralsExpPoints.wnd:StaticTextTitle", 24, 18, 380, 48, window_type="STATICTEXT", style="STATICTEXT+USER", text="General Powers", font_size=16, color=(18, 22, 28, 180)),
+            child_wnd_block("GeneralsExpPoints.wnd:StaticTextRankPointsAvailable", 24, 54, 380, 80, window_type="STATICTEXT", style="STATICTEXT+USER", text="Points Available: 0", font_size=12, color=(18, 22, 28, 180)),
+            child_wnd_block("GeneralsExpPoints.wnd:StaticTextLevel", 24, 82, 220, 106, window_type="STATICTEXT", style="STATICTEXT+USER", text="Level 1", font_size=12, color=(18, 22, 28, 180)),
+            child_wnd_block("GeneralsExpPoints.wnd:ProgressBarExperience", 224, 86, 386, 104, color=(120, 92, 32, 220)),
+            *rank1,
+            *rank3,
+            *rank8,
+            push_button("GeneralsExpPoints.wnd:ButtonExit", 320, 512, 394, 546, "Close"),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 292 96, BOTTOMRIGHT: 722 656, CREATIONRESOLUTION: 1024 768;
+  NAME = "GeneralsExpPoints.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -1356,6 +1487,10 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
         layout_name = Path(layout_path).name
         if layout_name == "ControlBar.wnd":
             layout_text = control_bar_wnd()
+        elif layout_name == "ControlBarPopupDescription.wnd":
+            layout_text = control_bar_popup_description_wnd()
+        elif layout_name == "GeneralsExpPoints.wnd":
+            layout_text = generals_exp_points_wnd()
         else:
             layout_text = minimal_wnd(layout_name, title)
         write_text(
