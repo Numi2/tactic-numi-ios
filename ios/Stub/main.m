@@ -1,5 +1,5 @@
-// Placeholder executable for the provisioning shell app.
-// package-ios.sh replaces this binary with the real z_generals engine.
+// Minimal executable for the provisioning wrapper app.
+// package-ios-zh.sh replaces this binary with the real GeneralsXZH engine.
 int main(int argc, char *argv[])
 {
     (void)argc;

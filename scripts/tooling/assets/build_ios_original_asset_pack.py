@@ -268,6 +268,13 @@ IOS_MISC_AUDIO = """MiscAudio
 End
 """
 
+IOS_BOOT_NOOP_INI = """; Generated iOS boot no-op.
+; This file is intentionally parseable but definition-free because the engine
+; requires at least one INI file in this directory during loadFileDirectory().
+; Real playable-slice definitions are emitted in the category-specific
+; ios_playable_slice.ini files or in the non-empty boot INIs above.
+"""
+
 
 def boot_ini_for(dirname: str) -> str:
     if dirname == "AudioSettings":
@@ -280,7 +287,7 @@ def boot_ini_for(dirname: str) -> str:
         return IOS_MISC_AUDIO
     if dirname in ("Speech", "Voice"):
         return "DialogEvent DefaultDialog\n  Volume = 0%\nEnd\n"
-    return "; Generated iOS boot placeholder.\n"
+    return IOS_BOOT_NOOP_INI
 
 IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
 CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
@@ -1996,9 +2003,9 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     )
     write_text(
         out_dir / "Data" / "English" / "HeaderTemplate" / "ios_boot.ini",
-        "; Generated iOS boot placeholder.\n",
+        IOS_BOOT_NOOP_INI,
         records,
-        "localization_header_template_placeholder",
+        "localization_header_template_noop_ini",
         project_root,
     )
     write_binary(
