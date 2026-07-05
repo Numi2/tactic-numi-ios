@@ -54,6 +54,17 @@ def collect_required_assets(manifest):
         indexed_by_path[item.get("archive_entry", "").lower()] = item
 
     required = {}
+    for item in manifest.get("files", []):
+        path = item.get("path")
+        if not path:
+            continue
+        required[path] = {
+            "path": path,
+            "category": item.get("category") or "other",
+            "bytes": item.get("bytes"),
+            "source_references": [],
+        }
+
     for record in manifest.get("resolved_references", []):
         target = record.get("target")
         if not target:
@@ -81,12 +92,13 @@ def select_first_slice(required_assets, limits):
     for asset in required_assets:
         grouped[asset["category"]].append(asset)
     selected = []
-    for category, limit in limits.items():
+    categories = sorted(set(grouped) | set(limits))
+    for category in categories:
         candidates = sorted(
             grouped.get(category, []),
             key=lambda item: (-len(item["source_references"]), item["path"].lower()),
         )
-        selected.extend(candidates[:limit])
+        selected.extend(candidates)
     return selected
 
 

@@ -2,433 +2,544 @@
   "missing_reference_count": 0,
   "selected_assets": [
     {
-      "bytes": 62562,
-      "category": "ui",
-      "path": "Data/Window/ControlBar.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ControlBar.wnd",
-          "source": "Data/Window/ControlBar.wnd"
-        }
-      ]
+      "bytes": 10742,
+      "category": "audio",
+      "path": "Data/Audio/Sounds/action_rejected.wav",
+      "source_references": []
     },
     {
-      "bytes": 968,
-      "category": "ui",
-      "path": "Data/Window/controlBarHidden.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "controlBarHidden.wnd",
-          "source": "Data/Window/controlBarHidden.wnd"
-        }
-      ]
+      "bytes": 19846,
+      "category": "audio",
+      "path": "Data/Audio/Sounds/load_ambient.wav",
+      "source_references": []
     },
     {
-      "bytes": 3889,
-      "category": "ui",
-      "path": "Data/Window/ControlBarPopupDescription.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ControlBarPopupDescription.wnd",
-          "source": "Data/Window/ControlBarPopupDescription.wnd"
-        }
-      ]
+      "bytes": 8594,
+      "category": "audio",
+      "path": "Data/Audio/Sounds/place_building.wav",
+      "source_references": []
     },
     {
-      "bytes": 29364,
-      "category": "ui",
-      "path": "Data/Window/GeneralsExpPoints.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "GeneralsExpPoints.wnd",
-          "source": "Data/Window/GeneralsExpPoints.wnd"
-        }
-      ]
+      "bytes": 6356,
+      "category": "audio",
+      "path": "Data/Audio/Sounds/rally_set.wav",
+      "source_references": []
     },
     {
-      "bytes": 3885,
-      "category": "ui",
-      "path": "Data/Window/InGameChat.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "InGameChat.wnd",
-          "source": "Data/Window/InGameChat.wnd"
-        }
-      ]
+      "bytes": 6876,
+      "category": "audio",
+      "path": "Data/Audio/Sounds/ui_click.wav",
+      "source_references": []
     },
     {
-      "bytes": 3877,
-      "category": "ui",
-      "path": "Data/Window/InGamePopupMessage.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "InGamePopupMessage.wnd",
-          "source": "Data/Window/InGamePopupMessage.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/English/HeaderTemplate/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 963,
-      "category": "ui",
-      "path": "Data/Window/Menus/BlankWindow.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "BlankWindow.wnd",
-          "source": "Data/Window/Menus/BlankWindow.wnd"
-        }
-      ]
+      "bytes": 43,
+      "category": "ini",
+      "path": "Data/English/Language.ini",
+      "source_references": []
     },
     {
-      "bytes": 2013,
-      "category": "ui",
-      "path": "Data/Window/Menus/ChallengeLoadScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ChallengeLoadScreen.wnd",
-          "source": "Data/Window/Menus/ChallengeLoadScreen.wnd"
-        }
-      ]
+      "bytes": 1744,
+      "category": "ini",
+      "path": "Data/INI/AIData/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2009,
-      "category": "ui",
-      "path": "Data/Window/Menus/CRCMismatch.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "CRCMismatch.wnd",
-          "source": "Data/Window/Menus/CRCMismatch.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Animation2D/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1986,
-      "category": "ui",
-      "path": "Data/Window/Menus/Defeat.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "Defeat.wnd",
-          "source": "Data/Window/Menus/Defeat.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Armor/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2012,
-      "category": "ui",
-      "path": "Data/Window/Menus/DisconnectScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "DisconnectScreen.wnd",
-          "source": "Data/Window/Menus/DisconnectScreen.wnd"
-        }
-      ]
+      "bytes": 194,
+      "category": "ini",
+      "path": "Data/INI/Armor/ios_playable_slice.ini",
+      "source_references": []
     },
     {
-      "bytes": 62415,
-      "category": "ui",
-      "path": "Data/Window/Menus/ExtrasMenu.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ExtrasMenu.wnd",
-          "source": "Data/Window/Menus/ExtrasMenu.wnd"
-        }
-      ]
+      "bytes": 658,
+      "category": "ini",
+      "path": "Data/INI/AudioSettings/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2009,
-      "category": "ui",
-      "path": "Data/Window/Menus/GameSpyLoadScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "GameSpyLoadScreen.wnd",
-          "source": "Data/Window/Menus/GameSpyLoadScreen.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Campaign/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1996,
-      "category": "ui",
-      "path": "Data/Window/Menus/LegalPage.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "LegalPage.wnd",
-          "source": "Data/Window/Menus/LegalPage.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ChallengeMode/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1996,
-      "category": "ui",
-      "path": "Data/Window/Menus/LocalDefeat.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "LocalDefeat.wnd",
-          "source": "Data/Window/Menus/LocalDefeat.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/CommandButton/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 56583,
-      "category": "ui",
-      "path": "Data/Window/Menus/MainMenu.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "MainMenu.wnd",
-          "source": "Data/Window/Menus/MainMenu.wnd"
-        }
-      ]
+      "bytes": 4870,
+      "category": "ini",
+      "path": "Data/INI/CommandButton/ios_playable_slice.ini",
+      "source_references": []
     },
     {
-      "bytes": 2009,
-      "category": "ui",
-      "path": "Data/Window/Menus/MapTransferScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "MapTransferScreen.wnd",
-          "source": "Data/Window/Menus/MapTransferScreen.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/CommandMap/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 962,
-      "category": "ui",
-      "path": "Data/Window/Menus/MessageBox.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "MessageBox.wnd",
-          "source": "Data/Window/Menus/MessageBox.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/CommandSet/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2017,
-      "category": "ui",
-      "path": "Data/Window/Menus/MultiplayerLoadScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "MultiplayerLoadScreen.wnd",
-          "source": "Data/Window/Menus/MultiplayerLoadScreen.wnd"
-        }
-      ]
+      "bytes": 733,
+      "category": "ini",
+      "path": "Data/INI/CommandSet/ios_playable_slice.ini",
+      "source_references": []
     },
     {
-      "bytes": 2005,
-      "category": "ui",
-      "path": "Data/Window/Menus/ObserverQuit.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ObserverQuit.wnd",
-          "source": "Data/Window/Menus/ObserverQuit.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ControlBarResizer/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1997,
-      "category": "ui",
-      "path": "Data/Window/Menus/OptionsMenu.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "OptionsMenu.wnd",
-          "source": "Data/Window/Menus/OptionsMenu.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ControlBarScheme/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 969,
-      "category": "ui",
-      "path": "Data/Window/Menus/PopupCommunicator.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "PopupCommunicator.wnd",
-          "source": "Data/Window/Menus/PopupCommunicator.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Crate/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1996,
-      "category": "ui",
-      "path": "Data/Window/Menus/PopupReplay.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "PopupReplay.wnd",
-          "source": "Data/Window/Menus/PopupReplay.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Credits/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1998,
-      "category": "ui",
-      "path": "Data/Window/Menus/PopupSaveLoad.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "PopupSaveLoad.wnd",
-          "source": "Data/Window/Menus/PopupSaveLoad.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/DamageFX/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1988,
-      "category": "ui",
-      "path": "Data/Window/Menus/QuitMenu.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "QuitMenu.wnd",
-          "source": "Data/Window/Menus/QuitMenu.wnd"
-        }
-      ]
+      "bytes": 32,
+      "category": "ini",
+      "path": "Data/INI/DamageFX/ios_playable_slice.ini",
+      "source_references": []
     },
     {
-      "bytes": 2000,
-      "category": "ui",
-      "path": "Data/Window/Menus/QuitMessageBox.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "QuitMessageBox.wnd",
-          "source": "Data/Window/Menus/QuitMessageBox.wnd"
-        }
-      ]
+      "bytes": 1744,
+      "category": "ini",
+      "path": "Data/INI/Default/AIData/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1992,
-      "category": "ui",
-      "path": "Data/Window/Menus/QuitNoSave.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "QuitNoSave.wnd",
-          "source": "Data/Window/Menus/QuitNoSave.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/CommandButton/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1995,
-      "category": "ui",
-      "path": "Data/Window/Menus/ScoreScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ScoreScreen.wnd",
-          "source": "Data/Window/Menus/ScoreScreen.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/ControlBarScheme/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2890,
-      "category": "ui",
-      "path": "Data/Window/Menus/ShellGameLoadScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ShellGameLoadScreen.wnd",
-          "source": "Data/Window/Menus/ShellGameLoadScreen.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Crate/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 19076,
-      "category": "ui",
-      "path": "Data/Window/Menus/SinglePlayerLoadScreen.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "SinglePlayerLoadScreen.wnd",
-          "source": "Data/Window/Menus/SinglePlayerLoadScreen.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/FXList/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 1995,
-      "category": "ui",
-      "path": "Data/Window/Menus/Victorious.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "Victorious.wnd",
-          "source": "Data/Window/Menus/Victorious.wnd"
-        }
-      ]
+      "bytes": 170,
+      "category": "ini",
+      "path": "Data/INI/Default/GameData.ini",
+      "source_references": []
     },
     {
-      "bytes": 1848,
-      "category": "ui",
-      "path": "Data/Window/MOTD.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "MOTD.wnd",
-          "source": "Data/Window/MOTD.wnd"
-        }
-      ]
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Multiplayer/ios_boot.ini",
+      "source_references": []
     },
     {
-      "bytes": 2863,
-      "category": "ui",
-      "path": "Data/Window/ReplayControl.wnd",
-      "source_references": [
-        {
-          "kind": "reference",
-          "origin": null,
-          "reference": "ReplayControl.wnd",
-          "source": "Data/Window/ReplayControl.wnd"
-        }
-      ]
+      "bytes": 63,
+      "category": "ini",
+      "path": "Data/INI/Default/Music/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Object/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/ObjectCreationList/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/PlayerTemplate/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Roads/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Science/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/ShellMenuScheme/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 613,
+      "category": "ini",
+      "path": "Data/INI/Default/SoundEffects/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/SpecialPower/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 44,
+      "category": "ini",
+      "path": "Data/INI/Default/Speech/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Terrain/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Upgrade/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Video/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 44,
+      "category": "ini",
+      "path": "Data/INI/Default/Voice/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Water/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Default/Weather/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/DrawGroupInfo/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Eva/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/FXList/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/GameLOD/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/GameLODPresets/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/InGameUI/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Locomotor/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 603,
+      "category": "ini",
+      "path": "Data/INI/Locomotor/ios_playable_slice.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 23586,
+      "category": "ini",
+      "path": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 542,
+      "category": "ini",
+      "path": "Data/INI/MiscAudio/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Mouse/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Multiplayer/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 63,
+      "category": "ini",
+      "path": "Data/INI/Music/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Object/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 18548,
+      "category": "ini",
+      "path": "Data/INI/Object/ios_playable_slice.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ObjectCreationList/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ParticleSystem/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/PlayerTemplate/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 1260,
+      "category": "ini",
+      "path": "Data/INI/PlayerTemplate/ios_playable_slice.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Rank/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Roads/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Science/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/ShellMenuScheme/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 613,
+      "category": "ini",
+      "path": "Data/INI/SoundEffects/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/SpecialPower/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 44,
+      "category": "ini",
+      "path": "Data/INI/Speech/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Terrain/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Upgrade/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Video/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 44,
+      "category": "ini",
+      "path": "Data/INI/Voice/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Water/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Weapon/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 515,
+      "category": "ini",
+      "path": "Data/INI/Weapon/ios_playable_slice.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/Weather/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 324,
+      "category": "ini",
+      "path": "Data/INI/WindowTransitions/ios_boot.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 6245,
+      "category": "ini",
+      "path": "Data/Runtime/RequiredAssets/Dazzle.INI",
+      "source_references": []
+    },
+    {
+      "bytes": 6245,
+      "category": "ini",
+      "path": "Dazzle.INI",
+      "source_references": []
+    },
+    {
+      "bytes": 102,
+      "category": "ini",
+      "path": "DefaultOptions.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 46,
+      "category": "ini",
+      "path": "Maps/IOSPlayableSlice/map.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 465,
+      "category": "ini",
+      "path": "Maps/MapCache.ini",
+      "source_references": []
+    },
+    {
+      "bytes": 6694,
+      "category": "localization",
+      "path": "Data/English/generals.csf",
+      "source_references": []
+    },
+    {
+      "bytes": 46,
+      "category": "localization",
+      "path": "Maps/IOSPlayableSlice/map.str",
+      "source_references": []
     },
     {
       "bytes": 4870,
@@ -884,6 +995,294 @@
           "source": "Data/INI/Object/ios_playable_slice.ini"
         }
       ]
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/AirF_AmericaParticleCannonUplink.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/AmericaParticleCannonUplink.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Boss_GLAScudStorm.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Boss_NuclearMissileLauncher.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Boss_ParticleCannonUplink.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Chem_GLAScudStorm.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/ChinaNuclearMissileLauncher.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Demo_GLAScudStorm.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/GarrisonGun.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/GenericBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/GenericDebris.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/GLAScudStorm.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Infa_ChinaNuclearMissileLauncher.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSBarracks.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSBeacon.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSCommandCenter.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSDozer.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSGenericBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSGenericDebris.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSPowerPlant.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSRallyPointMarker.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSRanger.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSScoutVehicle.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/IOSWaterWaveBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Lazr_AmericaParticleCannonUplink.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Nuke_ChinaNuclearMissileLauncher.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/ShatterPlanes0.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Slth_GLAScudStorm.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/SupW_AmericaParticleCannonUplink.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/Tank_ChinaNuclearMissileLauncher.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaterWaveBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveHit01.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSplash01.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSplashLeft01.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSplashRight01.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSpray01.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSpray02.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "Data/Runtime/RequiredAssets/WaveSpray03.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "GenericBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "GenericDebris.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "ShatterPlanes0.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 2444,
+      "category": "models",
+      "path": "WaterWaveBridge.w3d",
+      "source_references": []
+    },
+    {
+      "bytes": 209,
+      "category": "other",
+      "path": "Data/Runtime/RequiredAssets/ShatterAVel.tbl",
+      "source_references": []
+    },
+    {
+      "bytes": 209,
+      "category": "other",
+      "path": "Data/Runtime/RequiredAssets/ShatterVel.tbl",
+      "source_references": []
+    },
+    {
+      "bytes": 577,
+      "category": "other",
+      "path": "dxvk.conf",
+      "source_references": []
+    },
+    {
+      "bytes": 92845,
+      "category": "other",
+      "path": "ios_original_asset_pack_manifest.json",
+      "source_references": []
+    },
+    {
+      "bytes": 209,
+      "category": "other",
+      "path": "ShatterAVel.tbl",
+      "source_references": []
+    },
+    {
+      "bytes": 209,
+      "category": "other",
+      "path": "ShatterVel.tbl",
+      "source_references": []
     },
     {
       "bytes": 16402,
@@ -1446,6 +1845,831 @@
           "origin": null,
           "reference": "IOSVeterancy3Icon.tga",
           "source": "Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini"
+        }
+      ]
+    },
+    {
+      "bytes": 1068,
+      "category": "textures",
+      "path": "AddProjectorGradient.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "alphaclip.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/alphaclip.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/EXLaser.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/exmask_g.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/EXScorch01.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/EXSnowFlake.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/missing.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/Noise0000.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/shadow.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/shroud1024.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TBBib.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TBRedBib.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TMGras23a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSCloudMed.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMoonLarg.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMorningE.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMorningN.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMorningS.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMorningT.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSMorningW.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TSNoiseUrb.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TWAlphaEdge.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TWWater01.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TXAsph01a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/TXSnow04a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/WaterSurfaceBubbles.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/wave1.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/wave2.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Art/Textures/wave256.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 1068,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/AddProjectorGradient.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 1068,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/MultProjectorGradient.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/SunDazzle.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/SunHalo.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/SunLensFlare.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 49196,
+      "category": "textures",
+      "path": "Data/Runtime/RequiredAssets/w3d_missing_texture.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "EXLaser.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "exmask_g.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "EXScorch01.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "EXSnowFlake.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 65554,
+      "category": "textures",
+      "path": "Maps/IOSPlayableSlice/IOSPlayableSlice.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "missing.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 1068,
+      "category": "textures",
+      "path": "MultProjectorGradient.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "Noise0000.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "shadow.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "shroud1024.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TBBib.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TBRedBib.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TMGras23a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSCloudMed.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMoonLarg.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMorningE.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMorningN.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMorningS.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMorningT.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSMorningW.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TSNoiseUrb.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TWAlphaEdge.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TWWater01.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TXAsph01a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "TXSnow04a.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 49196,
+      "category": "textures",
+      "path": "w3d_missing_texture.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "WaterSurfaceBubbles.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "wave1.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "wave2.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 16402,
+      "category": "textures",
+      "path": "wave256.tga",
+      "source_references": []
+    },
+    {
+      "bytes": 62562,
+      "category": "ui",
+      "path": "Data/Window/ControlBar.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ControlBar.wnd",
+          "source": "Data/Window/ControlBar.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 968,
+      "category": "ui",
+      "path": "Data/Window/controlBarHidden.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "controlBarHidden.wnd",
+          "source": "Data/Window/controlBarHidden.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3889,
+      "category": "ui",
+      "path": "Data/Window/ControlBarPopupDescription.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ControlBarPopupDescription.wnd",
+          "source": "Data/Window/ControlBarPopupDescription.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 29364,
+      "category": "ui",
+      "path": "Data/Window/GeneralsExpPoints.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "GeneralsExpPoints.wnd",
+          "source": "Data/Window/GeneralsExpPoints.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3885,
+      "category": "ui",
+      "path": "Data/Window/InGameChat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "InGameChat.wnd",
+          "source": "Data/Window/InGameChat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 3877,
+      "category": "ui",
+      "path": "Data/Window/InGamePopupMessage.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "InGamePopupMessage.wnd",
+          "source": "Data/Window/InGamePopupMessage.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 963,
+      "category": "ui",
+      "path": "Data/Window/Menus/BlankWindow.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "BlankWindow.wnd",
+          "source": "Data/Window/Menus/BlankWindow.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2013,
+      "category": "ui",
+      "path": "Data/Window/Menus/ChallengeLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ChallengeLoadScreen.wnd",
+          "source": "Data/Window/Menus/ChallengeLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/CRCMismatch.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "CRCMismatch.wnd",
+          "source": "Data/Window/Menus/CRCMismatch.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1986,
+      "category": "ui",
+      "path": "Data/Window/Menus/Defeat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "Defeat.wnd",
+          "source": "Data/Window/Menus/Defeat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2012,
+      "category": "ui",
+      "path": "Data/Window/Menus/DisconnectScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "DisconnectScreen.wnd",
+          "source": "Data/Window/Menus/DisconnectScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 62415,
+      "category": "ui",
+      "path": "Data/Window/Menus/ExtrasMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ExtrasMenu.wnd",
+          "source": "Data/Window/Menus/ExtrasMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/GameSpyLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "GameSpyLoadScreen.wnd",
+          "source": "Data/Window/Menus/GameSpyLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/LegalPage.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "LegalPage.wnd",
+          "source": "Data/Window/Menus/LegalPage.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/LocalDefeat.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "LocalDefeat.wnd",
+          "source": "Data/Window/Menus/LocalDefeat.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 56583,
+      "category": "ui",
+      "path": "Data/Window/Menus/MainMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MainMenu.wnd",
+          "source": "Data/Window/Menus/MainMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2009,
+      "category": "ui",
+      "path": "Data/Window/Menus/MapTransferScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MapTransferScreen.wnd",
+          "source": "Data/Window/Menus/MapTransferScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 962,
+      "category": "ui",
+      "path": "Data/Window/Menus/MessageBox.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MessageBox.wnd",
+          "source": "Data/Window/Menus/MessageBox.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2017,
+      "category": "ui",
+      "path": "Data/Window/Menus/MultiplayerLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MultiplayerLoadScreen.wnd",
+          "source": "Data/Window/Menus/MultiplayerLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2005,
+      "category": "ui",
+      "path": "Data/Window/Menus/ObserverQuit.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ObserverQuit.wnd",
+          "source": "Data/Window/Menus/ObserverQuit.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1997,
+      "category": "ui",
+      "path": "Data/Window/Menus/OptionsMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "OptionsMenu.wnd",
+          "source": "Data/Window/Menus/OptionsMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 969,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupCommunicator.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupCommunicator.wnd",
+          "source": "Data/Window/Menus/PopupCommunicator.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1996,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupReplay.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupReplay.wnd",
+          "source": "Data/Window/Menus/PopupReplay.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1998,
+      "category": "ui",
+      "path": "Data/Window/Menus/PopupSaveLoad.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "PopupSaveLoad.wnd",
+          "source": "Data/Window/Menus/PopupSaveLoad.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1988,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitMenu.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitMenu.wnd",
+          "source": "Data/Window/Menus/QuitMenu.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2000,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitMessageBox.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitMessageBox.wnd",
+          "source": "Data/Window/Menus/QuitMessageBox.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1992,
+      "category": "ui",
+      "path": "Data/Window/Menus/QuitNoSave.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "QuitNoSave.wnd",
+          "source": "Data/Window/Menus/QuitNoSave.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1995,
+      "category": "ui",
+      "path": "Data/Window/Menus/ScoreScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ScoreScreen.wnd",
+          "source": "Data/Window/Menus/ScoreScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2890,
+      "category": "ui",
+      "path": "Data/Window/Menus/ShellGameLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ShellGameLoadScreen.wnd",
+          "source": "Data/Window/Menus/ShellGameLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 19076,
+      "category": "ui",
+      "path": "Data/Window/Menus/SinglePlayerLoadScreen.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "SinglePlayerLoadScreen.wnd",
+          "source": "Data/Window/Menus/SinglePlayerLoadScreen.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1995,
+      "category": "ui",
+      "path": "Data/Window/Menus/Victorious.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "Victorious.wnd",
+          "source": "Data/Window/Menus/Victorious.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 1848,
+      "category": "ui",
+      "path": "Data/Window/MOTD.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "MOTD.wnd",
+          "source": "Data/Window/MOTD.wnd"
+        }
+      ]
+    },
+    {
+      "bytes": 2863,
+      "category": "ui",
+      "path": "Data/Window/ReplayControl.wnd",
+      "source_references": [
+        {
+          "kind": "reference",
+          "origin": null,
+          "reference": "ReplayControl.wnd",
+          "source": "Data/Window/ReplayControl.wnd"
         }
       ]
     }

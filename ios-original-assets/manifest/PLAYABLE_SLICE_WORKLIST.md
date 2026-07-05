@@ -5,7 +5,7 @@ Source manifest: `build/asset-manifest/ios_asset_manifest.json`
 ## Gate Status
 
 - Hard missing references in source manifest: 0
-- Selected required assets: 110
+- Selected required assets: 314
 
 ## Source Layout
 
@@ -21,6 +21,111 @@ Source manifest: `build/asset-manifest/ios_asset_manifest.json`
 - `validation/`
 
 ## Asset Worklist
+
+### audio
+
+| Asset | References |
+|---|---:|
+| `Data/Audio/Sounds/action_rejected.wav` | 0 |
+| `Data/Audio/Sounds/load_ambient.wav` | 0 |
+| `Data/Audio/Sounds/place_building.wav` | 0 |
+| `Data/Audio/Sounds/rally_set.wav` | 0 |
+| `Data/Audio/Sounds/ui_click.wav` | 0 |
+
+### ini
+
+| Asset | References |
+|---|---:|
+| `Data/English/HeaderTemplate/ios_boot.ini` | 0 |
+| `Data/English/Language.ini` | 0 |
+| `Data/INI/AIData/ios_boot.ini` | 0 |
+| `Data/INI/Animation2D/ios_boot.ini` | 0 |
+| `Data/INI/Armor/ios_boot.ini` | 0 |
+| `Data/INI/Armor/ios_playable_slice.ini` | 0 |
+| `Data/INI/AudioSettings/ios_boot.ini` | 0 |
+| `Data/INI/Campaign/ios_boot.ini` | 0 |
+| `Data/INI/ChallengeMode/ios_boot.ini` | 0 |
+| `Data/INI/CommandButton/ios_boot.ini` | 0 |
+| `Data/INI/CommandButton/ios_playable_slice.ini` | 0 |
+| `Data/INI/CommandMap/ios_boot.ini` | 0 |
+| `Data/INI/CommandSet/ios_boot.ini` | 0 |
+| `Data/INI/CommandSet/ios_playable_slice.ini` | 0 |
+| `Data/INI/ControlBarResizer/ios_boot.ini` | 0 |
+| `Data/INI/ControlBarScheme/ios_boot.ini` | 0 |
+| `Data/INI/Crate/ios_boot.ini` | 0 |
+| `Data/INI/Credits/ios_boot.ini` | 0 |
+| `Data/INI/DamageFX/ios_boot.ini` | 0 |
+| `Data/INI/DamageFX/ios_playable_slice.ini` | 0 |
+| `Data/INI/Default/AIData/ios_boot.ini` | 0 |
+| `Data/INI/Default/CommandButton/ios_boot.ini` | 0 |
+| `Data/INI/Default/ControlBarScheme/ios_boot.ini` | 0 |
+| `Data/INI/Default/Crate/ios_boot.ini` | 0 |
+| `Data/INI/Default/FXList/ios_boot.ini` | 0 |
+| `Data/INI/Default/GameData.ini` | 0 |
+| `Data/INI/Default/Multiplayer/ios_boot.ini` | 0 |
+| `Data/INI/Default/Music/ios_boot.ini` | 0 |
+| `Data/INI/Default/Object/ios_boot.ini` | 0 |
+| `Data/INI/Default/ObjectCreationList/ios_boot.ini` | 0 |
+| `Data/INI/Default/PlayerTemplate/ios_boot.ini` | 0 |
+| `Data/INI/Default/Roads/ios_boot.ini` | 0 |
+| `Data/INI/Default/Science/ios_boot.ini` | 0 |
+| `Data/INI/Default/ShellMenuScheme/ios_boot.ini` | 0 |
+| `Data/INI/Default/SoundEffects/ios_boot.ini` | 0 |
+| `Data/INI/Default/SpecialPower/ios_boot.ini` | 0 |
+| `Data/INI/Default/Speech/ios_boot.ini` | 0 |
+| `Data/INI/Default/Terrain/ios_boot.ini` | 0 |
+| `Data/INI/Default/Upgrade/ios_boot.ini` | 0 |
+| `Data/INI/Default/Video/ios_boot.ini` | 0 |
+| `Data/INI/Default/Voice/ios_boot.ini` | 0 |
+| `Data/INI/Default/Water/ios_boot.ini` | 0 |
+| `Data/INI/Default/Weather/ios_boot.ini` | 0 |
+| `Data/INI/DrawGroupInfo/ios_boot.ini` | 0 |
+| `Data/INI/Eva/ios_boot.ini` | 0 |
+| `Data/INI/FXList/ios_boot.ini` | 0 |
+| `Data/INI/GameLOD/ios_boot.ini` | 0 |
+| `Data/INI/GameLODPresets/ios_boot.ini` | 0 |
+| `Data/INI/InGameUI/ios_boot.ini` | 0 |
+| `Data/INI/Locomotor/ios_boot.ini` | 0 |
+| `Data/INI/Locomotor/ios_playable_slice.ini` | 0 |
+| `Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini` | 0 |
+| `Data/INI/MiscAudio/ios_boot.ini` | 0 |
+| `Data/INI/Mouse/ios_boot.ini` | 0 |
+| `Data/INI/Multiplayer/ios_boot.ini` | 0 |
+| `Data/INI/Music/ios_boot.ini` | 0 |
+| `Data/INI/Object/ios_boot.ini` | 0 |
+| `Data/INI/Object/ios_playable_slice.ini` | 0 |
+| `Data/INI/ObjectCreationList/ios_boot.ini` | 0 |
+| `Data/INI/ParticleSystem/ios_boot.ini` | 0 |
+| `Data/INI/PlayerTemplate/ios_boot.ini` | 0 |
+| `Data/INI/PlayerTemplate/ios_playable_slice.ini` | 0 |
+| `Data/INI/Rank/ios_boot.ini` | 0 |
+| `Data/INI/Roads/ios_boot.ini` | 0 |
+| `Data/INI/Science/ios_boot.ini` | 0 |
+| `Data/INI/ShellMenuScheme/ios_boot.ini` | 0 |
+| `Data/INI/SoundEffects/ios_boot.ini` | 0 |
+| `Data/INI/SpecialPower/ios_boot.ini` | 0 |
+| `Data/INI/Speech/ios_boot.ini` | 0 |
+| `Data/INI/Terrain/ios_boot.ini` | 0 |
+| `Data/INI/Upgrade/ios_boot.ini` | 0 |
+| `Data/INI/Video/ios_boot.ini` | 0 |
+| `Data/INI/Voice/ios_boot.ini` | 0 |
+| `Data/INI/Water/ios_boot.ini` | 0 |
+| `Data/INI/Weapon/ios_boot.ini` | 0 |
+| `Data/INI/Weapon/ios_playable_slice.ini` | 0 |
+| `Data/INI/Weather/ios_boot.ini` | 0 |
+| `Data/INI/WindowTransitions/ios_boot.ini` | 0 |
+| `Data/Runtime/RequiredAssets/Dazzle.INI` | 0 |
+| `Dazzle.INI` | 0 |
+| `DefaultOptions.ini` | 0 |
+| `Maps/IOSPlayableSlice/map.ini` | 0 |
+| `Maps/MapCache.ini` | 0 |
+
+### localization
+
+| Asset | References |
+|---|---:|
+| `Data/English/generals.csf` | 0 |
+| `Maps/IOSPlayableSlice/map.str` | 0 |
 
 ### maps
 
@@ -66,6 +171,59 @@ Source manifest: `build/asset-manifest/ios_asset_manifest.json`
 | `WaveSpray01.w3d` | 1 |
 | `WaveSpray02.w3d` | 1 |
 | `WaveSpray03.w3d` | 1 |
+| `Data/Runtime/RequiredAssets/AirF_AmericaParticleCannonUplink.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/AmericaParticleCannonUplink.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Boss_GLAScudStorm.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Boss_NuclearMissileLauncher.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Boss_ParticleCannonUplink.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Chem_GLAScudStorm.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/ChinaNuclearMissileLauncher.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Demo_GLAScudStorm.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/GarrisonGun.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/GenericBridge.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/GenericDebris.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/GLAScudStorm.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Infa_ChinaNuclearMissileLauncher.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSBarracks.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSBeacon.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSCommandCenter.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSDozer.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSGenericBridge.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSGenericDebris.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSPowerPlant.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSRallyPointMarker.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSRanger.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSScoutVehicle.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/IOSWaterWaveBridge.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Lazr_AmericaParticleCannonUplink.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Nuke_ChinaNuclearMissileLauncher.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/ShatterPlanes0.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Slth_GLAScudStorm.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/SupW_AmericaParticleCannonUplink.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/Tank_ChinaNuclearMissileLauncher.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaterWaveBridge.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveHit01.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSplash01.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSplashLeft01.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSplashRight01.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSpray01.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSpray02.w3d` | 0 |
+| `Data/Runtime/RequiredAssets/WaveSpray03.w3d` | 0 |
+| `GenericBridge.w3d` | 0 |
+| `GenericDebris.w3d` | 0 |
+| `ShatterPlanes0.w3d` | 0 |
+| `WaterWaveBridge.w3d` | 0 |
+
+### other
+
+| Asset | References |
+|---|---:|
+| `Data/Runtime/RequiredAssets/ShatterAVel.tbl` | 0 |
+| `Data/Runtime/RequiredAssets/ShatterVel.tbl` | 0 |
+| `dxvk.conf` | 0 |
+| `ios_original_asset_pack_manifest.json` | 0 |
+| `ShatterAVel.tbl` | 0 |
+| `ShatterVel.tbl` | 0 |
 
 ### textures
 
@@ -113,6 +271,72 @@ Source manifest: `build/asset-manifest/ios_asset_manifest.json`
 | `Data/Art/Textures/IOSVeterancy1Icon.tga` | 1 |
 | `Data/Art/Textures/IOSVeterancy2Icon.tga` | 1 |
 | `Data/Art/Textures/IOSVeterancy3Icon.tga` | 1 |
+| `AddProjectorGradient.tga` | 0 |
+| `alphaclip.tga` | 0 |
+| `Data/Art/Textures/alphaclip.tga` | 0 |
+| `Data/Art/Textures/EXLaser.tga` | 0 |
+| `Data/Art/Textures/exmask_g.tga` | 0 |
+| `Data/Art/Textures/EXScorch01.tga` | 0 |
+| `Data/Art/Textures/EXSnowFlake.tga` | 0 |
+| `Data/Art/Textures/missing.tga` | 0 |
+| `Data/Art/Textures/Noise0000.tga` | 0 |
+| `Data/Art/Textures/shadow.tga` | 0 |
+| `Data/Art/Textures/shroud1024.tga` | 0 |
+| `Data/Art/Textures/TBBib.tga` | 0 |
+| `Data/Art/Textures/TBRedBib.tga` | 0 |
+| `Data/Art/Textures/TMGras23a.tga` | 0 |
+| `Data/Art/Textures/TSCloudMed.tga` | 0 |
+| `Data/Art/Textures/TSMoonLarg.tga` | 0 |
+| `Data/Art/Textures/TSMorningE.tga` | 0 |
+| `Data/Art/Textures/TSMorningN.tga` | 0 |
+| `Data/Art/Textures/TSMorningS.tga` | 0 |
+| `Data/Art/Textures/TSMorningT.tga` | 0 |
+| `Data/Art/Textures/TSMorningW.tga` | 0 |
+| `Data/Art/Textures/TSNoiseUrb.tga` | 0 |
+| `Data/Art/Textures/TWAlphaEdge.tga` | 0 |
+| `Data/Art/Textures/TWWater01.tga` | 0 |
+| `Data/Art/Textures/TXAsph01a.tga` | 0 |
+| `Data/Art/Textures/TXSnow04a.tga` | 0 |
+| `Data/Art/Textures/WaterSurfaceBubbles.tga` | 0 |
+| `Data/Art/Textures/wave1.tga` | 0 |
+| `Data/Art/Textures/wave2.tga` | 0 |
+| `Data/Art/Textures/wave256.tga` | 0 |
+| `Data/Runtime/RequiredAssets/AddProjectorGradient.tga` | 0 |
+| `Data/Runtime/RequiredAssets/MultProjectorGradient.tga` | 0 |
+| `Data/Runtime/RequiredAssets/SunDazzle.tga` | 0 |
+| `Data/Runtime/RequiredAssets/SunHalo.tga` | 0 |
+| `Data/Runtime/RequiredAssets/SunLensFlare.tga` | 0 |
+| `Data/Runtime/RequiredAssets/w3d_missing_texture.tga` | 0 |
+| `EXLaser.tga` | 0 |
+| `exmask_g.tga` | 0 |
+| `EXScorch01.tga` | 0 |
+| `EXSnowFlake.tga` | 0 |
+| `Maps/IOSPlayableSlice/IOSPlayableSlice.tga` | 0 |
+| `missing.tga` | 0 |
+| `MultProjectorGradient.tga` | 0 |
+| `Noise0000.tga` | 0 |
+| `shadow.tga` | 0 |
+| `shroud1024.tga` | 0 |
+| `TBBib.tga` | 0 |
+| `TBRedBib.tga` | 0 |
+| `TMGras23a.tga` | 0 |
+| `TSCloudMed.tga` | 0 |
+| `TSMoonLarg.tga` | 0 |
+| `TSMorningE.tga` | 0 |
+| `TSMorningN.tga` | 0 |
+| `TSMorningS.tga` | 0 |
+| `TSMorningT.tga` | 0 |
+| `TSMorningW.tga` | 0 |
+| `TSNoiseUrb.tga` | 0 |
+| `TWAlphaEdge.tga` | 0 |
+| `TWWater01.tga` | 0 |
+| `TXAsph01a.tga` | 0 |
+| `TXSnow04a.tga` | 0 |
+| `w3d_missing_texture.tga` | 0 |
+| `WaterSurfaceBubbles.tga` | 0 |
+| `wave1.tga` | 0 |
+| `wave2.tga` | 0 |
+| `wave256.tga` | 0 |
 
 ### ui
 
