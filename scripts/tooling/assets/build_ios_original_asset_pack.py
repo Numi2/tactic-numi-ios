@@ -135,6 +135,11 @@ STOCK_MAPPED_IMAGE_ALIASES = (
     ("USACampaign_G", "IOSStarGold.tga"),
     ("USACampaign_S", "IOSStarSilver.tga"),
     ("Ultimate", "IOSGeneralPowersIcon.tga"),
+    ("MainMenuRuler", "IOSLoadScreen.tga"),
+    ("ScrollBarThumbDisabled", "IOSOptionsIcon.tga"),
+    ("ScrollBarThumbEnabled", "IOSFactionEnabled.tga"),
+    ("ScrollBarThumbHilite", "IOSStarSilver.tga"),
+    ("ScrollBarThumbHiliteSelected", "IOSStarGold.tga"),
 )
 
 IOS_MODEL_ASSETS = (
