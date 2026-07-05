@@ -126,6 +126,8 @@ CSF_LABEL = (ord("L") << 24) | (ord("B") << 16) | (ord("L") << 8) | ord(" ")
 CSF_STRING = (ord("S") << 24) | (ord("T") << 16) | (ord("R") << 8) | ord(" ")
 CSF_VERSION = 3
 LANGUAGE_ID_US = 0
+IOS_SLICE_MAP_NAME = "IOSPlayableSlice"
+IOS_SLICE_MAP_PATH = f"Maps/{IOS_SLICE_MAP_NAME}/{IOS_SLICE_MAP_NAME}.map"
 IOS_CSF_LABELS = {
     "GUI:Observer": "Observer",
     "INI:FactionCivilian": "Civilian",
@@ -147,6 +149,7 @@ IOS_CSF_LABELS = {
     "INI:Command_StopDescription": "Cancels the current order.",
     "INI:Command_SelectAllOfType": "Select Type",
     "INI:Command_SelectAllOfTypeDescription": "Selects matching units on screen.",
+    "MAP:IOSPlayableSlice": "iOS Playable Slice",
 }
 IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
   Side = Observer
@@ -671,6 +674,141 @@ def build_csf(labels: dict[str, str]) -> bytes:
     return bytes(payload)
 
 
+def chunky_toc(symbols: dict[str, int]) -> bytes:
+    payload = bytearray()
+    payload.extend(b"CkMp")
+    payload.extend(struct.pack("<i", len(symbols)))
+    for name, symbol_id in symbols.items():
+        name_bytes = name.encode("ascii")
+        if len(name_bytes) > 255:
+            raise ValueError(f"chunk symbol too long: {name}")
+        payload.extend(struct.pack("<B", len(name_bytes)))
+        payload.extend(name_bytes)
+        payload.extend(struct.pack("<I", symbol_id))
+    return bytes(payload)
+
+
+def chunky_chunk(symbol_id: int, version: int, data: bytes) -> bytes:
+    return struct.pack("<IHi", symbol_id, version, len(data)) + data
+
+
+def chunky_ascii(text: str) -> bytes:
+    encoded = text.encode("ascii")
+    return struct.pack("<H", len(encoded)) + encoded
+
+
+def chunky_dict(
+    pairs: list[tuple[str, int, object]],
+    symbol_ids: dict[str, int],
+) -> bytes:
+    payload = bytearray()
+    payload.extend(struct.pack("<H", len(pairs)))
+    for key, dtype, value in pairs:
+        payload.extend(struct.pack("<i", (symbol_ids[key] << 8) | dtype))
+        if dtype == 1:
+            payload.extend(struct.pack("<i", int(value)))
+        elif dtype == 3:
+            payload.extend(chunky_ascii(str(value)))
+        else:
+            raise ValueError(f"unsupported generated dict type: {dtype}")
+    return bytes(payload)
+
+
+def build_ios_slice_map() -> bytes:
+    symbol_ids = {
+        "HeightMapData": 1,
+        "WorldInfo": 2,
+        "ObjectsList": 3,
+        "Object": 4,
+        "mapName": 5,
+        "waypointID": 6,
+        "waypointName": 7,
+    }
+    toc_symbols = {
+        "waypointName": 7,
+        "waypointID": 6,
+        "mapName": 5,
+        "Object": 4,
+        "ObjectsList": 3,
+        "WorldInfo": 2,
+        "HeightMapData": 1,
+    }
+
+    width = 66
+    height = 66
+    border = 1
+    active_width = width - (2 * border)
+    active_height = height - (2 * border)
+    flat_height = 24
+    height_data = bytes([flat_height]) * (width * height)
+    height_payload = bytearray()
+    height_payload.extend(struct.pack("<iii", width, height, border))
+    height_payload.extend(struct.pack("<i", 1))
+    height_payload.extend(struct.pack("<ii", active_width, active_height))
+    height_payload.extend(struct.pack("<i", len(height_data)))
+    height_payload.extend(height_data)
+
+    world_dict = chunky_dict(
+        [("mapName", 3, "MAP:IOSPlayableSlice")],
+        symbol_ids,
+    )
+
+    def waypoint_chunk(waypoint_id: int, name: str, x: float, y: float) -> bytes:
+        payload = bytearray()
+        payload.extend(struct.pack("<fff", x, y, 0.0))
+        payload.extend(struct.pack("<f", 0.0))
+        payload.extend(struct.pack("<i", 0))
+        payload.extend(chunky_ascii(""))
+        payload.extend(
+            chunky_dict(
+                [
+                    ("waypointID", 1, waypoint_id),
+                    ("waypointName", 3, name),
+                ],
+                symbol_ids,
+            )
+        )
+        return chunky_chunk(symbol_ids["Object"], 3, bytes(payload))
+
+    objects_payload = bytearray()
+    objects_payload.extend(waypoint_chunk(1, "InitialCameraPosition", 320.0, 320.0))
+    objects_payload.extend(waypoint_chunk(2, "Player_1_Start", 180.0, 320.0))
+    objects_payload.extend(waypoint_chunk(3, "Player_1_Rally", 240.0, 320.0))
+    objects_payload.extend(waypoint_chunk(4, "Player_2_Start", 460.0, 320.0))
+    objects_payload.extend(waypoint_chunk(5, "Player_2_Rally", 400.0, 320.0))
+
+    payload = bytearray()
+    payload.extend(chunky_toc(toc_symbols))
+    payload.extend(chunky_chunk(symbol_ids["HeightMapData"], 4, bytes(height_payload)))
+    payload.extend(chunky_chunk(symbol_ids["WorldInfo"], 1, world_dict))
+    payload.extend(chunky_chunk(symbol_ids["ObjectsList"], 1, bytes(objects_payload)))
+    return bytes(payload)
+
+
+def build_ios_map_cache(map_bytes: bytes) -> str:
+    crc = 0
+    for byte in map_bytes:
+        crc = ((crc >> 8) | (crc << 24)) & 0xFFFFFFFF
+        crc = (crc + byte) & 0xFFFFFFFF
+    return f"""MapCache {IOS_SLICE_MAP_PATH}
+  isOfficial = Yes
+  isMultiplayer = Yes
+  extentMin = X:0.0 Y:0.0 Z:0.0
+  extentMax = X:640.0 Y:640.0 Z:0.0
+  numPlayers = 2
+  fileSize = {len(map_bytes)}
+  fileCRC = {crc}
+  timestampLo = 0
+  timestampHi = 0
+  displayName = "iOS Playable Slice"
+  nameLookupTag = MAP:IOSPlayableSlice
+  Player_1_Start = X:180.0 Y:320.0 Z:0.0
+  Player_2_Start = X:460.0 Y:320.0 Z:0.0
+  InitialCameraPosition = X:320.0 Y:320.0 Z:0.0
+End
+"""
+
+
 def write_radial_tga(
     dest: Path,
     color: tuple[int, int, int, int],
@@ -760,6 +898,44 @@ def write_playable_slice_assets(
             project_root,
             size=64,
         )
+
+    map_bytes = build_ios_slice_map()
+    write_binary(
+        out_dir / IOS_SLICE_MAP_PATH,
+        map_bytes,
+        records,
+        "ios_playable_slice_map",
+        project_root,
+    )
+    write_text(
+        out_dir / "Maps" / IOS_SLICE_MAP_NAME / "map.ini",
+        "; Generated iOS playable slice map overrides.\n",
+        records,
+        "ios_playable_slice_map_ini",
+        project_root,
+    )
+    write_text(
+        out_dir / "Maps" / IOS_SLICE_MAP_NAME / "map.str",
+        "MAP:IOSPlayableSlice\n\"iOS Playable Slice\"\nEND\n",
+        records,
+        "ios_playable_slice_map_strings",
+        project_root,
+    )
+    write_text(
+        out_dir / "Maps" / "MapCache.ini",
+        build_ios_map_cache(map_bytes),
+        records,
+        "ios_playable_slice_map_cache",
+        project_root,
+    )
+    write_radial_tga(
+        out_dir / "Maps" / IOS_SLICE_MAP_NAME / f"{IOS_SLICE_MAP_NAME}.tga",
+        (58, 150, 118, 255),
+        records,
+        "ios_playable_slice_map_preview",
+        project_root,
+        size=128,
+    )
 
 
 def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, object]:

@@ -430,6 +430,7 @@ int main(int argc, char* argv[])
 				}
 			}
 		}
+
 	}
 #endif
 
@@ -459,6 +460,23 @@ int main(int argc, char* argv[])
 		// Store argc/argv for CommandLine parser to access via _NSGetArgc/_NSGetArgv or /proc/self/cmdline
 		// For now, let CommandLine::parseCommandLineForStartup() handle this
 		CommandLine::parseCommandLineForStartup();
+
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+		if (TheGlobalData != nullptr &&
+		    TheGlobalData->m_initialFile.isEmpty() &&
+		    access("Maps/IOSPlayableSlice/IOSPlayableSlice.map", R_OK) == 0) {
+			// GeneralsX @feature Codex 05/07/2026 Make the repo-owned iOS
+			// original asset pack self-starting. Retail/custom bundles do not
+			// contain this generated map, and user-supplied initial files win.
+			TheWritableGlobalData->m_shellMapOn = FALSE;
+			TheWritableGlobalData->m_playIntro = FALSE;
+			TheWritableGlobalData->m_afterIntro = TRUE;
+			TheWritableGlobalData->m_playSizzle = FALSE;
+			TheWritableGlobalData->m_animateWindows = FALSE;
+			TheWritableGlobalData->m_initialFile = "Maps/IOSPlayableSlice/IOSPlayableSlice.map";
+			fprintf(stderr, "INFO: iOS generated playable slice auto-start enabled\n");
+		}
+#endif
 
 		// GeneralsX @bugfix Copilot 17/05/2026 Skip SDL3 window bootstrap for CLI/headless replay execution.
 		const bool isHeadlessMode = (TheGlobalData != nullptr && TheGlobalData->m_headless);

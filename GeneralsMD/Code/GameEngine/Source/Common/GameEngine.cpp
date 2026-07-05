@@ -102,6 +102,7 @@
 #include "GameClient/GUICallbacks.h"
 
 #include "GameNetwork/NetworkInterface.h"
+#include "GameNetwork/GameInfo.h"
 #include "GameNetwork/WOLBrowser/WebBrowser.h"
 #include "GameNetwork/LANAPI.h"
 #include "GameNetwork/GameSpy/GameResultsThread.h"
@@ -152,6 +153,93 @@ GameEngine *TheGameEngine = nullptr;
 
 //-------------------------------------------------------------------------------------------------
 SubsystemInterfaceList* TheSubsystemList = nullptr;
+
+//-------------------------------------------------------------------------------------------------
+// GeneralsX @feature Codex 05/07/2026 Auto-start the repo-owned iOS
+// generated playable slice as a real skirmish setup.
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+static Bool startIOSGeneratedPlayableSlice(const AsciiString& initialMap)
+{
+	AsciiString lowerMap = initialMap;
+	lowerMap.toLower();
+	if (lowerMap.compareNoCase("maps/iosplayableslice/iosplayableslice.map") != 0)
+		return FALSE;
+
+	const Int playerTemplate = ThePlayerTemplateStore->getTemplateNumByName("FactionIOS");
+	if (playerTemplate < 0)
+		return FALSE;
+
+	if (TheSkirmishGameInfo == nullptr)
+	{
+		TheSkirmishGameInfo = NEW SkirmishGameInfo;
+	}
+	else if (TheSkirmishGameInfo->isInGame())
+	{
+		TheSkirmishGameInfo->endGame();
+	}
+
+	TheSkirmishGameInfo->init();
+	TheSkirmishGameInfo->clearSlotList();
+	TheSkirmishGameInfo->reset();
+	TheSkirmishGameInfo->setLocalIP(1);
+	TheSkirmishGameInfo->enterGame();
+	TheSkirmishGameInfo->setSeed(1);
+
+	Money startingCash;
+	startingCash.setStartingCash(10000);
+	TheSkirmishGameInfo->setStartingCash(startingCash);
+	TheSkirmishGameInfo->setSuperweaponRestriction(0);
+
+	UnicodeString playerName;
+	playerName.translate("iOS Player");
+	GameSlot playerSlot;
+	playerSlot.setName(playerName);
+	playerSlot.setState(SLOT_PLAYER, playerName, 1);
+	playerSlot.setColor(0);
+	playerSlot.setPlayerTemplate(playerTemplate);
+	playerSlot.setStartPos(0);
+	playerSlot.setTeamNumber(0);
+	playerSlot.setMapAvailability(TRUE);
+	TheSkirmishGameInfo->setSlot(0, playerSlot);
+
+	UnicodeString aiName;
+	aiName.translate("iOS AI");
+	GameSlot aiSlot;
+	aiSlot.setName(aiName);
+	aiSlot.setState(SLOT_EASY_AI, aiName);
+	aiSlot.setColor(1);
+	aiSlot.setPlayerTemplate(playerTemplate);
+	aiSlot.setStartPos(1);
+	aiSlot.setTeamNumber(1);
+	aiSlot.setMapAvailability(TRUE);
+	TheSkirmishGameInfo->setSlot(1, aiSlot);
+
+	TheSkirmishGameInfo->setMap(initialMap);
+	const MapMetaData *md = TheMapCache ? TheMapCache->findMap(initialMap) : nullptr;
+	if (md)
+	{
+		TheSkirmishGameInfo->setMapCRC(md->m_CRC);
+		TheSkirmishGameInfo->setMapSize(md->m_filesize);
+	}
+	else
+	{
+		TheSkirmishGameInfo->setMapCRC(0);
+		TheSkirmishGameInfo->setMapSize(0);
+	}
+
+	TheSkirmishGameInfo->startGame(0);
+
+	TheWritableGlobalData->m_mapName = initialMap;
+	InitRandom(TheSkirmishGameInfo->getSeed());
+
+	GameMessage *msg = TheMessageStream->appendMessage(GameMessage::MSG_NEW_GAME);
+	msg->appendIntegerArgument(GAME_SKIRMISH);
+	msg->appendIntegerArgument(DIFFICULTY_NORMAL);
+	msg->appendIntegerArgument(0);
+	msg->appendIntegerArgument(30);
+	return TRUE;
+}
+#endif
 
 //-------------------------------------------------------------------------------------------------
 template<class SUBSYSTEM>
@@ -786,12 +874,19 @@ void GameEngine::init()
 				// shutdown the top, but do not pop it off the stack
 	//			TheShell->hideShell();
 
-				// send a message to the logic for a new game
-				GameMessage *msg = TheMessageStream->appendMessage( GameMessage::MSG_NEW_GAME );
-				msg->appendIntegerArgument(GAME_SINGLE_PLAYER);
-				msg->appendIntegerArgument(DIFFICULTY_NORMAL);
-				msg->appendIntegerArgument(0);
-				InitRandom(0);
+				Bool startedGeneratedIOSMap = FALSE;
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+				startedGeneratedIOSMap = startIOSGeneratedPlayableSlice(TheGlobalData->m_initialFile);
+#endif
+				if (!startedGeneratedIOSMap)
+				{
+					// send a message to the logic for a new game
+					GameMessage *msg = TheMessageStream->appendMessage( GameMessage::MSG_NEW_GAME );
+					msg->appendIntegerArgument(GAME_SINGLE_PLAYER);
+					msg->appendIntegerArgument(DIFFICULTY_NORMAL);
+					msg->appendIntegerArgument(0);
+					InitRandom(0);
+				}
 			}
 		}
 
