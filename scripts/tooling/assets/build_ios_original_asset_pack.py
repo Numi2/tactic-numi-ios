@@ -45,6 +45,37 @@ DAZZLE_TEXTURES = (
     ("SunLensFlare.tga", (255, 250, 220, 235), "lens flare atlas"),
 )
 
+IOS_RUNTIME_TEXTURES = (
+    ("EXLaser.tga", (90, 220, 255, 255), "waypoint laser texture"),
+    ("EXScorch01.tga", (55, 45, 38, 255), "scorch decal texture"),
+    ("EXSnowFlake.tga", (240, 248, 255, 230), "snow flake texture"),
+    ("Noise0000.tga", (112, 128, 142, 255), "water noise texture"),
+    ("TBBib.tga", (42, 48, 42, 180), "building bib texture"),
+    ("TBRedBib.tga", (120, 42, 42, 190), "highlight bib texture"),
+    ("TMGras23a.tga", (48, 112, 60, 255), "grass shadow texture"),
+    ("TSCloudMed.tga", (178, 192, 205, 210), "cloud texture"),
+    ("TSMoonLarg.tga", (224, 226, 215, 255), "sky body texture"),
+    ("TSMorningE.tga", (92, 142, 170, 255), "skybox east texture"),
+    ("TSMorningN.tga", (82, 132, 162, 255), "skybox north texture"),
+    ("TSMorningS.tga", (106, 152, 176, 255), "skybox south texture"),
+    ("TSMorningT.tga", (130, 170, 190, 255), "skybox top texture"),
+    ("TSMorningW.tga", (96, 136, 165, 255), "skybox west texture"),
+    ("TSNoiseUrb.tga", (88, 88, 88, 255), "terrain noise texture"),
+    ("TWAlphaEdge.tga", (128, 180, 210, 160), "water alpha edge texture"),
+    ("TWWater01.tga", (38, 104, 148, 210), "standing water texture"),
+    ("TXAsph01a.tga", (80, 80, 76, 255), "asphalt shadow texture"),
+    ("TXSnow04a.tga", (224, 230, 232, 255), "snow shadow texture"),
+    ("WaterSurfaceBubbles.tga", (180, 220, 238, 190), "water sparkle texture"),
+    ("alphaclip.tga", (255, 255, 255, 180), "water alpha clip texture"),
+    ("exmask_g.tga", (128, 128, 128, 255), "fade mask texture"),
+    ("missing.tga", (255, 0, 255, 255), "missing fallback texture"),
+    ("shadow.tga", (0, 0, 0, 140), "projected shadow texture"),
+    ("shroud1024.tga", (0, 0, 0, 220), "shroud texture"),
+    ("wave1.tga", (70, 142, 180, 210), "water wave texture"),
+    ("wave2.tga", (56, 126, 170, 210), "water wave texture"),
+    ("wave256.tga", (64, 132, 178, 210), "water wave texture"),
+)
+
 MANDATORY_BOOT_INI_DIRS = (
     "Animation2D",
     "AudioSettings",
@@ -148,10 +179,16 @@ IOS_GAMEPLAY_WND_LAYOUTS = {
     "controlBarHidden.wnd": None,
     "Menus/CRCMismatch.wnd": "Connection Mismatch",
     "Menus/Defeat.wnd": "Defeat",
+    "Menus/ChallengeLoadScreen.wnd": "Loading",
+    "Menus/GameSpyLoadScreen.wnd": "Loading",
     "Menus/LocalDefeat.wnd": "Defeat",
+    "Menus/MapTransferScreen.wnd": "Loading",
+    "Menus/MultiplayerLoadScreen.wnd": "Loading",
     "Menus/ObserverQuit.wnd": "Observer Quit",
     "Menus/PopupCommunicator.wnd": None,
     "Menus/ScoreScreen.wnd": "Score",
+    "Menus/ShellGameLoadScreen.wnd": "Loading",
+    "Menus/SinglePlayerLoadScreen.wnd": "Loading",
     "Menus/Victorious.wnd": "Victory",
 }
 IOS_CSF_LABELS = {
@@ -1072,6 +1109,24 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
             project_root,
         )
         write_radial_tga(out_dir / filename, color, records, role, project_root)
+
+    for filename, color, role in IOS_RUNTIME_TEXTURES:
+        write_radial_tga(
+            out_dir / "Data" / "Art" / "Textures" / filename,
+            color,
+            records,
+            f"ios_runtime_{role}",
+            project_root,
+            size=64,
+        )
+        write_radial_tga(
+            out_dir / filename,
+            color,
+            records,
+            f"ios_runtime_root_{role}",
+            project_root,
+            size=64,
+        )
 
     copy_file(
         project_root / MENU_FIXTURE,

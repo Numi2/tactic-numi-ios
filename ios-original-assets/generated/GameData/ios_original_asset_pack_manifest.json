@@ -1,5 +1,5 @@
 {
-  "asset_count": 144,
+  "asset_count": 206,
   "assets": [
     {
       "bytes": 1068,
@@ -226,6 +226,398 @@
       "source": "generated"
     },
     {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/EXLaser.tga",
+      "role": "ios_runtime_waypoint laser texture",
+      "sha256": "3953e9604347dd104d0f33e55c22c16ea2f5fb008b0fe734546c324026ace440",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/EXLaser.tga",
+      "role": "ios_runtime_root_waypoint laser texture",
+      "sha256": "3953e9604347dd104d0f33e55c22c16ea2f5fb008b0fe734546c324026ace440",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/EXScorch01.tga",
+      "role": "ios_runtime_scorch decal texture",
+      "sha256": "e3b4b7ae9783442df7da5eb2132d983ccda832d6e2b39d6573e2658c72382b17",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/EXScorch01.tga",
+      "role": "ios_runtime_root_scorch decal texture",
+      "sha256": "e3b4b7ae9783442df7da5eb2132d983ccda832d6e2b39d6573e2658c72382b17",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/EXSnowFlake.tga",
+      "role": "ios_runtime_snow flake texture",
+      "sha256": "c525f9128b6f444bd8177269a252812fb688e3ff7e5ba966b26c73bb0dbfb269",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/EXSnowFlake.tga",
+      "role": "ios_runtime_root_snow flake texture",
+      "sha256": "c525f9128b6f444bd8177269a252812fb688e3ff7e5ba966b26c73bb0dbfb269",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/Noise0000.tga",
+      "role": "ios_runtime_water noise texture",
+      "sha256": "8fdcd309b7312474d340fd137c1161ec30ec39c215b92c3fd23a67ad72623bf4",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Noise0000.tga",
+      "role": "ios_runtime_root_water noise texture",
+      "sha256": "8fdcd309b7312474d340fd137c1161ec30ec39c215b92c3fd23a67ad72623bf4",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TBBib.tga",
+      "role": "ios_runtime_building bib texture",
+      "sha256": "5c21fa9e74255e95f3611fc04755dc09a9b20d76a761d631de07fa29e16085b8",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TBBib.tga",
+      "role": "ios_runtime_root_building bib texture",
+      "sha256": "5c21fa9e74255e95f3611fc04755dc09a9b20d76a761d631de07fa29e16085b8",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TBRedBib.tga",
+      "role": "ios_runtime_highlight bib texture",
+      "sha256": "e536288c892fa1f82307910e7995a86312e24bb7177bdb3b1ede1074c85a9cbc",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TBRedBib.tga",
+      "role": "ios_runtime_root_highlight bib texture",
+      "sha256": "e536288c892fa1f82307910e7995a86312e24bb7177bdb3b1ede1074c85a9cbc",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TMGras23a.tga",
+      "role": "ios_runtime_grass shadow texture",
+      "sha256": "eebca509e38378c2e3c1ca3c5c9ec6b15df9aef7e846dea1f517276b526a06b2",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TMGras23a.tga",
+      "role": "ios_runtime_root_grass shadow texture",
+      "sha256": "eebca509e38378c2e3c1ca3c5c9ec6b15df9aef7e846dea1f517276b526a06b2",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSCloudMed.tga",
+      "role": "ios_runtime_cloud texture",
+      "sha256": "e8b4dfbdb5bfd0e6b5c648186ef1c8ed5e45a001612347b1cc9d4229fb9898f8",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSCloudMed.tga",
+      "role": "ios_runtime_root_cloud texture",
+      "sha256": "e8b4dfbdb5bfd0e6b5c648186ef1c8ed5e45a001612347b1cc9d4229fb9898f8",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMoonLarg.tga",
+      "role": "ios_runtime_sky body texture",
+      "sha256": "0ed7821b4d8b838a375c0026012723f63b5a737dd1dfe2d66c7ede7e27548f09",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMoonLarg.tga",
+      "role": "ios_runtime_root_sky body texture",
+      "sha256": "0ed7821b4d8b838a375c0026012723f63b5a737dd1dfe2d66c7ede7e27548f09",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMorningE.tga",
+      "role": "ios_runtime_skybox east texture",
+      "sha256": "aeeab7a0c47a309a5a286b95dc005cbf824cf2a867324e62e67f70193b99d8e9",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMorningE.tga",
+      "role": "ios_runtime_root_skybox east texture",
+      "sha256": "aeeab7a0c47a309a5a286b95dc005cbf824cf2a867324e62e67f70193b99d8e9",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMorningN.tga",
+      "role": "ios_runtime_skybox north texture",
+      "sha256": "f681d157d564fb2d95f9320640bcb29e21e5f6c032e837865a6a5b5b3f0a58f5",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMorningN.tga",
+      "role": "ios_runtime_root_skybox north texture",
+      "sha256": "f681d157d564fb2d95f9320640bcb29e21e5f6c032e837865a6a5b5b3f0a58f5",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMorningS.tga",
+      "role": "ios_runtime_skybox south texture",
+      "sha256": "a8561add31ffb563d8306190c954ff40cdea6d0f64da9e434036882dbbb74743",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMorningS.tga",
+      "role": "ios_runtime_root_skybox south texture",
+      "sha256": "a8561add31ffb563d8306190c954ff40cdea6d0f64da9e434036882dbbb74743",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMorningT.tga",
+      "role": "ios_runtime_skybox top texture",
+      "sha256": "a4e682d9965d187789b31af0cbe2a6ea82fe1a357510d50e0812a1925f99e86a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMorningT.tga",
+      "role": "ios_runtime_root_skybox top texture",
+      "sha256": "a4e682d9965d187789b31af0cbe2a6ea82fe1a357510d50e0812a1925f99e86a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSMorningW.tga",
+      "role": "ios_runtime_skybox west texture",
+      "sha256": "2abf9051e2c959eb81bfb247b18c87e1db8d090735adaf3db952158fccade926",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSMorningW.tga",
+      "role": "ios_runtime_root_skybox west texture",
+      "sha256": "2abf9051e2c959eb81bfb247b18c87e1db8d090735adaf3db952158fccade926",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TSNoiseUrb.tga",
+      "role": "ios_runtime_terrain noise texture",
+      "sha256": "3716d090681c89cce709771c162eded97e1d200f0bee84b61135abb6f32b0576",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TSNoiseUrb.tga",
+      "role": "ios_runtime_root_terrain noise texture",
+      "sha256": "3716d090681c89cce709771c162eded97e1d200f0bee84b61135abb6f32b0576",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TWAlphaEdge.tga",
+      "role": "ios_runtime_water alpha edge texture",
+      "sha256": "f5e60f14e5e895f7b84fc81025f5e7ca948fd2fa906930e60f7567d0388dd27d",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TWAlphaEdge.tga",
+      "role": "ios_runtime_root_water alpha edge texture",
+      "sha256": "f5e60f14e5e895f7b84fc81025f5e7ca948fd2fa906930e60f7567d0388dd27d",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TWWater01.tga",
+      "role": "ios_runtime_standing water texture",
+      "sha256": "36265f23da9d3a1c575e7912ce141b891e79cbc6caacd01b3c928f2d506ba0f6",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TWWater01.tga",
+      "role": "ios_runtime_root_standing water texture",
+      "sha256": "36265f23da9d3a1c575e7912ce141b891e79cbc6caacd01b3c928f2d506ba0f6",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TXAsph01a.tga",
+      "role": "ios_runtime_asphalt shadow texture",
+      "sha256": "7be56192a8c9dcfe9fe2f4e6c9831018a6484dcfbcb4b9fcb33d634f7b3b954c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TXAsph01a.tga",
+      "role": "ios_runtime_root_asphalt shadow texture",
+      "sha256": "7be56192a8c9dcfe9fe2f4e6c9831018a6484dcfbcb4b9fcb33d634f7b3b954c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/TXSnow04a.tga",
+      "role": "ios_runtime_snow shadow texture",
+      "sha256": "350f8eda51d3a986ab773cff663c07a27432953cad0e9c80a7709afe303f096c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/TXSnow04a.tga",
+      "role": "ios_runtime_root_snow shadow texture",
+      "sha256": "350f8eda51d3a986ab773cff663c07a27432953cad0e9c80a7709afe303f096c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/WaterSurfaceBubbles.tga",
+      "role": "ios_runtime_water sparkle texture",
+      "sha256": "b1ccf4585f283cb34588317fbdb6c7ca87abdefa730f445d66ea57d51323b9f0",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/WaterSurfaceBubbles.tga",
+      "role": "ios_runtime_root_water sparkle texture",
+      "sha256": "b1ccf4585f283cb34588317fbdb6c7ca87abdefa730f445d66ea57d51323b9f0",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/alphaclip.tga",
+      "role": "ios_runtime_water alpha clip texture",
+      "sha256": "1e7de0beb568d8762152b7b2f2a85e46e6791b26d25c5c1c023c5684fc49d14a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/alphaclip.tga",
+      "role": "ios_runtime_root_water alpha clip texture",
+      "sha256": "1e7de0beb568d8762152b7b2f2a85e46e6791b26d25c5c1c023c5684fc49d14a",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/exmask_g.tga",
+      "role": "ios_runtime_fade mask texture",
+      "sha256": "fa0233ba18f7fcea3b5af254bc59b9f0e9a0f0cb09b03f26e4ec5935fc72772c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/exmask_g.tga",
+      "role": "ios_runtime_root_fade mask texture",
+      "sha256": "fa0233ba18f7fcea3b5af254bc59b9f0e9a0f0cb09b03f26e4ec5935fc72772c",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/missing.tga",
+      "role": "ios_runtime_missing fallback texture",
+      "sha256": "a92919b43236a2d45f9df1326e212016df6cd7f185b1dc81ee0cc171df2117e6",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/missing.tga",
+      "role": "ios_runtime_root_missing fallback texture",
+      "sha256": "a92919b43236a2d45f9df1326e212016df6cd7f185b1dc81ee0cc171df2117e6",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/shadow.tga",
+      "role": "ios_runtime_projected shadow texture",
+      "sha256": "da488d3d29cd61f8a963fe00fa3369bf3a2e03e53e6a726443d55dbbf98f0738",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/shadow.tga",
+      "role": "ios_runtime_root_projected shadow texture",
+      "sha256": "da488d3d29cd61f8a963fe00fa3369bf3a2e03e53e6a726443d55dbbf98f0738",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/shroud1024.tga",
+      "role": "ios_runtime_shroud texture",
+      "sha256": "3adb34a304347031fba4ec22c437b31035d1ccad551846b9f781be0b7c6cfcb5",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/shroud1024.tga",
+      "role": "ios_runtime_root_shroud texture",
+      "sha256": "3adb34a304347031fba4ec22c437b31035d1ccad551846b9f781be0b7c6cfcb5",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/wave1.tga",
+      "role": "ios_runtime_water wave texture",
+      "sha256": "b959715fadde7ba1761e287f84410b5f19c7813163f3e8cb1d6a24f929c323da",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/wave1.tga",
+      "role": "ios_runtime_root_water wave texture",
+      "sha256": "b959715fadde7ba1761e287f84410b5f19c7813163f3e8cb1d6a24f929c323da",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/wave2.tga",
+      "role": "ios_runtime_water wave texture",
+      "sha256": "0852abdde06d8bda67710e8b92be13d2fc07b2acf9ebac4b1e903927aa17fb16",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/wave2.tga",
+      "role": "ios_runtime_root_water wave texture",
+      "sha256": "0852abdde06d8bda67710e8b92be13d2fc07b2acf9ebac4b1e903927aa17fb16",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/wave256.tga",
+      "role": "ios_runtime_water wave texture",
+      "sha256": "a844e521425fedb9403e0efd2ae0067d9afd5e06ee3e31bfb63e9c1d54cd7d36",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/wave256.tga",
+      "role": "ios_runtime_root_water wave texture",
+      "sha256": "a844e521425fedb9403e0efd2ae0067d9afd5e06ee3e31bfb63e9c1d54cd7d36",
+      "source": "generated"
+    },
+    {
       "bytes": 62415,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ExtrasMenu.wnd",
       "role": "ios_boot_menu",
@@ -303,6 +695,13 @@
       "source": "generated"
     },
     {
+      "bytes": 2013,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ChallengeLoadScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "c5145b9a1b55fd143d56a47ad00b4a768b2143c6e84c0e652f7607067c3c58b7",
+      "source": "generated"
+    },
+    {
       "bytes": 1986,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/Defeat.wnd",
       "role": "ios_gameplay_window_layout",
@@ -310,10 +709,31 @@
       "source": "generated"
     },
     {
+      "bytes": 2009,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/GameSpyLoadScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "901958f5672658c4d299ccac4238a9df68ebd195c0038e6d500a03e830b2c5bd",
+      "source": "generated"
+    },
+    {
       "bytes": 1996,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/LocalDefeat.wnd",
       "role": "ios_gameplay_window_layout",
       "sha256": "9d0a29eefc5789c8390827bf82b3e0978c4dba623bb5dff3bf5d26944b543bc4",
+      "source": "generated"
+    },
+    {
+      "bytes": 2009,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MapTransferScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "6d90562ad1e94c4592cb1631f134d6791c3ec4f0eb8feefe83efdb041a4dd66d",
+      "source": "generated"
+    },
+    {
+      "bytes": 2017,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MultiplayerLoadScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "c2c7ab8615e05db240cc0a8e8cb1b0543b5c615ef333710fcb75c517e7927376",
       "source": "generated"
     },
     {
@@ -335,6 +755,20 @@
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ScoreScreen.wnd",
       "role": "ios_gameplay_window_layout",
       "sha256": "bae661b24a0cd61fec5bb176856c70dfbd84eaef90087587bdbe3bcb01a68e5a",
+      "source": "generated"
+    },
+    {
+      "bytes": 2013,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ShellGameLoadScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "36b38dd6a38c596dac21b5e3dc2fdea47acceb1a24570aa1ccbe6c103b962250",
+      "source": "generated"
+    },
+    {
+      "bytes": 2019,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/SinglePlayerLoadScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "2b235bc93af600dc3ac04be817c8e899283cfbf8b94758364aa73637d38b18dd",
       "source": "generated"
     },
     {
