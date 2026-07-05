@@ -895,7 +895,11 @@ Locomotor IOSVehicleLocomotor
 End
 """
 
-IOS_SLICE_ARMOR = """Armor IOSInfantryArmor
+IOS_SLICE_ARMOR = """Armor DEFAULT
+  Armor = DEFAULT 100%
+End
+
+Armor IOSInfantryArmor
   Armor = DEFAULT 100%
 End
 
