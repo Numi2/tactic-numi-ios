@@ -1087,10 +1087,10 @@
       "source": "generated"
     },
     {
-      "bytes": 324,
+      "bytes": 1744,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/AIData/ios_boot.ini",
       "role": "ios_boot_default_ini",
-      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
+      "sha256": "5c71e4a54e3be6aca163ff0b1d4e12b456ba7c5c6f840a35948f45440fd6ccde",
       "source": "generated"
     },
     {
@@ -1367,10 +1367,10 @@
       "source": "generated"
     },
     {
-      "bytes": 324,
+      "bytes": 1744,
       "path": "ios-original-assets/generated/GameData/Data/INI/AIData/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "5f7f7d134ef839f52ea3bac68310e7f60f433ed2134c73ab6d505723673fa3c1",
+      "sha256": "5c71e4a54e3be6aca163ff0b1d4e12b456ba7c5c6f840a35948f45440fd6ccde",
       "source": "generated"
     },
     {

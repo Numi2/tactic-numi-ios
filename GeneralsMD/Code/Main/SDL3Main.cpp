@@ -386,6 +386,7 @@ int main(int argc, char* argv[])
 				"Data/INI/Armor/ios_playable_slice.ini",
 				"Data/INI/DamageFX/ios_playable_slice.ini",
 				"Data/INI/Object/ios_playable_slice.ini",
+				"Data/INI/AIData/ios_boot.ini",
 				"Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini",
 				"Data/INI/SoundEffects/ios_boot.ini",
 				"Data/Audio/Sounds/action_rejected.wav",
