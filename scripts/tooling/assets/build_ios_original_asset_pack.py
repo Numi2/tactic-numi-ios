@@ -366,6 +366,12 @@ IOS_CSF_LABELS = {
     "INI:Command_SellDescription": "Sells the selected structure.",
     "INI:Command_SetRallyPoint": "Rally Point",
     "INI:Command_SetRallyPointDescription": "Sets the production rally point.",
+    "INI:Command_Evacuate": "Evacuate",
+    "INI:Command_EvacuateDescription": "Orders contained units to exit.",
+    "INI:Command_StructureExit": "Exit",
+    "INI:Command_StructureExitDescription": "Orders one contained unit to exit.",
+    "INI:Command_TransportExit": "Unload",
+    "INI:Command_TransportExitDescription": "Orders transport passengers to exit.",
     "GUI:Communicator": "Messages",
     "GUI:CommunicatorDescription": "Opens the communicator.",
     "GUI:Options": "Options",
@@ -462,6 +468,13 @@ CommandButton Command_IOSStop
   ButtonImage = IOSStopIcon
 End
 
+CommandButton Command_Stop
+  Command = STOP
+  TextLabel = INI:Command_Stop
+  DescriptLabel = INI:Command_StopDescription
+  ButtonImage = IOSStopIcon
+End
+
 CommandButton Command_IOSSelectAllOfType
   Command = SELECT_ALL_UNITS_OF_TYPE
   TextLabel = INI:Command_SelectAllOfType
@@ -509,7 +522,39 @@ CommandButton Command_SetRallyPoint
   ButtonBorderType = ACTION
 End
 
+CommandButton Command_Evacuate
+  Command = EVACUATE
+  TextLabel = INI:Command_Evacuate
+  DescriptLabel = INI:Command_EvacuateDescription
+  ButtonImage = IOSExitIcon
+  ButtonBorderType = ACTION
+End
+
+CommandButton Command_StructureExit
+  Command = EXIT_CONTAINER
+  TextLabel = INI:Command_StructureExit
+  DescriptLabel = INI:Command_StructureExitDescription
+  ButtonImage = IOSExitIcon
+  ButtonBorderType = ACTION
+End
+
+CommandButton Command_TransportExit
+  Command = EXIT_CONTAINER
+  TextLabel = INI:Command_TransportExit
+  DescriptLabel = INI:Command_TransportExitDescription
+  ButtonImage = IOSExitIcon
+  ButtonBorderType = ACTION
+End
+
 CommandButton NonCommand_Communicator
+  Command = NONE
+  TextLabel = GUI:Communicator
+  DescriptLabel = GUI:CommunicatorDescription
+  ButtonImage = IOSCommunicatorIcon
+  ButtonBorderType = SYSTEM
+End
+
+CommandButton NonCommand_BriefingHistory
   Command = NONE
   TextLabel = GUI:Communicator
   DescriptLabel = GUI:CommunicatorDescription
@@ -1943,6 +1988,7 @@ def write_playable_slice_assets(
         ("IOSCancelIcon.tga", (220, 54, 48, 255)),
         ("IOSSellIcon.tga", (220, 164, 42, 255)),
         ("IOSRallyPointIcon.tga", (76, 198, 126, 255)),
+        ("IOSExitIcon.tga", (96, 188, 232, 255)),
         ("IOSCommunicatorIcon.tga", (64, 180, 220, 255)),
         ("IOSOptionsIcon.tga", (178, 188, 198, 255)),
         ("IOSIdleWorkerIcon.tga", (214, 174, 82, 255)),
@@ -1959,6 +2005,39 @@ def write_playable_slice_assets(
             project_root,
             size=64,
         )
+
+    mapped_images = []
+    for filename, _color in icon_colors:
+        name = filename.removesuffix(".tga")
+        mapped_images.append((name, filename, 64, 64))
+    mapped_images.extend(
+        (
+            ("BarButtonGenStarON", "IOSGeneralPowersIcon.tga", 64, 64),
+            ("BarButtonGenStarOFF", "IOSGeneralPowersIcon.tga", 64, 64),
+            ("SSChevron1L", "IOSRangerIcon.tga", 64, 64),
+            ("SSChevron2L", "IOSScoutVehicleIcon.tga", 64, 64),
+            ("SSChevron3L", "IOSCommandCenterIcon.tga", 64, 64),
+        )
+    )
+    mapped_image_text = "".join(
+        f"""MappedImage {name}
+  Texture = {texture}
+  TextureWidth = {width}
+  TextureHeight = {height}
+  Coords = Left:0 Top:0 Right:{width} Bottom:{height}
+  Status = NONE
+End
+
+"""
+        for name, texture, width, height in mapped_images
+    )
+    write_text(
+        out_dir / "Data" / "INI" / "MappedImages" / "TextureSize_512" / "ios_playable_slice.ini",
+        mapped_image_text,
+        records,
+        "ios_playable_slice_mapped_images",
+        project_root,
+    )
 
     map_bytes = build_ios_slice_map()
     write_binary(

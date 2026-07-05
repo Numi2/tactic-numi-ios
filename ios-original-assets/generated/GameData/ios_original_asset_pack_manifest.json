@@ -1,5 +1,5 @@
 {
-  "asset_count": 232,
+  "asset_count": 234,
   "assets": [
     {
       "bytes": 6876,
@@ -940,10 +940,10 @@
       "source": "generated"
     },
     {
-      "bytes": 3988,
+      "bytes": 4519,
       "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
       "role": "localization_boot_csf",
-      "sha256": "f0e80855882949b55e393357aeb5fb8b380d32f4db5edad8e11a47004e6b2fc2",
+      "sha256": "af98ff23c42bddb57984cd7f8dbc2ac27ef5712387f55cf6dd6e81d2d7c9f56c",
       "source": "generated"
     },
     {
@@ -1423,10 +1423,10 @@
       "source": "generated"
     },
     {
-      "bytes": 3876,
+      "bytes": 4870,
       "path": "ios-original-assets/generated/GameData/Data/INI/CommandButton/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "c9144c002cc6f334cf7838a42fd029530731213a547afd01e26be393e13f5ea4",
+      "sha256": "e921700a8acca859808e22b9c598dcae3b81e7912254cb40a931f2e264a6d3f3",
       "source": "generated"
     },
     {
@@ -1550,6 +1550,13 @@
     },
     {
       "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSExitIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "dc73aa1a475e9569232b73b9014f4e19193b967a066ef768d643952b76f34742",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
       "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSCommunicatorIcon.tga",
       "role": "ios_playable_slice_icon",
       "sha256": "900398c9e17bf2c23f030069edfb5f8ddd8a175c52e0e2eed8d26d26b709d0c6",
@@ -1588,6 +1595,13 @@
       "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSToggleControlBarIcon.tga",
       "role": "ios_playable_slice_icon",
       "sha256": "de8efbb137803af096832569d564eb8f7d42f4bc3e5f85b5204e3f789ca6cfdb",
+      "source": "generated"
+    },
+    {
+      "bytes": 3829,
+      "path": "ios-original-assets/generated/GameData/Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini",
+      "role": "ios_playable_slice_mapped_images",
+      "sha256": "611032d8c8cfefb900438db2ecfcb0eba1b8850d38be1819cfbc0789829edb2a",
       "source": "generated"
     },
     {
