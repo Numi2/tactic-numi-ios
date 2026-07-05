@@ -43,9 +43,9 @@ scripts/tooling/assets/scan_ios_asset_manifest.py \
 For deterministic source validation, add `--hash` to include SHA-256 hashes for
 every loose file.
 
-The current scanner inventories loose files and flags `.big` containers. Full
-coverage requires adding a BIG index/extraction backend because most game assets
-are expected to live in archives.
+The current scanner inventories loose files, indexes `.big` directory entries,
+and can parse small text entries inside archives for dependency references. It
+does not yet decode binary formats such as W3D, DDS, map binaries, or CSF.
 
 ## Required Asset Buckets
 
@@ -134,12 +134,13 @@ The first generated batch should be a complete vertical slice:
 
 ## Next Engineering Tasks
 
-1. Add BIG archive indexing or extraction support to the scanner.
-2. Parse common INI fields into typed dependencies instead of regex-only text
+1. Parse common INI fields into typed dependencies instead of regex-only text
    references.
-3. Generate per-map and per-faction preload groups.
-4. Add budget checks for texture dimensions, model LOD presence, and oversized
+2. Decode W3D dependencies for textures, animations, skeletons, and hierarchy
+   links.
+3. Decode map and UI binary formats where references are not visible as text.
+4. Generate per-map and per-faction preload groups.
+5. Add budget checks for texture dimensions, model LOD presence, and oversized
    audio/video files.
-5. Add iOS package validation before signing so missing assets fail packaging,
+6. Add iOS package validation before signing so missing assets fail packaging,
    not runtime.
-

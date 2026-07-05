@@ -103,15 +103,17 @@ scripts/tooling/assets/scan_ios_asset_manifest.py \
   --md-out build/asset-manifest/ios_asset_inventory.md
 ```
 
-The first scan inventories loose files and flags `.big` archives. Full coverage
-requires a BIG extraction/index backend because most production assets live in
-archives.
+The first scan inventories loose files, indexes `.big` archive directory
+entries, and parses small text entries inside archives for references. Full
+coverage still requires typed parsers for W3D, map binaries, DDS metadata, and
+CSF/localization data.
 
 ### Phase 2: Dependency Graph
 
-- Add BIG archive indexing.
 - Resolve INI object definitions to model, animation, texture, particle, audio,
   icon, and localization dependencies.
+- Decode W3D, map, UI, and localization binary references that are not visible
+  through text scanning.
 - Generate per-map and per-faction preload groups.
 - Fail the pipeline when an original replacement pack has unresolved required
   dependencies.
