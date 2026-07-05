@@ -134,6 +134,11 @@ MANIFEST_JSON="${GX_ASSET_MANIFEST_JSON:-${MANIFEST_DIR}/ios_asset_manifest.json
 MANIFEST_MD="${GX_ASSET_MANIFEST_MD:-${MANIFEST_DIR}/ios_asset_inventory.md}"
 if [[ "${DEV_MODE}" != "1" ]]; then
     # GeneralsX @build Codex 05/07/2026 Prefer the repo-owned iOS original asset pack when retail data is absent.
+    if [[ -z "${ORIGINAL_ASSET_PACK}" && ! -d "${GAME_DATA_SRC}" && ! -d "${DEFAULT_ORIGINAL_ASSET_PACK}" ]]; then
+        echo "==> Building repo-owned original iOS asset pack"
+        "${PROJECT_ROOT}/scripts/tooling/assets/build_ios_original_asset_pack.py" --clean \
+            --out-dir "${DEFAULT_ORIGINAL_ASSET_PACK}"
+    fi
     if [[ -z "${ORIGINAL_ASSET_PACK}" && ! -d "${GAME_DATA_SRC}" && -d "${DEFAULT_ORIGINAL_ASSET_PACK}" ]]; then
         ORIGINAL_ASSET_PACK="${DEFAULT_ORIGINAL_ASSET_PACK}"
     fi
@@ -176,13 +181,15 @@ if [[ "${DEV_MODE}" != "1" ]]; then
             --exclude="RedistInstallers" --exclude="_CommonRedist" --exclude="*.txt" \
             "${ASSET_SRC}/" "${APP}/GameData/"
     fi
+    if [[ ! -f "${FONTS_SRC}/arial.ttf" || ! -f "${FONTS_SRC}/arialbold.ttf" || ! -f "${FONTS_SRC}/couriernew.ttf" || ! -f "${FONTS_SRC}/timesnewroman.ttf" ]]; then
+        echo "==> Staging iOS bundled fonts"
+        GX_FONTS="${FONTS_SRC}" "${PROJECT_ROOT}/scripts/build/ios/stage-fonts.sh"
+    fi
     if [[ -d "${FONTS_SRC}" ]]; then
         mkdir -p "${APP}/GameData/fonts"
         cp "${FONTS_SRC}"/*.ttf "${APP}/GameData/fonts/"
     else
-        echo "ERROR: fonts not staged at ${FONTS_SRC} — the app would render no text."
-        echo "  Run scripts/build/ios/stage-fonts.sh once (downloads Liberation fonts and"
-        echo "  renames them to the arial/couriernew/timesnewroman names the game expects)."
+        echo "ERROR: fonts not staged at ${FONTS_SRC}; automatic staging failed."
         exit 1
     fi
     for cfg in dxvk.conf Options.ini; do
@@ -249,5 +256,5 @@ if [[ "${DO_INSTALL}" == "1" ]]; then
         exit 1
     fi
     xcrun devicectl device install app --device "${DEVICE_ID}" "${APP}"
-    echo "==> Installed. Copy game assets to the app's Documents via Finder/Files app."
+    echo "==> Installed with bundled GameData: ${APP}/GameData"
 fi
