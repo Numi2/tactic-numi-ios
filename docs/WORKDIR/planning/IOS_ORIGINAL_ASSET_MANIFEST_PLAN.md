@@ -139,6 +139,19 @@ The first generated batch should be a complete vertical slice:
 - One command icon/portrait set.
 - One music loop, one UI click, one weapon SFX, and one explosion SFX.
 
+After generating the hard manifest, create the first worklist with:
+
+```bash
+scripts/tooling/assets/create_ios_playable_slice_worklist.py \
+  --manifest build/asset-manifest/ios_required_asset_manifest.json \
+  --out-dir ios-original-assets
+```
+
+This creates the source/generated workspace and writes:
+
+- `ios-original-assets/manifest/playable_slice_worklist.json`
+- `ios-original-assets/manifest/PLAYABLE_SLICE_WORKLIST.md`
+
 ## Next Engineering Tasks
 
 1. Expand typed INI coverage for less common object, weapon, FX, science, and
