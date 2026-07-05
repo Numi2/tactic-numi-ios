@@ -542,14 +542,10 @@ int main(int argc, char* argv[])
 		fprintf(stderr, "INFO: SDL3 window created successfully\n");
 
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
-		// Match the game's internal resolution to the phone screen's aspect ratio.
-		// Without this the engine runs its 4:3 default inside the 19.5:9 display:
-		// pillarboxed picture and a skewed window->game coordinate mapping. Height
-		// stays at the engine's 600px design baseline (UI layouts assume >= 600);
-		// width follows the real aspect. Injected as -xres/-yres argv entries so
-		// the normal command-line path applies them (user-passed flags still win
-		// because the parser lets later arguments override earlier ones... ours go
-		// last, so only add them if the user didn't pass explicit -xres/-yres).
+		// Match the game's internal resolution to the phone screen's native
+		// drawable. CommandLine::parseCommandLineForStartup() has already run by
+		// this point, so update GlobalData directly unless the user passed an
+		// explicit -xres/-yres.
 		{
 			bool userSetRes = false;
 			for (int i = 1; i < __argc; ++i) {
@@ -564,29 +560,13 @@ int main(int argc, char* argv[])
 			int winW = 0, winH = 0;
 			SDL_GetWindowSizeInPixels(TheSDL3Window, &winW, &winH);
 			if (!userSetRes && winW > 0 && winH > 0 && winW > winH) {
-				static char xresVal[16], yresVal[16];
-				static char xresFlag[] = "-xres";
-				static char yresFlag[] = "-yres";
 				const int yres = winH;
 				int xres = winW;
 				xres &= ~1;  // keep it even
-				snprintf(xresVal, sizeof(xresVal), "%d", xres);
-				snprintf(yresVal, sizeof(yresVal), "%d", yres);
-
-				static char* newArgv[64];
-				int n = 0;
-				for (int i = 0; i < __argc && n < 59; ++i) {
-					newArgv[n++] = __argv[i];
-				}
-				newArgv[n++] = xresFlag;
-				newArgv[n++] = xresVal;
-				newArgv[n++] = yresFlag;
-				newArgv[n++] = yresVal;
-				newArgv[n] = nullptr;
-				__argv = newArgv;
-				__argc = n;
-				fprintf(stderr, "INFO: iOS internal resolution set to %sx%s (window %dx%d)\n",
-				        xresVal, yresVal, winW, winH);
+				TheWritableGlobalData->m_xResolution = xres;
+				TheWritableGlobalData->m_yResolution = yres;
+				fprintf(stderr, "INFO: iOS internal resolution set to %dx%d (window %dx%d)\n",
+				        xres, yres, winW, winH);
 			}
 		}
 #endif
