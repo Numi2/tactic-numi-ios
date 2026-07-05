@@ -1164,6 +1164,129 @@ END
 """
 
 
+def progress_bar(name: str, x1: int, y1: int, x2: int, y2: int) -> str:
+    return child_wnd_block(
+        name,
+        x1,
+        y1,
+        x2,
+        y2,
+        window_type="PROGRESSBAR",
+        style="PROGRESSBAR+USER",
+        color=(74, 126, 184, 235),
+    )
+
+
+def single_player_load_screen_wnd() -> str:
+    objective_lines = [
+        child_wnd_block(
+            f"SinglePlayerLoadScreen.wnd:StaticTextLine{index}",
+            48,
+            184 + index * 28,
+            560,
+            208 + index * 28,
+            window_type="STATICTEXT",
+            style="STATICTEXT+USER",
+            font_size=12,
+            color=(18, 22, 28, 180),
+        )
+        for index in range(5)
+    ]
+    cameo_text = [
+        child_wnd_block(
+            f"SinglePlayerLoadScreen.wnd:StaticTextCameoText{index}",
+            650,
+            206 + index * 42,
+            960,
+            236 + index * 42,
+            window_type="STATICTEXT",
+            style="STATICTEXT+USER",
+            font_size=12,
+            color=(18, 22, 28, 180),
+        )
+        for index in range(4)
+    ]
+    children = "".join(
+        [
+            child_wnd_block("SinglePlayerLoadScreen.wnd:ParentSinglePlayerLoadScreen", 0, 0, 1024, 768, color=(8, 10, 14, 245)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:ObjectivesWin", 40, 142, 590, 344, color=(16, 20, 26, 210)),
+            *objective_lines,
+            progress_bar("SinglePlayerLoadScreen.wnd:ProgressLoad", 210, 690, 814, 714),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:Percent", 824, 684, 928, 718, window_type="STATICTEXT", style="STATICTEXT+USER", text="0%", font_size=14, color=(8, 10, 14, 0)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:WindowCameo1", 610, 190, 642, 222, color=(40, 48, 58, 220)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:WindowCameo2", 610, 232, 642, 264, color=(40, 48, 58, 220)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:WindowCameo3", 610, 274, 642, 306, color=(40, 48, 58, 220)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:WindowHead", 740, 72, 910, 182, color=(30, 36, 44, 200)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:WindowHiliteCameo", 604, 184, 648, 228, color=(190, 160, 70, 120)),
+            child_wnd_block("SinglePlayerLoadScreen.wnd:StaticTextCameoText", 650, 164, 960, 194, window_type="STATICTEXT", style="STATICTEXT+USER", font_size=12, color=(18, 22, 28, 180)),
+            *cameo_text,
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0, BOTTOMRIGHT: 1024 768, CREATIONRESOLUTION: 1024 768;
+  NAME = "SinglePlayerLoadScreen.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
+def shell_game_load_screen_wnd() -> str:
+    children = "".join(
+        [
+            child_wnd_block("ShellGameLoadScreen.wnd:StaticTextLegal", 120, 304, 904, 346, window_type="STATICTEXT", style="STATICTEXT+CENTER+USER", text="GeneralsX iOS", font_size=18, color=(8, 10, 14, 0)),
+            progress_bar("ShellGameLoadScreen.wnd:ProgressLoad", 210, 690, 814, 714),
+        ]
+    )
+    return f"""FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0, BOTTOMRIGHT: 1024 768, CREATIONRESOLUTION: 1024 768;
+  NAME = "ShellGameLoadScreen.wnd";
+  STATUS = ENABLED+IMAGE;
+  STYLE = USER;
+  SYSTEMCALLBACK = "[None]";
+  INPUTCALLBACK = "[None]";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "[None]";
+  FONT = NAME: "Arial", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "[NONE]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED: 255 255 255 255, ENABLEDBORDER: 0 0 0 255,
+              DISABLED: 180 180 180 255, DISABLEDBORDER: 0 0 0 255,
+              HILITE: 255 235 170 255, HILITEBORDER: 0 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 8 10 14 245, BORDERCOLOR: 0 0 0 0;{children}
+END
+"""
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -1640,6 +1763,10 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
             layout_text = motd_wnd()
         elif layout_name == "ReplayControl.wnd":
             layout_text = replay_control_wnd()
+        elif layout_name == "SinglePlayerLoadScreen.wnd":
+            layout_text = single_player_load_screen_wnd()
+        elif layout_name == "ShellGameLoadScreen.wnd":
+            layout_text = shell_game_load_screen_wnd()
         else:
             layout_text = minimal_wnd(layout_name, title)
         write_text(

@@ -814,17 +814,17 @@
       "source": "generated"
     },
     {
-      "bytes": 2013,
+      "bytes": 2890,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/ShellGameLoadScreen.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "36b38dd6a38c596dac21b5e3dc2fdea47acceb1a24570aa1ccbe6c103b962250",
+      "sha256": "cfc58514577ea771e9eced75718492ca0ac5e97b8972955804059b93cc1bbec3",
       "source": "generated"
     },
     {
-      "bytes": 2019,
+      "bytes": 19076,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/SinglePlayerLoadScreen.wnd",
       "role": "ios_gameplay_window_layout",
-      "sha256": "2b235bc93af600dc3ac04be817c8e899283cfbf8b94758364aa73637d38b18dd",
+      "sha256": "6fac33de1df9dc44d7e02e3b679e957aab0b5038d4513d8345fc4c566bb1c67d",
       "source": "generated"
     },
     {
