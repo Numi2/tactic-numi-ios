@@ -1,5 +1,5 @@
 {
-  "asset_count": 206,
+  "asset_count": 214,
   "assets": [
     {
       "bytes": 1068,
@@ -709,6 +709,13 @@
       "source": "generated"
     },
     {
+      "bytes": 2012,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/DisconnectScreen.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "32917a91d9f565c4e59d485d4e9d05fa42441bb87decbeaefbe1e4ecf1891cf6",
+      "source": "generated"
+    },
+    {
       "bytes": 2009,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/GameSpyLoadScreen.wnd",
       "role": "ios_gameplay_window_layout",
@@ -730,6 +737,13 @@
       "source": "generated"
     },
     {
+      "bytes": 962,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MessageBox.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "f6a34172c4663be853906ef144e2a4b8257fa7f9839876136d7a5f89e9879d78",
+      "source": "generated"
+    },
+    {
       "bytes": 2017,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/MultiplayerLoadScreen.wnd",
       "role": "ios_gameplay_window_layout",
@@ -744,10 +758,52 @@
       "source": "generated"
     },
     {
+      "bytes": 1997,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/OptionsMenu.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "2e6ce8e2647eef0d9171fc7b2c3de4c0a9afe382ed49d239f21fd5880bdaf840",
+      "source": "generated"
+    },
+    {
       "bytes": 969,
       "path": "ios-original-assets/generated/GameData/Data/Window/Menus/PopupCommunicator.wnd",
       "role": "ios_gameplay_window_layout",
       "sha256": "fd96c7492999fc6d847cb0e0b1d3d1815695c1a118951e1c59702c18ef3711ef",
+      "source": "generated"
+    },
+    {
+      "bytes": 1996,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/PopupReplay.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "032a6228d039a3dc79bf1d9f5aea142b86894123a2efa52166b3f1df68493b2b",
+      "source": "generated"
+    },
+    {
+      "bytes": 1998,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/PopupSaveLoad.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "4fda491bc877b4cedb8c1c6cd755653663db3c724054a4ea5b377dfc132604ce",
+      "source": "generated"
+    },
+    {
+      "bytes": 1988,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/QuitMenu.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "44c0933d3c5404e973e4536e7a70863904d5c1b08a808809d78ecb24106e757b",
+      "source": "generated"
+    },
+    {
+      "bytes": 2000,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/QuitMessageBox.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "0756412b9b1740f4ee141a6f4db72b0c6c00d39e03cc77538b7defc4553965d2",
+      "source": "generated"
+    },
+    {
+      "bytes": 1992,
+      "path": "ios-original-assets/generated/GameData/Data/Window/Menus/QuitNoSave.wnd",
+      "role": "ios_gameplay_window_layout",
+      "sha256": "4cbb9278f9c0a8ab65cc3bc63676f2e9c20386eeb82198be184cfdbe959c9215",
       "source": "generated"
     },
     {
