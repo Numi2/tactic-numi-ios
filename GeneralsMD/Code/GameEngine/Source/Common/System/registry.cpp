@@ -30,6 +30,9 @@
 
 #include "Common/Registry.h"
 #include "registryini.h"
+#if defined(__APPLE__)
+#include <TargetConditionals.h>
+#endif
 
 // GeneralsX @build felipebraz 11/02/2026 Phase 1.5 - Linux port
 // Windows Registry types not available on Linux - define stub types
@@ -451,7 +454,12 @@ AsciiString GetRegistryLanguage()
 {
 	static Bool cached = FALSE;
 	// NOTE: static causes a memory leak, but we have to keep it because the value is cached.
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+	// GeneralsX @build Codex 05/07/2026 Match the bundled iOS original asset pack's localized Data/English path.
+	static AsciiString val = "English";
+#else
 	static AsciiString val = "english";
+#endif
 	if (cached) {
 		return val;
 	} else {

@@ -96,7 +96,12 @@ SDL_Window* TheSDL3Window = nullptr;
 // GameText.cpp uses these paths to load CSF and STR files (game localization)
 // Format %s is replaced with language code in GameTextManager::init()
 // GeneralsX @bugfix BenderAI 13/02/2026 - Fix case-sensitivity on Linux (generals.csf vs Generals.csf)
+// GeneralsX @build Codex 05/07/2026 Match the bundled iOS original pack's Data/English casing.
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+const Char *g_csfFile = "Data/%s/generals.csf";
+#else
 const Char *g_csfFile = "data/%s/generals.csf";  ///< CSF file path (lowercase for Linux compatibility)
+#endif
 const Char *g_strFile = "data/Generals.str";     ///< STR file path
 
 // Extern declarations (from GameMain.cpp)

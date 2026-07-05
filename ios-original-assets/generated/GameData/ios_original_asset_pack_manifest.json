@@ -1,5 +1,5 @@
 {
-  "asset_count": 94,
+  "asset_count": 96,
   "assets": [
     {
       "bytes": 1068,
@@ -188,6 +188,20 @@
       "path": "ios-original-assets/generated/GameData/Data/English/Language.ini",
       "role": "localization_boot_config",
       "sha256": "677227ed9d8a7e07b1e7b7d0d499c68053441dc4bf8b6679e973949aad2cfc7c",
+      "source": "generated"
+    },
+    {
+      "bytes": 34,
+      "path": "ios-original-assets/generated/GameData/Data/English/HeaderTemplate/ios_boot.ini",
+      "role": "localization_header_template_placeholder",
+      "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "source": "generated"
+    },
+    {
+      "bytes": 24,
+      "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
+      "role": "localization_boot_csf",
+      "sha256": "12304e51d7ee33b188369065aa5530d7c72d1befbd16002fe595e6269d0d9981",
       "source": "generated"
     },
     {

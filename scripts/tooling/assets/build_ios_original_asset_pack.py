@@ -12,6 +12,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import struct
 from pathlib import Path
 
 
@@ -119,6 +120,11 @@ IOS_BOOT_GAMEDATA = """GameData
 End
 """
 
+IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
+CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
+CSF_VERSION = 3
+LANGUAGE_ID_US = 0
+
 def minimal_wnd(layout_name: str, title: str | None = None) -> str:
     text_block = ""
     if title:
@@ -221,6 +227,26 @@ def write_text(
 ) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(text, encoding="utf-8", newline="\n")
+    records.append(
+        {
+            "role": role,
+            "path": manifest_path(dest, project_root),
+            "source": "generated",
+            "bytes": dest.stat().st_size,
+            "sha256": sha256(dest),
+        }
+    )
+
+
+def write_binary(
+    dest: Path,
+    payload: bytes,
+    records: list[dict[str, object]],
+    role: str,
+    project_root: Path,
+) -> None:
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(payload)
     records.append(
         {
             "role": role,
@@ -360,9 +386,23 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
 
     write_text(
         out_dir / "Data" / "English" / "Language.ini",
-        "Language = English\nUnicodeFontName = Arial\n",
+        IOS_BOOT_LANGUAGE,
         records,
         "localization_boot_config",
+        project_root,
+    )
+    write_text(
+        out_dir / "Data" / "English" / "HeaderTemplate" / "ios_boot.ini",
+        "; Generated iOS boot placeholder.\n",
+        records,
+        "localization_header_template_placeholder",
+        project_root,
+    )
+    write_binary(
+        out_dir / "Data" / "English" / "generals.csf",
+        struct.pack("<iiiiii", CSF_ID, CSF_VERSION, 0, 0, 0, LANGUAGE_ID_US),
+        records,
+        "localization_boot_csf",
         project_root,
     )
 
