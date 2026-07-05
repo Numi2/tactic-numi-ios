@@ -124,6 +124,303 @@ IOS_BOOT_LANGUAGE = "Language = English\nUnicodeFontName = Arial\n"
 CSF_ID = (ord("C") << 24) | (ord("S") << 16) | (ord("F") << 8) | ord(" ")
 CSF_VERSION = 3
 LANGUAGE_ID_US = 0
+IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
+  Side = Observer
+  BaseSide = Observer
+  PlayableSide = No
+  DisplayName = GUI:Observer
+  IsObserver = Yes
+End
+
+PlayerTemplate FactionCivilian
+  Side = Civilian
+  BaseSide = Civilian
+  PlayableSide = No
+  DisplayName = INI:FactionCivilian
+  PreferredColor = R:255 G:255 B:255
+End
+
+PlayerTemplate FactionIOS
+  Side = IOS
+  BaseSide = USA
+  PlayableSide = Yes
+  DisplayName = INI:FactionIOS
+  StartMoney = 10000
+  PreferredColor = R:32 G:168 B:255
+  StartingBuilding = IOSCommandCenter
+  StartingUnit0 = IOSRanger
+  StartingUnit1 = IOSScoutVehicle
+  PurchaseScienceCommandSetRank1 = IOSScienceCommandSet
+  PurchaseScienceCommandSetRank3 = IOSScienceCommandSet
+  PurchaseScienceCommandSetRank8 = IOSScienceCommandSet
+  SpecialPowerShortcutCommandSet = IOSSpecialPowerCommandSet
+End
+"""
+
+IOS_SLICE_COMMAND_BUTTON = """CommandButton Command_ConstructIOSPowerPlant
+  Command = DOZER_CONSTRUCT
+  Object = IOSPowerPlant
+  TextLabel = INI:Command_ConstructIOSPowerPlant
+  DescriptLabel = INI:Command_ConstructIOSPowerPlantDescription
+  ButtonImage = IOSPowerPlantIcon
+End
+
+CommandButton Command_ConstructIOSBarracks
+  Command = DOZER_CONSTRUCT
+  Object = IOSBarracks
+  TextLabel = INI:Command_ConstructIOSBarracks
+  DescriptLabel = INI:Command_ConstructIOSBarracksDescription
+  ButtonImage = IOSBarracksIcon
+End
+
+CommandButton Command_ConstructIOSScoutVehicle
+  Command = UNIT_BUILD
+  Object = IOSScoutVehicle
+  TextLabel = INI:Command_ConstructIOSScoutVehicle
+  DescriptLabel = INI:Command_ConstructIOSScoutVehicleDescription
+  ButtonImage = IOSScoutVehicleIcon
+End
+
+CommandButton Command_ConstructIOSRanger
+  Command = UNIT_BUILD
+  Object = IOSRanger
+  TextLabel = INI:Command_ConstructIOSRanger
+  DescriptLabel = INI:Command_ConstructIOSRangerDescription
+  ButtonImage = IOSRangerIcon
+End
+
+CommandButton Command_IOSStop
+  Command = STOP
+  TextLabel = INI:Command_Stop
+  DescriptLabel = INI:Command_StopDescription
+  ButtonImage = IOSStopIcon
+End
+
+CommandButton Command_IOSSelectAllOfType
+  Command = SELECT_ALL_UNITS_OF_TYPE
+  TextLabel = INI:Command_SelectAllOfType
+  DescriptLabel = INI:Command_SelectAllOfTypeDescription
+  ButtonImage = IOSSelectAllIcon
+End
+"""
+
+IOS_SLICE_COMMAND_SET = """CommandSet IOSCommandCenterCommandSet
+  1 = Command_ConstructIOSPowerPlant
+  2 = Command_ConstructIOSBarracks
+  13 = Command_IOSSelectAllOfType
+  14 = Command_IOSStop
+End
+
+CommandSet IOSBarracksCommandSet
+  1 = Command_ConstructIOSRanger
+  13 = Command_IOSSelectAllOfType
+  14 = Command_IOSStop
+End
+
+CommandSet IOSVehicleFactoryCommandSet
+  1 = Command_ConstructIOSScoutVehicle
+  13 = Command_IOSSelectAllOfType
+  14 = Command_IOSStop
+End
+
+CommandSet IOSUnitCommandSet
+  13 = Command_IOSSelectAllOfType
+  14 = Command_IOSStop
+End
+
+CommandSet IOSScienceCommandSet
+End
+
+CommandSet IOSSpecialPowerCommandSet
+End
+"""
+
+IOS_SLICE_WEAPON = """Weapon IOSRifleWeapon
+  PrimaryDamage = 8.0
+  PrimaryDamageRadius = 0.0
+  AttackRange = 120.0
+  DamageType = SMALL_ARMS
+  DeathType = NORMAL
+  WeaponSpeed = 999999.0
+  ClipSize = 5
+  ClipReloadTime = 1000
+  DelayBetweenShots = 250
+  AntiGround = Yes
+End
+
+Weapon IOSCannonWeapon
+  PrimaryDamage = 35.0
+  PrimaryDamageRadius = 8.0
+  AttackRange = 160.0
+  DamageType = ARMOR_PIERCING
+  DeathType = EXPLODED
+  WeaponSpeed = 250.0
+  ClipSize = 1
+  ClipReloadTime = 1500
+  DelayBetweenShots = 1000
+  AntiGround = Yes
+End
+"""
+
+IOS_SLICE_LOCOMOTOR = """Locomotor IOSInfantryLocomotor
+  Surfaces = GROUND
+  Speed = 25
+  SpeedDamaged = 18
+  TurnRate = 360
+  TurnRateDamaged = 240
+  Acceleration = 80
+  AccelerationDamaged = 60
+  Braking = 80
+  MinSpeed = 0
+  ZAxisBehavior = NO_Z_MOTIVE_FORCE
+  Appearance = TWO_LEGS
+  StickToGround = Yes
+End
+
+Locomotor IOSVehicleLocomotor
+  Surfaces = GROUND
+  Speed = 40
+  SpeedDamaged = 25
+  TurnRate = 120
+  TurnRateDamaged = 90
+  Acceleration = 60
+  AccelerationDamaged = 40
+  Braking = 60
+  MinSpeed = 0
+  ZAxisBehavior = NO_Z_MOTIVE_FORCE
+  Appearance = FOUR_WHEELS
+  StickToGround = Yes
+  CanMoveBackwards = Yes
+End
+"""
+
+IOS_SLICE_ARMOR = """Armor IOSInfantryArmor
+  Armor = DEFAULT 100%
+End
+
+Armor IOSVehicleArmor
+  Armor = DEFAULT 100%
+End
+
+Armor IOSStructureArmor
+  Armor = DEFAULT 100%
+End
+"""
+
+IOS_SLICE_DAMAGE_FX = """DamageFX IOSDefaultDamageFX
+End
+"""
+
+IOS_SLICE_OBJECT = """Object IOSCommandCenter
+  DisplayName = INI:IOSCommandCenter
+  Side = IOS
+  EditorSorting = STRUCTURE
+  KindOf = STRUCTURE SELECTABLE IMMOBILE COMMANDCENTER
+  Buildable = Yes
+  BuildCost = 2000
+  BuildTime = 10.0
+  EnergyProduction = 0
+  CommandSet = IOSCommandCenterCommandSet
+  VisionRange = 200.0
+  ShroudClearingRange = 220.0
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  ButtonImage = IOSCommandCenterIcon
+  SelectPortrait = IOSCommandCenterIcon
+End
+
+Object IOSPowerPlant
+  DisplayName = INI:IOSPowerPlant
+  Side = IOS
+  EditorSorting = STRUCTURE
+  KindOf = STRUCTURE SELECTABLE IMMOBILE FS_POWER
+  Buildable = Yes
+  BuildCost = 800
+  BuildTime = 8.0
+  EnergyProduction = 5
+  VisionRange = 120.0
+  ShroudClearingRange = 140.0
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  ButtonImage = IOSPowerPlantIcon
+  SelectPortrait = IOSPowerPlantIcon
+End
+
+Object IOSBarracks
+  DisplayName = INI:IOSBarracks
+  Side = IOS
+  EditorSorting = STRUCTURE
+  KindOf = STRUCTURE SELECTABLE IMMOBILE FS_FACTORY
+  Buildable = Yes
+  BuildCost = 600
+  BuildTime = 8.0
+  EnergyProduction = -1
+  CommandSet = IOSBarracksCommandSet
+  VisionRange = 140.0
+  ShroudClearingRange = 160.0
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  ButtonImage = IOSBarracksIcon
+  SelectPortrait = IOSBarracksIcon
+End
+
+Object IOSRanger
+  DisplayName = INI:IOSRanger
+  Side = IOS
+  EditorSorting = INFANTRY
+  KindOf = PRELOAD SELECTABLE CAN_ATTACK INFANTRY SCORE
+  Buildable = Yes
+  BuildCost = 150
+  BuildTime = 3.0
+  CommandSet = IOSUnitCommandSet
+  VisionRange = 160.0
+  ShroudClearingRange = 180.0
+  WeaponSet
+    Conditions = None
+    Weapon = PRIMARY IOSRifleWeapon
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSInfantryArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  ButtonImage = IOSRangerIcon
+  SelectPortrait = IOSRangerIcon
+End
+
+Object IOSScoutVehicle
+  DisplayName = INI:IOSScoutVehicle
+  Side = IOS
+  EditorSorting = VEHICLE
+  KindOf = PRELOAD SELECTABLE CAN_ATTACK VEHICLE SCORE
+  Buildable = Yes
+  BuildCost = 600
+  BuildTime = 6.0
+  CommandSet = IOSUnitCommandSet
+  VisionRange = 180.0
+  ShroudClearingRange = 200.0
+  WeaponSet
+    Conditions = None
+    Weapon = PRIMARY IOSCannonWeapon
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSVehicleArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  ButtonImage = IOSScoutVehicleIcon
+  SelectPortrait = IOSScoutVehicleIcon
+End
+"""
 
 def minimal_wnd(layout_name: str, title: str | None = None) -> str:
     text_block = ""
@@ -305,6 +602,50 @@ def write_radial_tga(
     )
 
 
+def write_playable_slice_assets(
+    out_dir: Path,
+    records: list[dict[str, object]],
+    project_root: Path,
+) -> None:
+    slice_files = (
+        ("PlayerTemplate", IOS_SLICE_PLAYER_TEMPLATE),
+        ("CommandButton", IOS_SLICE_COMMAND_BUTTON),
+        ("CommandSet", IOS_SLICE_COMMAND_SET),
+        ("Weapon", IOS_SLICE_WEAPON),
+        ("Locomotor", IOS_SLICE_LOCOMOTOR),
+        ("Armor", IOS_SLICE_ARMOR),
+        ("DamageFX", IOS_SLICE_DAMAGE_FX),
+        ("Object", IOS_SLICE_OBJECT),
+    )
+    for dirname, text in slice_files:
+        write_text(
+            out_dir / "Data" / "INI" / dirname / "ios_playable_slice.ini",
+            text,
+            records,
+            "ios_playable_slice_ini",
+            project_root,
+        )
+
+    icon_colors = (
+        ("IOSCommandCenterIcon.tga", (44, 120, 220, 255)),
+        ("IOSPowerPlantIcon.tga", (236, 190, 52, 255)),
+        ("IOSBarracksIcon.tga", (80, 180, 120, 255)),
+        ("IOSRangerIcon.tga", (210, 230, 245, 255)),
+        ("IOSScoutVehicleIcon.tga", (120, 150, 165, 255)),
+        ("IOSStopIcon.tga", (220, 62, 54, 255)),
+        ("IOSSelectAllIcon.tga", (150, 96, 210, 255)),
+    )
+    for filename, color in icon_colors:
+        write_radial_tga(
+            out_dir / "Data" / "Art" / "Textures" / filename,
+            color,
+            records,
+            "ios_playable_slice_icon",
+            project_root,
+            size=64,
+        )
+
+
 def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, object]:
     out_dir = out_dir.resolve()
     if clean and out_dir.exists():
@@ -429,6 +770,7 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
             "ios_boot_ini_placeholder",
             project_root,
         )
+    write_playable_slice_assets(out_dir, records, project_root)
 
     try:
         game_data_path = out_dir.relative_to(project_root).as_posix()

@@ -1,5 +1,5 @@
 {
-  "asset_count": 96,
+  "asset_count": 111,
   "assets": [
     {
       "bytes": 1068,
@@ -671,6 +671,111 @@
       "path": "ios-original-assets/generated/GameData/Data/INI/WindowTransitions/ios_boot.ini",
       "role": "ios_boot_ini_placeholder",
       "sha256": "356204845d378eaa0a1b3c734b9b8ceee029c06580c2e76b918a8d4a7c26873d",
+      "source": "generated"
+    },
+    {
+      "bytes": 811,
+      "path": "ios-original-assets/generated/GameData/Data/INI/PlayerTemplate/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "91917edadc3b9af5385d9eb7b8c88abe767c616da57a2ce664b370f218e9c4da",
+      "source": "generated"
+    },
+    {
+      "bytes": 1341,
+      "path": "ios-original-assets/generated/GameData/Data/INI/CommandButton/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "8817c216c7e7d256d8bb1ecfc28beb3d4e41951c94649e8b428b5529ec0f044b",
+      "source": "generated"
+    },
+    {
+      "bytes": 609,
+      "path": "ios-original-assets/generated/GameData/Data/INI/CommandSet/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "6eb4ef92ae2c361f278db0fcd22c63a73d19c0b2608ac6b971d76ccde81e558f",
+      "source": "generated"
+    },
+    {
+      "bytes": 515,
+      "path": "ios-original-assets/generated/GameData/Data/INI/Weapon/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "2d5c872d2ff6a42efb8a9acfa8ded0f576e62c90e1889f15ae767ac7219f853b",
+      "source": "generated"
+    },
+    {
+      "bytes": 603,
+      "path": "ios-original-assets/generated/GameData/Data/INI/Locomotor/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "016f738f1ea670a8e8826e67f5a532569736ba8a3041cc74aab6fca709e6fc34",
+      "source": "generated"
+    },
+    {
+      "bytes": 152,
+      "path": "ios-original-assets/generated/GameData/Data/INI/Armor/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "580b3da9c616950774b7b2c605d1f1a790aee31f5edf3fb5ecbf785dcff16676",
+      "source": "generated"
+    },
+    {
+      "bytes": 32,
+      "path": "ios-original-assets/generated/GameData/Data/INI/DamageFX/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "8a4030103f8c8d011dc0bbb95f01b7f9394239288d5a39cba22e334621afbd99",
+      "source": "generated"
+    },
+    {
+      "bytes": 2532,
+      "path": "ios-original-assets/generated/GameData/Data/INI/Object/ios_playable_slice.ini",
+      "role": "ios_playable_slice_ini",
+      "sha256": "c556bc33ac7604ec0081d1ed243473e4e10c3c61a9742f7598b5fa8cacbd19cc",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSCommandCenterIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "1391e77ecc063a5755fed9882cfc40f71e96095d7aa511e08301d5fc1b6776c9",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSPowerPlantIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "d672e7b9ef9bb79dfd2c9965a21c618b5519a313a1fc5ee3bf56ade7f22f23ae",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSBarracksIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "f751acde3af396c99de7ab0be3466ab2d44caa560b1e7a8332aaa1b91f3817f9",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSRangerIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "f1c824ce11db7648a38898a8594d3433b97538bf66573a2746a7286ca82c0378",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSScoutVehicleIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "3d5fa93bc8fe1544f89a5b3714edcab04f79d0a2406d64f52d02d1ca461fbb79",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSStopIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "36a4837cb3955d96d104687890ec5d32319c0c5e50e0591947196d918acc9831",
+      "source": "generated"
+    },
+    {
+      "bytes": 16402,
+      "path": "ios-original-assets/generated/GameData/Data/Art/Textures/IOSSelectAllIcon.tga",
+      "role": "ios_playable_slice_icon",
+      "sha256": "dea6563152cfc1211e8cc2e22e59c0abf04bedb0e992595fcb63483bce3f5ca7",
       "source": "generated"
     }
   ],
