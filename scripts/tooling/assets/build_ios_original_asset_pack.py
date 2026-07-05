@@ -30,6 +30,113 @@ RUNTIME_ASSETS = (
     "w3d_missing_texture.tga",
 )
 
+STOCK_TEMPLATE_MODEL_NAMES = (
+    "GenericDebris",
+    "GenericBridge",
+    "WaterWaveBridge",
+    "GarrisonGun",
+    "WaveHit01",
+    "WaveSplash01",
+    "WaveSplashLeft01",
+    "WaveSplashRight01",
+    "WaveSpray01",
+    "WaveSpray02",
+    "WaveSpray03",
+    "GLAScudStorm",
+    "Boss_GLAScudStorm",
+    "Chem_GLAScudStorm",
+    "Demo_GLAScudStorm",
+    "Slth_GLAScudStorm",
+    "AmericaParticleCannonUplink",
+    "AirF_AmericaParticleCannonUplink",
+    "Lazr_AmericaParticleCannonUplink",
+    "SupW_AmericaParticleCannonUplink",
+    "Boss_ParticleCannonUplink",
+    "ChinaNuclearMissileLauncher",
+    "Boss_NuclearMissileLauncher",
+    "Infa_ChinaNuclearMissileLauncher",
+    "Nuke_ChinaNuclearMissileLauncher",
+    "Tank_ChinaNuclearMissileLauncher",
+)
+
+STOCK_GENERATED_TEMPLATE_NAMES = (
+    "GarrisonGun",
+    "WaveHit01",
+    "WaveSplash01",
+    "WaveSplashLeft01",
+    "WaveSplashRight01",
+    "WaveSpray01",
+    "WaveSpray02",
+    "WaveSpray03",
+    "GLAScudStorm",
+    "Boss_GLAScudStorm",
+    "Chem_GLAScudStorm",
+    "Demo_GLAScudStorm",
+    "Slth_GLAScudStorm",
+    "AmericaParticleCannonUplink",
+    "AirF_AmericaParticleCannonUplink",
+    "Lazr_AmericaParticleCannonUplink",
+    "SupW_AmericaParticleCannonUplink",
+    "Boss_ParticleCannonUplink",
+    "ChinaNuclearMissileLauncher",
+    "Boss_NuclearMissileLauncher",
+    "Infa_ChinaNuclearMissileLauncher",
+    "Nuke_ChinaNuclearMissileLauncher",
+    "Tank_ChinaNuclearMissileLauncher",
+)
+
+STOCK_MAPPED_IMAGE_ALIASES = (
+    ("Apocalypse", "IOSGeneralPowersIcon.tga"),
+    ("Campaign_China", "IOSStarGold.tga"),
+    ("Campaign_GLA", "IOSStarGold.tga"),
+    ("Campaign_USA", "IOSStarGold.tga"),
+    ("Challenge_Bronz", "IOSStarBronze.tga"),
+    ("Challenge_Gold", "IOSStarGold.tga"),
+    ("Challenge_Silver", "IOSStarSilver.tga"),
+    ("ChinaCampaign_B", "IOSStarBronze.tga"),
+    ("ChinaCampaign_G", "IOSStarGold.tga"),
+    ("ChinaCampaign_S", "IOSStarSilver.tga"),
+    ("CustomMatch_deselected", "IOSOptionsIcon.tga"),
+    ("CustomMatch_selected", "IOSFactionEnabled.tga"),
+    ("Domination_100", "IOSStarBronze.tga"),
+    ("Domination_1000", "IOSStarSilver.tga"),
+    ("Domination_10000", "IOSStarGold.tga"),
+    ("Domination_500", "IOSStarSilver.tga"),
+    ("Endurance", "IOSGeneralPowersIcon.tga"),
+    ("Endurance_B", "IOSStarBronze.tga"),
+    ("Endurance_G", "IOSStarGold.tga"),
+    ("Endurance_S", "IOSStarSilver.tga"),
+    ("FairPlay", "IOSFactionEnabled.tga"),
+    ("GLACampaign_B", "IOSStarBronze.tga"),
+    ("GLACampaign_G", "IOSStarGold.tga"),
+    ("GLACampaign_S", "IOSStarSilver.tga"),
+    ("GlobalGen", "IOSGeneralPowersIcon.tga"),
+    ("HonorAirWing", "IOSScoutVehicleIcon.tga"),
+    ("HonorBattleTank", "IOSScoutVehicleIcon.tga"),
+    ("HonorBlitz10", "IOSStarGold.tga"),
+    ("HonorBlitz5", "IOSStarSilver.tga"),
+    ("HonorChallenge1", "IOSStarBronze.tga"),
+    ("HonorChallenge2", "IOSStarBronze.tga"),
+    ("HonorChallenge3", "IOSStarSilver.tga"),
+    ("HonorChallenge4", "IOSStarSilver.tga"),
+    ("HonorChallenge5", "IOSStarGold.tga"),
+    ("HonorChallenge6", "IOSStarGold.tga"),
+    ("HonorChallenge7", "IOSGeneralPowersIcon.tga"),
+    ("HonorStreak_100", "IOSStarBronze.tga"),
+    ("HonorStreak_1000", "IOSStarGold.tga"),
+    ("HonorStreak_500", "IOSStarSilver.tga"),
+    ("HonorStreak_B", "IOSStarBronze.tga"),
+    ("HonorStreak_G", "IOSStarGold.tga"),
+    ("HonorStreak_S", "IOSStarSilver.tga"),
+    ("Loyalty_China", "IOSFactionSideIcon.tga"),
+    ("Loyalty_GLA", "IOSFactionSideIcon.tga"),
+    ("Loyalty_USA", "IOSFactionSideIcon.tga"),
+    ("USACampaign_B", "IOSStarBronze.tga"),
+    ("USACampaign_G", "IOSStarGold.tga"),
+    ("USACampaign_S", "IOSStarSilver.tga"),
+    ("Ultimate", "IOSGeneralPowersIcon.tga"),
+)
+
 IOS_MODEL_ASSETS = (
     "IOSCommandCenter",
     "IOSPowerPlant",
@@ -39,6 +146,10 @@ IOS_MODEL_ASSETS = (
     "IOSScoutVehicle",
     "IOSBeacon",
     "IOSRallyPointMarker",
+    "IOSGenericDebris",
+    "IOSGenericBridge",
+    "IOSWaterWaveBridge",
+    *STOCK_TEMPLATE_MODEL_NAMES,
 )
 
 DAZZLE_TEXTURES = (
@@ -412,6 +523,9 @@ IOS_CSF_LABELS = {
     "INI:IOSScoutVehicle": "Scout Vehicle",
     "INI:IOSBeacon": "Beacon",
     "INI:RallyPointMarker": "Rally Point",
+    "INI:GenericDebris": "Debris",
+    "INI:GenericBridge": "Bridge",
+    "INI:WaterWaveBridge": "Water Bridge",
     "INI:Command_ConstructIOSDozer": "Build Builder",
     "INI:Command_ConstructIOSDozerDescription": "Produces a construction unit.",
     "INI:Command_ConstructIOSPowerPlant": "Build Power Plant",
@@ -456,6 +570,7 @@ IOS_CSF_LABELS = {
     "GUI:ToggleControlBarDescription": "Toggles the expanded control bar.",
     "MAP:IOSPlayableSlice": "iOS Playable Slice",
 }
+IOS_CSF_LABELS.update({f"INI:{name}": name for name in STOCK_TEMPLATE_MODEL_NAMES})
 IOS_SLICE_PLAYER_TEMPLATE = """PlayerTemplate FactionObserver
   Side = Observer
   BaseSide = Observer
@@ -1051,7 +1166,101 @@ Object RallyPointMarker
     InitialHealth = 1.0
   End
 End
+
+Object GenericDebris
+  DisplayName = INI:GenericDebris
+  Side = Civilian
+  EditorSorting = MISC_MAN_MADE
+  KindOf = INERT
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = IOSGenericDebris
+    End
+  End
+  Body = ActiveBody ModuleTag_Body
+    MaxHealth = 1.0
+    InitialHealth = 1.0
+  End
+  Behavior = PhysicsBehavior ModuleTag_Physics
+    Mass = 1.0
+  End
+End
+
+Object GenericBridge
+  DisplayName = INI:GenericBridge
+  Side = Civilian
+  EditorSorting = MISC_MAN_MADE
+  KindOf = STRUCTURE IMMOBILE BRIDGE
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = IOSGenericBridge
+    End
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 2000.0
+    InitialHealth = 2000.0
+  End
+End
+
+Object WaterWaveBridge
+  DisplayName = INI:WaterWaveBridge
+  Side = Civilian
+  EditorSorting = MISC_MAN_MADE
+  KindOf = STRUCTURE IMMOBILE BRIDGE
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = IOSWaterWaveBridge
+    End
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 2000.0
+    InitialHealth = 2000.0
+  End
+End
 """
+
+IOS_STOCK_TEMPLATE_OBJECTS = "".join(
+    f"""
+
+Object {name}
+  DisplayName = INI:{name}
+  Side = Civilian
+  EditorSorting = MISC_MAN_MADE
+  KindOf = STRUCTURE IMMOBILE INERT
+  Buildable = No
+  Draw = W3DModelDraw ModuleTag_Draw
+    DefaultConditionState
+      Model = {name}
+    End
+  End
+  ArmorSet
+    Conditions = None
+    Armor = IOSStructureArmor
+    DamageFX = IOSDefaultDamageFX
+  End
+  Body = StructureBody ModuleTag_Body
+    MaxHealth = 1000.0
+    InitialHealth = 1000.0
+  End
+End
+"""
+    for name in STOCK_GENERATED_TEMPLATE_NAMES
+)
+
+IOS_SLICE_OBJECT = IOS_SLICE_OBJECT.rstrip() + IOS_STOCK_TEMPLATE_OBJECTS
 
 def minimal_wnd(layout_name: str, title: str | None = None) -> str:
     text_block = ""
@@ -2112,6 +2321,7 @@ def write_playable_slice_assets(
     for filename, _color in icon_colors:
         name = filename.removesuffix(".tga")
         mapped_images.append((name, filename, 64, 64))
+    mapped_images.extend((name, texture, 64, 64) for name, texture in STOCK_MAPPED_IMAGE_ALIASES)
     mapped_images.extend(
         (
             ("BarButtonGenStarON", "IOSGeneralPowersIcon.tga", 64, 64),
@@ -2136,9 +2346,34 @@ def write_playable_slice_assets(
             ("MissionLoad_USA", "IOSLoadScreen.tga", 64, 64),
             ("MissionLoad_GLA", "IOSLoadScreen.tga", 64, 64),
             ("MissionLoad_China", "IOSLoadScreen.tga", 64, 64),
+            ("TitleScreen", "IOSLoadScreen.tga", 64, 64),
+            ("SAFactionLogoLg_US", "IOSFactionGeneral.tga", 64, 64),
+            ("SUFactionLogoLg_GLA", "IOSFactionGeneral.tga", 64, 64),
+            ("SNFactionLogoLg_China", "IOSFactionGeneral.tga", 64, 64),
+            ("SAFactionLogo144_US", "IOSFactionSideIcon.tga", 64, 64),
+            ("SUFactionLogo144_GLA", "IOSFactionSideIcon.tga", 64, 64),
+            ("SNFactionLogo144_China", "IOSFactionSideIcon.tga", 64, 64),
+            ("LoadingBar_Progress", "IOSFactionEnabled.tga", 64, 64),
             ("LoadingBar_ProgressCenter1", "IOSFactionEnabled.tga", 64, 64),
             ("LoadingBar_ProgressCenter2", "IOSFactionEnabled.tga", 64, 64),
             ("LoadingBar_ProgressCenter3", "IOSFactionEnabled.tga", 64, 64),
+            ("GeneralsChallengeWinLoss", "IOSScoreScreen.tga", 64, 64),
+            ("MutiPlayer_ScoreScreen", "IOSScoreScreen.tga", 64, 64),
+            ("TecBuilding", "IOSPowerPlantIcon.tga", 64, 64),
+            ("Cash", "IOSSellIcon.tga", 64, 64),
+            ("UnknownMap", "IOSMapPreview.tga", 64, 64),
+            ("Gradient", "IOSLoadScreen.tga", 64, 64),
+            ("GameinfoRANDOM", "IOSFactionSideIcon.tga", 64, 64),
+            ("GameinfoOBSRVR", "IOSObserverSideIcon.tga", 64, 64),
+            ("Observer", "IOSObserverSideIcon.tga", 64, 64),
+            ("Ping01", "IOSStarGold.tga", 64, 64),
+            ("Ping02", "IOSStarSilver.tga", 64, 64),
+            ("Ping03", "IOSStarBronze.tga", 64, 64),
+            ("Password", "IOSOptionsIcon.tga", 64, 64),
+            ("GoodStatsIcon", "IOSGeneralPowersIcon.tga", 64, 64),
+            ("NewPlayer", "IOSFactionSideIcon.tga", 64, 64),
+            ("OfficersClubsmall", "IOSGeneralPowersIcon.tga", 64, 64),
+            ("OfficersClub", "IOSGeneralPowersIcon.tga", 64, 64),
         )
     )
     mapped_image_text = "".join(

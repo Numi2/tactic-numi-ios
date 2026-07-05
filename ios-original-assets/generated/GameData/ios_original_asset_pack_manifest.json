@@ -1,5 +1,5 @@
 {
-  "asset_count": 255,
+  "asset_count": 313,
   "assets": [
     {
       "bytes": 6876,
@@ -242,6 +242,412 @@
     {
       "bytes": 2444,
       "path": "ios-original-assets/generated/GameData/IOSRallyPointMarker.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSGenericDebris.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSGenericDebris.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSGenericBridge.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSGenericBridge.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/IOSWaterWaveBridge.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/IOSWaterWaveBridge.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/GenericDebris.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/GenericDebris.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/GenericBridge.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/GenericBridge.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaterWaveBridge.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaterWaveBridge.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/GarrisonGun.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/GarrisonGun.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveHit01.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveHit01.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSplash01.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSplash01.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSplashLeft01.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSplashLeft01.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSplashRight01.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSplashRight01.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSpray01.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSpray01.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSpray02.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSpray02.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/WaveSpray03.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/WaveSpray03.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/GLAScudStorm.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/GLAScudStorm.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Boss_GLAScudStorm.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Boss_GLAScudStorm.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Chem_GLAScudStorm.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Chem_GLAScudStorm.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Demo_GLAScudStorm.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Demo_GLAScudStorm.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Slth_GLAScudStorm.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Slth_GLAScudStorm.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/AirF_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/AirF_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Lazr_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Lazr_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/SupW_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/SupW_AmericaParticleCannonUplink.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Boss_ParticleCannonUplink.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Boss_ParticleCannonUplink.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Boss_NuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Boss_NuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Infa_ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Infa_ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Nuke_ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Nuke_ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_root_lookup",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/Tank_ChinaNuclearMissileLauncher.w3d",
+      "role": "ios_generated_model_asset",
+      "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
+      "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
+    },
+    {
+      "bytes": 2444,
+      "path": "ios-original-assets/generated/GameData/Tank_ChinaNuclearMissileLauncher.w3d",
       "role": "ios_generated_model_root_lookup",
       "sha256": "5fc92205a761292ef24d930bce373e9336bb1323f94c6511e63deb3bdebfcea5",
       "source": "Core/Libraries/Source/WWVegas/WW3D2/RequiredAssets/ShatterPlanes0.w3d"
@@ -940,10 +1346,10 @@
       "source": "generated"
     },
     {
-      "bytes": 4519,
+      "bytes": 6694,
       "path": "ios-original-assets/generated/GameData/Data/English/generals.csf",
       "role": "localization_boot_csf",
-      "sha256": "af98ff23c42bddb57984cd7f8dbc2ac27ef5712387f55cf6dd6e81d2d7c9f56c",
+      "sha256": "af455bb2930b921907e6b2c14f67d879bdbe8581e96e5f695aa9c2f49e9514b0",
       "source": "generated"
     },
     {
@@ -1465,10 +1871,10 @@
       "source": "generated"
     },
     {
-      "bytes": 5951,
+      "bytes": 18548,
       "path": "ios-original-assets/generated/GameData/Data/INI/Object/ios_playable_slice.ini",
       "role": "ios_playable_slice_ini",
-      "sha256": "074a0d9a554a88b3191660c59b4e90f2290a0590251d2ab644d1a056347d6c0e",
+      "sha256": "8a207d10faff28b6c63f52c5a8fef5517be78c55ae3a669f0f36a7c931970a73",
       "source": "generated"
     },
     {
@@ -1745,10 +2151,10 @@
       "source": "generated"
     },
     {
-      "bytes": 10667,
+      "bytes": 22739,
       "path": "ios-original-assets/generated/GameData/Data/INI/MappedImages/TextureSize_512/ios_playable_slice.ini",
       "role": "ios_playable_slice_mapped_images",
-      "sha256": "07518de0b46ac53476d59c43cd330071cb31f43496fc34bea04fa5cf3f6fc4c4",
+      "sha256": "8c47b43aa9c5747b509d5998768cbbc80bb9b357e30831449e31aca650fcde37",
       "source": "generated"
     },
     {
