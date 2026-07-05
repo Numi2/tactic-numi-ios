@@ -76,6 +76,14 @@ IOS_RUNTIME_TEXTURES = (
     ("wave256.tga", (64, 132, 178, 210), "water wave texture"),
 )
 
+IOS_AUDIO_ASSETS = (
+    ("ui_click.wav", "octave/ui_click.wav"),
+    ("rally_set.wav", "octave/rally_set.wav"),
+    ("place_building.wav", "octave/place_building.wav"),
+    ("action_rejected.wav", "octave/action_rejected.wav"),
+    ("load_ambient.wav", "octave/load_ambient.wav"),
+)
+
 MANDATORY_BOOT_INI_DIRS = (
     "Animation2D",
     "AudioSettings",
@@ -191,35 +199,46 @@ End
 """
 
 IOS_SILENT_SOUND_EFFECTS = """AudioEvent DefaultSoundEffect
-  Volume = 0%
+  Volume = 70%
   MinVolume = 0%
-  Limit = 1
+  Limit = 4
   Priority = LOWEST
   Type = UI EVERYONE
 End
 
 AudioEvent PlaceBuilding
-  Volume = 0%
+  Sounds = place_building
+  Volume = 70%
 End
 
 AudioEvent RallyPointSet
-  Volume = 0%
+  Sounds = rally_set
+  Volume = 55%
 End
 
 AudioEvent UnableToSetRallyPoint
-  Volume = 0%
+  Sounds = action_rejected
+  Volume = 65%
 End
 
 AudioEvent BeaconPlaced
-  Volume = 0%
+  Sounds = ui_click
+  Volume = 55%
 End
 
 AudioEvent BeaconPlacementFailed
-  Volume = 0%
+  Sounds = action_rejected
+  Volume = 65%
 End
 
 AudioEvent LoadScreenAmbient
-  Volume = 0%
+  Sounds = load_ambient
+  Volume = 35%
+End
+
+AudioEvent GUIClick
+  Sounds = ui_click
+  Volume = 45%
 End
 """
 
@@ -230,8 +249,8 @@ End
 """
 
 IOS_MISC_AUDIO = """MiscAudio
-  GUIClickSound = NoSound
-  NoCanDoSound = NoSound
+  GUIClickSound = GUIClick
+  NoCanDoSound = UnableToSetRallyPoint
   AllCheerSound = NoSound
   BattleCrySound = NoSound
   MoneyDepositSound = NoSound
@@ -1822,6 +1841,15 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
     out_dir.mkdir(parents=True, exist_ok=True)
 
     records: list[dict[str, object]] = []
+
+    for dest_name, source_name in IOS_AUDIO_ASSETS:
+        copy_file(
+            project_root / "ios-original-assets" / "source" / "audio" / source_name,
+            out_dir / "Data" / "Audio" / "Sounds" / dest_name,
+            records,
+            "ios_octave_audio_sound",
+            project_root,
+        )
 
     for filename in RUNTIME_ASSETS:
         copy_file(

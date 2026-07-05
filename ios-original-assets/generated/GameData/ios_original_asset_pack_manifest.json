@@ -1,6 +1,41 @@
 {
-  "asset_count": 214,
+  "asset_count": 219,
   "assets": [
+    {
+      "bytes": 6876,
+      "path": "ios-original-assets/generated/GameData/Data/Audio/Sounds/ui_click.wav",
+      "role": "ios_octave_audio_sound",
+      "sha256": "2cf190988c434885406cd3c21a546d2f153d31c54a9272a43ac018a8fe30995d",
+      "source": "ios-original-assets/source/audio/octave/ui_click.wav"
+    },
+    {
+      "bytes": 6356,
+      "path": "ios-original-assets/generated/GameData/Data/Audio/Sounds/rally_set.wav",
+      "role": "ios_octave_audio_sound",
+      "sha256": "8c46e0ab04b2ecd0309f19dcac02b459ff85c503e3c1e37394b210a9984048b9",
+      "source": "ios-original-assets/source/audio/octave/rally_set.wav"
+    },
+    {
+      "bytes": 8594,
+      "path": "ios-original-assets/generated/GameData/Data/Audio/Sounds/place_building.wav",
+      "role": "ios_octave_audio_sound",
+      "sha256": "6c357c3237b6f1bdc0b397f4ab4896362b22b9deeacf09c4dfe58a1782379a97",
+      "source": "ios-original-assets/source/audio/octave/place_building.wav"
+    },
+    {
+      "bytes": 10742,
+      "path": "ios-original-assets/generated/GameData/Data/Audio/Sounds/action_rejected.wav",
+      "role": "ios_octave_audio_sound",
+      "sha256": "ae026e156e5a5ce45f12b10c9aab684a426729034c2b10ed02d7120432d20af5",
+      "source": "ios-original-assets/source/audio/octave/action_rejected.wav"
+    },
+    {
+      "bytes": 19846,
+      "path": "ios-original-assets/generated/GameData/Data/Audio/Sounds/load_ambient.wav",
+      "role": "ios_octave_audio_sound",
+      "sha256": "2bb2f55e10dedb7524157280751490fe3a86ebbc90e3d71acf2430730a514673",
+      "source": "ios-original-assets/source/audio/octave/load_ambient.wav"
+    },
     {
       "bytes": 1068,
       "path": "ios-original-assets/generated/GameData/Data/Runtime/RequiredAssets/AddProjectorGradient.tga",
@@ -940,10 +975,10 @@
       "source": "generated"
     },
     {
-      "bytes": 401,
+      "bytes": 613,
       "path": "ios-original-assets/generated/GameData/Data/INI/Default/SoundEffects/ios_boot.ini",
       "role": "ios_boot_default_ini",
-      "sha256": "e19424a3eee4797a5ccd210b331db09584449e361bd5547d689c0074b2a599aa",
+      "sha256": "97a4a26bcdb8581ed0a25df8efbec42869d73673c12c1cda816a52aaa26d0175",
       "source": "generated"
     },
     {
@@ -1150,10 +1185,10 @@
       "source": "generated"
     },
     {
-      "bytes": 527,
+      "bytes": 542,
       "path": "ios-original-assets/generated/GameData/Data/INI/MiscAudio/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "4776d057485e7aecfe5d625fedb33d9844e184527c7398ccfaf33c7dbb3f7866",
+      "sha256": "fefb9ef97137d87be849580541d0c4506901f0d38eb8e3ca347a220c0697e14c",
       "source": "generated"
     },
     {
@@ -1325,10 +1360,10 @@
       "source": "generated"
     },
     {
-      "bytes": 401,
+      "bytes": 613,
       "path": "ios-original-assets/generated/GameData/Data/INI/SoundEffects/ios_boot.ini",
       "role": "ios_boot_ini",
-      "sha256": "e19424a3eee4797a5ccd210b331db09584449e361bd5547d689c0074b2a599aa",
+      "sha256": "97a4a26bcdb8581ed0a25df8efbec42869d73673c12c1cda816a52aaa26d0175",
       "source": "generated"
     },
     {
