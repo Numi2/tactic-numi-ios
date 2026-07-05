@@ -35,6 +35,58 @@ DAZZLE_TEXTURES = (
     ("SunLensFlare.tga", (255, 250, 220, 235), "lens flare atlas"),
 )
 
+MANDATORY_BOOT_INI_DIRS = (
+    "Science",
+    "Multiplayer",
+    "Terrain",
+    "Roads",
+    "Water",
+    "Weather",
+    "Rank",
+    "PlayerTemplate",
+    "FXList",
+    "Weapon",
+    "ObjectCreationList",
+    "Locomotor",
+    "SpecialPower",
+    "DamageFX",
+    "Armor",
+    "Object",
+    "Upgrade",
+    "AIData",
+    "Crate",
+    "CommandMap",
+)
+
+DEFAULT_BOOT_INI_DIRS = (
+    "Science",
+    "Multiplayer",
+    "Terrain",
+    "Roads",
+    "Water",
+    "Weather",
+    "PlayerTemplate",
+    "FXList",
+    "ObjectCreationList",
+    "SpecialPower",
+    "Object",
+    "Upgrade",
+    "AIData",
+    "Crate",
+)
+
+IOS_BOOT_GAMEDATA = """GameData
+  Windowed = No
+  XResolution = 1024
+  YResolution = 768
+  UseTrees = Yes
+  UseFPSLimit = Yes
+  FramesPerSecondLimit = 60
+  ShellMapOn = No
+  PlayIntro = No
+End
+"""
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -204,6 +256,30 @@ def build_pack(project_root: Path, out_dir: Path, clean: bool) -> dict[str, obje
         "localization_boot_config",
         project_root,
     )
+
+    write_text(
+        out_dir / "Data" / "INI" / "Default" / "GameData.ini",
+        IOS_BOOT_GAMEDATA,
+        records,
+        "ios_boot_game_data_ini",
+        project_root,
+    )
+    for dirname in DEFAULT_BOOT_INI_DIRS:
+        write_text(
+            out_dir / "Data" / "INI" / "Default" / dirname / "ios_boot.ini",
+            "; Generated iOS boot placeholder.\n",
+            records,
+            "ios_boot_default_ini_placeholder",
+            project_root,
+        )
+    for dirname in MANDATORY_BOOT_INI_DIRS:
+        write_text(
+            out_dir / "Data" / "INI" / dirname / "ios_boot.ini",
+            "; Generated iOS boot placeholder.\n",
+            records,
+            "ios_boot_ini_placeholder",
+            project_root,
+        )
 
     try:
         game_data_path = out_dir.relative_to(project_root).as_posix()

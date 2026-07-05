@@ -54,16 +54,15 @@ On top of the macOS prerequisites: full Xcode (signed into your Apple ID),
 cd GeneralsX
 git submodule update --init references/fbraz3-dxvk   # iOS DXVK is built from this + Patches/dxvk-ios.patch
 ./scripts/build/ios/fetch-moltenvk.sh                # pinned MoltenVK.framework (checksummed)
-./scripts/build/ios/stage-fonts.sh                   # Liberation fonts, renamed as the game expects
 cmake --preset ios-vulkan
 cmake --build build/ios-vulkan --target z_generals
 GX_TEAM_ID=<your-team-id> GX_BUNDLE_ID=com.you.generalszh \
     ./scripts/build/ios/package-ios-zh.sh --install  # assembles, signs, installs
 ```
 
-Find your team id in Xcode → Settings → Accounts. Assets ship inside the app
-bundle (self-contained install); `--dev` skips the ~2.7 GB copy for fast code
-iteration.
+Find your team id in Xcode → Settings → Accounts. The package step stages
+fonts when needed and bundles `GameData` inside the app for a self-contained
+install; `--dev` skips asset bundling for fast code iteration.
 
 ## Where things are
 
