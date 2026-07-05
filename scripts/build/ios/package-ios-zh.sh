@@ -172,6 +172,13 @@ if [[ "${DEV_MODE}" != "1" ]]; then
             --exclude="GeneralsXZH.dxvk-cache" --exclude="*_d3d9.log" \
             --exclude="MoltenVK_icd.json" --exclude="dxvk.conf" --exclude="fontconfig" \
             "${ASSET_SRC}/" "${APP}/GameData/"
+        if [[ -n "${ORIGINAL_SLICE_WORKLIST}" ]]; then
+            echo "==> Validating bundled original slice worklist"
+            "${PROJECT_ROOT}/scripts/tooling/assets/validate_ios_playable_slice.py" \
+                --worklist "${ORIGINAL_SLICE_WORKLIST}" \
+                --game-data "${APP}/GameData" \
+                --report "${MANIFEST_DIR}/original_slice_bundle_validation.json"
+        fi
     else
         rsync -a --exclude=".*" \
             --exclude="*.dylib" --exclude="run.sh" --exclude="GeneralsXZH" \
